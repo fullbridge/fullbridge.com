@@ -1,0 +1,27 @@
+.main-menu
+{
+  h1,
+  h2
+  {
+    margin: 0;
+    line-height: 1;
+    font-size: 1em;
+
+    a,
+    img
+    {
+      display: block;
+    }
+
+    img
+    {
+      width: auto;
+      height: 3em;
+    }
+
+    span
+    {
+      @include visuallyhidden;
+    }
+  }
+}

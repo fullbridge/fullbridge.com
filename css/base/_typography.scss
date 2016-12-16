@@ -1,0 +1,353 @@
+*,
+*:before,
+*:after
+{
+  @include antialiased;
+  @include kerning;
+}
+
+html.touch *,
+html.touch *:before,
+html.touch *:after
+{
+  text-rendering: optimizeSpeed;
+}
+
+html
+{
+  font-size: $base-font-size + px;
+}
+
+body
+{
+  @include font(body,regular);
+
+  color: $body-text-color;
+  line-height: $leading;
+  font-size: calc(#{$base-font-size}px + .25vw);
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+  @include font(heading,bold);
+  @include ligatures;
+
+  color: $heading-color;
+  letter-spacing: -1px;
+}
+
+h1,
+h2
+{
+  @include bp(small)
+  {
+    @include break-all;
+  }
+}
+
+h1:first-child
+{
+  @include text-align(center);
+
+  text-indent: -.03em;
+}
+
+h1
+{
+  line-height: 1.1;
+
+  @include bp(small)
+  {
+    @include margin(($paragraph-spacing/3.33*2.375 + em),auto,($paragraph-spacing/2.73 + em),auto);
+  }
+
+  @include bp(desktop)
+  {
+    @include margin(($paragraph-spacing/3.33*2.375 + em),auto,($paragraph-spacing/3.33 + em),auto);
+  }
+
+  @include bp(small)
+  {
+    @include break-all;
+
+    font-size: 2.73em;
+  }
+
+  @include bp(desktop)
+  {
+    font-size: 3.33em;
+  }
+}
+
+h2
+{
+  line-height: 1.15;
+
+  @include bp(small)
+  {
+    @include margin(($paragraph-spacing/2.22*2 + em),auto,($paragraph-spacing/1.82 + em),auto);
+
+    font-size: 1.82em;
+  }
+
+  @include bp(desktop)
+  {
+    @include margin(($paragraph-spacing/2.22*2 + em),auto,($paragraph-spacing/2.22 + em),auto);
+
+    font-size: 2.22em;
+  }
+}
+
+h3
+{
+  line-height: 1.25;
+
+  @include bp(small)
+  {
+    @include margin(($paragraph-spacing/1.67*1.375 + em),auto,($paragraph-spacing/5 + em),auto);
+
+    font-size: 1.37em;
+  }
+
+  @include bp(desktop)
+  {
+    @include margin(($paragraph-spacing/1.67*1.375 + em),auto,($paragraph-spacing/5 + em),auto);
+
+    font-size: 1.67em;
+  }
+}
+
+h4,
+h5,
+h6
+{
+  @include margin(($paragraph-spacing*1.2 + em),auto,($paragraph-spacing/3 + em),auto);
+
+  line-height: 1.35;
+
+  @include bp(small)
+  {
+    font-size: 1em;
+  }
+
+  @include bp(desktop)
+  {
+    font-size: 1.22em;
+  }
+}
+
+a
+{
+  color: $body-text-color;
+  text-decoration: none;
+
+  @include transition(color $timing ease-in-out);
+
+  &:visited
+  {
+    color: $body-text-color;
+  }
+
+  &:hover
+  {
+    color: $link-color;
+  }
+
+  &:visited:hover
+  {
+    color: $link-visited-color;
+  }
+
+  &:active
+  {
+    color: $link-visited-color;
+  }
+}
+
+em,
+address
+{
+  @include font(body,italic);
+}
+
+code
+{
+  @include position(relative,auto,auto,auto,auto);
+  @include padding(1px,($gutter/8),3px,($gutter/8));
+  @include font(code,regular);
+
+  color: $background-color;
+  background-color: $body-text-color;
+
+  @include bp(small)
+  {
+    top: -.08em; // magic number to align baseline
+  }
+
+  @include bp(medium)
+  {
+    top: -.09em; // magic number to align baseline
+  }
+
+  @include bp(large)
+  {
+    top: -.06em; // magic number to align baseline
+  }
+}
+
+address
+{
+  display: inline;
+}
+
+small
+{
+  em,
+  address
+  {
+    top: -.1em;
+  }
+}
+
+abbr
+{
+  border: none !important;
+}
+
+small,
+figcaption,
+aside > *,
+thead th,
+tfoot td
+{
+  font-size: ($small-font-size + rem);
+}
+
+* + p
+{
+  @include bp(small)
+  {
+    text-indent: $gutter/2;
+  }
+
+  @include bp(desktop)
+  {
+    text-indent: $gutter/1.5;
+  }
+}
+
+header + p,
+header + *:not(p) + p,
+h1 + p,
+h1 + *:not(p) + p,
+h2 + p,
+h2 + *:not(p) + p,
+h3 + p,
+h3 + *:not(p) + p,
+h4 + p,
+h4 + *:not(p) + p,
+h5 + p,
+h5 + *:not(p) + p,
+h6 + p,
+h6 + *:not(p) + p
+{
+  text-indent: 0;
+}
+
+p
+{
+  @include margin(0,auto,0,auto);
+
+  &:first-of-type
+  {
+    text-indent: 0;
+  }
+
+  &:first-child
+  {
+    @include margin(($paragraph-spacing + em),auto,0,auto);
+  }
+}
+
+ol,
+ul,
+details,
+summary,
+dl
+{
+  @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+}
+
+ol,
+ul
+{
+  @include padding(0,0,0,0);
+}
+
+ul
+{
+  list-style: square;
+}
+
+ol
+{
+  list-style: upper-roman;
+}
+
+dl
+{
+  dt
+  {
+    @include font(heading,regular);
+
+    color: $heading-color;
+  }
+
+  dd
+  {
+    @include bp(small)
+    {
+      @include margin(auto,auto,auto,($gutter/2));
+    }
+
+    @include bp(desktop)
+    {
+      @include margin(auto,auto,auto,($gutter/1.5));
+    }
+  }
+}
+
+hr
+{
+  @include position(relative,auto,auto,auto,auto);
+  @include margin(($paragraph-spacing*3 + em),auto,($paragraph-spacing*3 + em),auto);
+  @include padding(0,0,0,0);
+
+  display: block;
+  height: 1px;
+  border: 0;
+  background-color: $body-text-color;
+
+  &:before,
+  &:after
+  {
+    @include small-diamond;
+  }
+
+  &:before
+  {
+    @include position(absolute,-2px,auto,auto,-2px);
+  }
+
+  &:after
+  {
+    @include position(absolute,-2px,-2px,auto,auto);
+  }
+}
+
