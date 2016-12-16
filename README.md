@@ -13,3 +13,7 @@
 ###Production:
 * *Cyberduck*: fullbridge-com-production.s3.amazonaws.com
 * *Web Endpoint*: fullbridge-com-production.s3-website-us-east-1.amazonaws.com
+
+## Naming Convention
+* *Index*: index.html
+* *Error Page (including 404s)*: error.html
