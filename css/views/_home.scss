@@ -1,0 +1,46 @@
+.home-hero
+{
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+  @include margin(0,auto,0,auto);
+  @include padding(0,$gutter,0,$gutter);
+
+  max-width: $medium-screen;
+  height: calc(100vh - #{5em*.7});
+
+  h2,
+  h3
+  {
+    @include margin(0,0,0,0);
+  }
+
+  h2
+  {
+    line-height: 1;
+    font-size: 4.5vw;
+  }
+
+  h3
+  {
+    @include margin(($paragraph-spacing + em),0,($paragraph-spacing + em),0);
+    @include font(body,regular);
+
+    letter-spacing: 0;
+    font-size: 2vw;
+  }
+}
+
+.home-hero-headlines
+{
+  @include flex(0 0 40%);
+}
+
+.home-hero-image
+{
+  img
+  {
+    width: 100%;
+    height: auto;
+  }
+}

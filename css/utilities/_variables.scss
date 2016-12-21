@@ -4,6 +4,12 @@ $yellow: yellow;
 $blue: mediumblue;
 $purple: indigo;
 
+$branding-red: #af272f;
+$branding-blue: #13a8e1;
+
+$primary-color: $branding-red;
+$secondary-color: $branding-blue;
+
 $body-text-color: $black;
 $heading-color: $body-text-color;
 $link-color: $blue;
@@ -12,6 +18,7 @@ $placeholder-text-color: $body-text-color;
 $background-color: $white;
 $highlight-background-color: $yellow;
 $border: 1px solid $body-text-color;
+$border-radius: 2px;
 
 $body-font: 'Source Sans Pro', sans-serif;
 $heading-font: 'Roboto Condensed', 'Lucida Sans', sans-serif;
@@ -25,7 +32,7 @@ $leading: 1.5;
 $paragraph-spacing: .98;
 $golden-characters: 70;
 
-$gutter: 1.96em; /* .98 x 2 */
+$gutter: 1.96em; // .98 x 2
 $golden-side-width: 21.6447;
 $golden-main-width: (100 - ($golden-side-width*2));
 $small-screen: 768px;

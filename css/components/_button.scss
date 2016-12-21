@@ -1,0 +1,46 @@
+.button
+{
+  @include padding(0,($gutter),0,($gutter));
+
+  display: inline-block;
+  line-height: 4;
+  border-radius: $border-radius;
+
+  &.is-primary
+  {
+    color: $background-color;
+    background-color: $primary-color;
+  }
+
+  span
+  {
+    @include font(body,bold);
+
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: .9em;
+  }
+}
+
+.link
+{
+  &:visited
+  {
+    color: $body-text-color;
+  }
+
+  &:hover
+  {
+    color: $link-color;
+  }
+
+  &:visited:hover
+  {
+    color: $link-visited-color;
+  }
+
+  &:active
+  {
+    color: $link-visited-color;
+  }
+}

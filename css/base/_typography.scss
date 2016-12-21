@@ -25,7 +25,6 @@ body
   color: $body-text-color;
   line-height: $leading;
   font-size: calc(#{$base-font-size}px + .25vw);
-
 }
 
 h1,
@@ -148,26 +147,6 @@ a
   text-decoration: none;
 
   @include transition(color $timing ease-in-out);
-
-  &:visited
-  {
-    color: $body-text-color;
-  }
-
-  &:hover
-  {
-    color: $link-color;
-  }
-
-  &:visited:hover
-  {
-    color: $link-visited-color;
-  }
-
-  &:active
-  {
-    color: $link-visited-color;
-  }
 }
 
 em,
@@ -229,52 +208,7 @@ tfoot td
   font-size: ($small-font-size + rem);
 }
 
-* + p
-{
-  @include bp(small)
-  {
-    text-indent: $gutter/2;
-  }
-
-  @include bp(desktop)
-  {
-    text-indent: $gutter/1.5;
-  }
-}
-
-header + p,
-header + *:not(p) + p,
-h1 + p,
-h1 + *:not(p) + p,
-h2 + p,
-h2 + *:not(p) + p,
-h3 + p,
-h3 + *:not(p) + p,
-h4 + p,
-h4 + *:not(p) + p,
-h5 + p,
-h5 + *:not(p) + p,
-h6 + p,
-h6 + *:not(p) + p
-{
-  text-indent: 0;
-}
-
-p
-{
-  @include margin(0,auto,0,auto);
-
-  &:first-of-type
-  {
-    text-indent: 0;
-  }
-
-  &:first-child
-  {
-    @include margin(($paragraph-spacing + em),auto,0,auto);
-  }
-}
-
+p,
 ol,
 ul,
 details,
@@ -320,34 +254,6 @@ dl
     {
       @include margin(auto,auto,auto,($gutter/1.5));
     }
-  }
-}
-
-hr
-{
-  @include position(relative,auto,auto,auto,auto);
-  @include margin(($paragraph-spacing*3 + em),auto,($paragraph-spacing*3 + em),auto);
-  @include padding(0,0,0,0);
-
-  display: block;
-  height: 1px;
-  border: 0;
-  background-color: $body-text-color;
-
-  &:before,
-  &:after
-  {
-    @include small-diamond;
-  }
-
-  &:before
-  {
-    @include position(absolute,-2px,auto,auto,-2px);
-  }
-
-  &:after
-  {
-    @include position(absolute,-2px,-2px,auto,auto);
   }
 }
 

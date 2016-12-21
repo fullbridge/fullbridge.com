@@ -20,11 +20,12 @@
 @import "components/table";
 @import "components/form";
 @import "components/tooltip";
+@import "components/button";
 
 // Layouts
 
 // Views
-@import "views/index";
+@import "views/home";
 @import "views/article";
 
 // More Utilities
