@@ -143,7 +143,7 @@ h6
 
 a
 {
-  color: $body-text-color;
+  color: $heading-color;
   text-decoration: none;
 
   @include transition(color $timing ease-in-out);

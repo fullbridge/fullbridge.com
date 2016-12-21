@@ -1,16 +1,12 @@
 .button
 {
   @include padding(0,($gutter),0,($gutter));
+  @include transition(background-color $timing ease-in-out);
 
   display: inline-block;
   line-height: 4;
+  white-space: nowrap;
   border-radius: $border-radius;
-
-  &.is-primary
-  {
-    color: $background-color;
-    background-color: $primary-color;
-  }
 
   span
   {
@@ -20,10 +16,44 @@
     letter-spacing: .1em;
     font-size: .9em;
   }
+
+  &.is-primary
+  {
+    color: $background-color;
+    background-color: $primary-color;
+
+    html:not(.touch) &:hover
+    {
+      background-color: lighten($primary-color,6%);
+    }
+  }
+
+  &.is-secondary
+  {
+    color: $background-color;
+    background-color: $heading-color;
+
+    html:not(.touch) &:hover
+    {
+      background-color: lighten($heading-color,16%);
+    }
+  }
+
+  &.is-small
+  {
+    line-height: 2.5;
+
+    span
+    {
+      font-size: .7em;
+    }
+  }
 }
 
 .link
 {
+  border-bottom: 1px solid;
+
   &:visited
   {
     color: $body-text-color;

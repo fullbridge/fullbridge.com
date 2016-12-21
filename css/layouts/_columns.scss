@@ -1,0 +1,9 @@
+.even-columns
+{
+  @include display(flex);
+}
+
+.even-column
+{
+  @include flex(1);
+}
