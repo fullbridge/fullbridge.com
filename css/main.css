@@ -2040,11 +2040,11 @@ abbr:before {
   text-align: center;
   color: white;
   background-color: black; }
-  .home-big-intro h2 {
-    color: white; }
   .home-big-intro h2,
   .home-big-intro p {
     max-width: 86ch; }
+  .home-big-intro h2 {
+    color: white; }
 
 #page-category-is-article > main a:visited {
   color: black; }

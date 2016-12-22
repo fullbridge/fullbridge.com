@@ -108,14 +108,14 @@
   color: $background-color;
   background-color: $heading-color;
 
-  h2
-  {
-    color: $background-color;
-  }
-
   h2,
   p
   {
     max-width: 86ch;
+  }
+
+  h2
+  {
+    color: $background-color;
   }
 }
