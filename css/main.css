@@ -698,6 +698,61 @@ dl dt {
       margin-right: 1.30667em;
       margin-left: auto; } }
 
+hr {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
+  margin-top: 0.98em;
+  margin-right: auto;
+  margin-bottom: 0.98em;
+  margin-left: auto;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.1); }
+  [dir=rtl] hr {
+    right: auto;
+    left: auto; }
+  [dir=rtl] hr {
+    margin-right: auto;
+    margin-left: auto; }
+  [dir=rtl] hr {
+    padding-right: 0;
+    padding-left: 0; }
+  hr:after {
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    color: white;
+    border: 3px solid;
+    border-radius: 10px;
+    background-color: black;
+    line-height: 1; }
+    [dir=rtl] hr:after {
+      right: auto;
+      left: auto; }
+
 .main-menu {
   display: -webkit-box;
   display: -moz-box;
@@ -1957,10 +2012,10 @@ abbr,
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
-    padding-top: 0.6em;
-    padding-right: 0.7em;
-    padding-bottom: 0.6em;
-    padding-left: 0.7em;
+    padding-top: 0.7em;
+    padding-right: 0.98em;
+    padding-bottom: 0.7em;
+    padding-left: 0.98em;
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -1968,13 +2023,13 @@ abbr,
     top: calc(100% - 0.98em);
     color: white;
     text-indent: 0;
-    text-transform: none;
+    text-transform: uppercase;
     text-decoration: none;
     text-shadow: none;
     line-height: 1.2;
-    letter-spacing: 0;
+    letter-spacing: .1em;
     white-space: nowrap;
-    font-size: .9em;
+    font-size: .6em;
     background-color: black;
     box-shadow: 0 0 0.8em white; }
     [dir=rtl] abbr:before, [dir=rtl]
@@ -1983,8 +2038,8 @@ abbr,
       margin-left: 0; }
     [dir=rtl] abbr:before, [dir=rtl]
     [data-tip]:before {
-      padding-right: 0.7em;
-      padding-left: 0.7em; }
+      padding-right: 0.98em;
+      padding-left: 0.98em; }
   abbr:after,
   [data-tip]:after {
     width: 0;
@@ -2152,6 +2207,7 @@ abbr:before {
   -o-justify-content: space-between;
   justify-content: space-between;
   -ms-flex-pack: justify;
+  min-height: 30em;
   max-height: calc(100vh - 6.5em); }
   .home-hero h2,
   .home-hero h3 {
@@ -2200,19 +2256,19 @@ abbr:before {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
   box-flex: 0;
-  -webkit-flex: 0 0 40%;
-  -moz-flex: 0 0 40%;
-  -ms-flex: 0 0 40%;
-  flex: 0 0 40%; }
+  -webkit-flex: 0 0 43%;
+  -moz-flex: 0 0 43%;
+  -ms-flex: 0 0 43%;
+  flex: 0 0 43%; }
 
 .home-hero-image {
   -webkit-box-flex: 0;
   -moz-box-flex: 0;
   box-flex: 0;
-  -webkit-flex: 0 0 55%;
-  -moz-flex: 0 0 55%;
-  -ms-flex: 0 0 55%;
-  flex: 0 0 55%; }
+  -webkit-flex: 0 0 52%;
+  -moz-flex: 0 0 52%;
+  -ms-flex: 0 0 52%;
+  flex: 0 0 52%; }
   .home-hero-image img {
     width: 100%;
     height: auto; }
@@ -2247,7 +2303,20 @@ abbr:before {
     width: 100%;
     height: auto; }
   .home-spotlight p {
-    max-width: 40ch; }
+    max-width: 40ch;
+    color: black; }
+  .home-spotlight hr {
+    -webkit-transition: background-color 0.25s ease-in-out;
+    -moz-transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out; }
+    .home-spotlight hr:after {
+      -webkit-transition: background-color 0.25s ease-in-out;
+      -moz-transition: background-color 0.25s ease-in-out;
+      transition: background-color 0.25s ease-in-out; }
+  html:not(.touch) .home-spotlight:hover hr {
+    background-color: #af272f; }
+    html:not(.touch) .home-spotlight:hover hr:after {
+      background-color: #af272f; }
 
 .home-big-intro {
   text-align: center;
@@ -2496,62 +2565,6 @@ form.form #page-category-is-article > main legend + *:not(p) + p,
       display: block;
       height: 0.98em;
       content: ""; }
-#page-category-is-article > main hr {
-  position: relative;
-  top: auto;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  margin-top: 2.94em;
-  margin-right: auto;
-  margin-bottom: 2.94em;
-  margin-left: auto;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  display: block;
-  height: 1px;
-  border: 0;
-  background-color: black; }
-  [dir=rtl] #page-category-is-article > main hr {
-    right: auto;
-    left: auto; }
-  [dir=rtl] #page-category-is-article > main hr {
-    margin-right: auto;
-    margin-left: auto; }
-  [dir=rtl] #page-category-is-article > main hr {
-    padding-right: 0;
-    padding-left: 0; }
-  #page-category-is-article > main hr:before, #page-category-is-article > main hr:after {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 5px;
-    height: 5px;
-    content: "";
-    background-color: black;
-    box-shadow: -1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white, 1px 1px 0 white, -2px 2px 0 white, -2px -2px 0 white, 2px -2px 0 white, 2px 2px 0 white, -3px 3px 0 white, -3px -3px 0 white, 3px -3px 0 white, 3px 3px 0 white; }
-  #page-category-is-article > main hr:before {
-    position: absolute;
-    top: -2px;
-    right: auto;
-    bottom: auto;
-    left: -2px; }
-    [dir=rtl] #page-category-is-article > main hr:before {
-      right: -2px;
-      left: auto; }
-  #page-category-is-article > main hr:after {
-    position: absolute;
-    top: -2px;
-    right: -2px;
-    bottom: auto;
-    left: auto; }
-    [dir=rtl] #page-category-is-article > main hr:after {
-      right: auto;
-      left: -2px; }
 #page-category-is-article > main article > footer {
   margin-top: 0.98em;
   margin-right: auto;

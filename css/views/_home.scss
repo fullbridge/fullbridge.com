@@ -23,6 +23,7 @@
   @include align-items(center);
   @include justify-content(space-between);
 
+  min-height: 30em;
   max-height: calc(100vh - #{5em*.7 + 3em});
 
   h2,
@@ -77,12 +78,12 @@
 
   .home-hero-headlines
   {
-    @include flex(0 0 40%);
+    @include flex(0 0 43%);
   }
 
   .home-hero-image
   {
-    @include flex(0 0 55%);
+    @include flex(0 0 52%);
 
     img
     {
@@ -126,6 +127,30 @@
     p
     {
       max-width: 40ch;
+      color: $body-text-color;
+    }
+
+    hr
+    {
+      @include transition(background-color $timing ease-in-out);
+
+      &:after
+      {
+        @include transition(background-color $timing ease-in-out);
+      }
+    }
+
+    html:not(.touch) &:hover
+    {
+      hr
+      {
+        background-color: $primary-color;
+
+        &:after
+        {
+          background-color: $primary-color;
+        }
+      }
     }
   }
 
