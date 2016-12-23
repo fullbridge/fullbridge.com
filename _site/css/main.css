@@ -443,7 +443,7 @@ h1,
 h2,
 h3,
 h4,
-form legend,
+form.form legend,
 #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *,
 h5,
 h6 {
@@ -553,7 +553,7 @@ h3 {
         margin-right: auto;
         margin-left: auto; } }
 
-h4, form legend, #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *,
+h4, form.form legend, #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *,
 h5,
 h6 {
   margin-top: 1.176em;
@@ -561,18 +561,18 @@ h6 {
   margin-bottom: 0.32667em;
   margin-left: auto;
   line-height: 1.35; }
-  [dir=rtl] h4, [dir=rtl] form legend, form [dir=rtl] legend, [dir=rtl] #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *, #page-category-is-article > main article > header:first-of-type > hgroup [dir=rtl] *:first-child + *, [dir=rtl]
+  [dir=rtl] h4, [dir=rtl] form.form legend, form.form [dir=rtl] legend, [dir=rtl] #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *, #page-category-is-article > main article > header:first-of-type > hgroup [dir=rtl] *:first-child + *, [dir=rtl]
   h5, [dir=rtl]
   h6 {
     margin-right: auto;
     margin-left: auto; }
   @media only screen and (max-width: 768px) {
-    h4, form legend, #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *,
+    h4, form.form legend, #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *,
     h5,
     h6 {
       font-size: 1em; } }
   @media only screen and (min-width: 769px) {
-    h4, form legend, #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *,
+    h4, form.form legend, #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + *,
     h5,
     h6 {
       font-size: 1.22em; } }
@@ -1468,45 +1468,242 @@ td:before {
     tfoot td {
       padding-right: 0.54444em;
       padding-left: 0.54444em; } }
-form {
+.hubspot-form {
+  margin-top: 0.98em;
+  margin-right: auto;
+  margin-bottom: 0.98em;
+  margin-left: auto; }
+  [dir=rtl] .hubspot-form {
+    margin-right: auto;
+    margin-left: auto; }
+  .hubspot-form ::-webkit-input-placeholder {
+    color: black; }
+  .hubspot-form :-moz-placeholder {
+    /* Firefox 18- */
+    color: black; }
+  .hubspot-form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: black; }
+  .hubspot-form :-ms-input-placeholder {
+    color: black; }
+  .hubspot-form form > div {
+    margin-top: 0.98em;
+    margin-right: auto;
+    margin-bottom: 0.98em;
+    margin-left: auto; }
+    [dir=rtl] .hubspot-form form > div {
+      margin-right: auto;
+      margin-left: auto; }
+  .hubspot-form form .hs_submit {
+    margin-top: 1.96em;
+    margin-right: auto;
+    margin-bottom: 1.96em;
+    margin-left: auto; }
+    [dir=rtl] .hubspot-form form .hs_submit {
+      margin-right: auto;
+      margin-left: auto; }
+  .hubspot-form form,
+  .hubspot-form label,
+  .hubspot-form select,
+  .hubspot-form input[type="color"], .hubspot-form input[type="date"], .hubspot-form input[type="datetime"], .hubspot-form input[type="datetime-local"], .hubspot-form input[type="email"], .hubspot-form input[type="month"], .hubspot-form input[type="number"], .hubspot-form input[type="password"], .hubspot-form input[type="search"], .hubspot-form input[type="tel"], .hubspot-form input[type="text"], .hubspot-form input[type="time"], .hubspot-form input[type="url"], .hubspot-form input[type="week"], .hubspot-form input:not([type]), .hubspot-form textarea,
+  .hubspot-form textarea {
+    display: block; }
+  .hubspot-form select,
+  .hubspot-form input[type="color"], .hubspot-form input[type="date"], .hubspot-form input[type="datetime"], .hubspot-form input[type="datetime-local"], .hubspot-form input[type="email"], .hubspot-form input[type="month"], .hubspot-form input[type="number"], .hubspot-form input[type="password"], .hubspot-form input[type="search"], .hubspot-form input[type="tel"], .hubspot-form input[type="text"], .hubspot-form input[type="time"], .hubspot-form input[type="url"], .hubspot-form input[type="week"], .hubspot-form input:not([type]), .hubspot-form textarea,
+  .hubspot-form textarea {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-style: normal; }
+  .hubspot-form input[type="color"], .hubspot-form input[type="date"], .hubspot-form input[type="datetime"], .hubspot-form input[type="datetime-local"], .hubspot-form input[type="email"], .hubspot-form input[type="month"], .hubspot-form input[type="number"], .hubspot-form input[type="password"], .hubspot-form input[type="search"], .hubspot-form input[type="tel"], .hubspot-form input[type="text"], .hubspot-form input[type="time"], .hubspot-form input[type="url"], .hubspot-form input[type="week"], .hubspot-form input:not([type]), .hubspot-form textarea,
+  .hubspot-form select {
+    padding-top: 0;
+    padding-right: 0.98em;
+    padding-bottom: 0;
+    padding-left: 0.98em;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    -webkit-transition: box-shadow 0.25s ease-in-out;
+    -moz-transition: box-shadow 0.25s ease-in-out;
+    transition: box-shadow 0.25s ease-in-out;
+    width: 100%;
+    color: black;
+    line-height: 3;
+    border: 1px solid black;
+    border-radius: 2px;
+    background-color: white; }
+    [dir=rtl] .hubspot-form input[type="color"], [dir=rtl] .hubspot-form input[type="date"], [dir=rtl] .hubspot-form input[type="datetime"], [dir=rtl] .hubspot-form input[type="datetime-local"], [dir=rtl] .hubspot-form input[type="email"], [dir=rtl] .hubspot-form input[type="month"], [dir=rtl] .hubspot-form input[type="number"], [dir=rtl] .hubspot-form input[type="password"], [dir=rtl] .hubspot-form input[type="search"], [dir=rtl] .hubspot-form input[type="tel"], [dir=rtl] .hubspot-form input[type="text"], [dir=rtl] .hubspot-form input[type="time"], [dir=rtl] .hubspot-form input[type="url"], [dir=rtl] .hubspot-form input[type="week"], [dir=rtl] .hubspot-form input:not([type]), [dir=rtl] .hubspot-form textarea, [dir=rtl]
+    .hubspot-form select {
+      padding-right: 0.98em;
+      padding-left: 0.98em; }
+    .hubspot-form input[type="color"]:focus, .hubspot-form input[type="date"]:focus, .hubspot-form input[type="datetime"]:focus, .hubspot-form input[type="datetime-local"]:focus, .hubspot-form input[type="email"]:focus, .hubspot-form input[type="month"]:focus, .hubspot-form input[type="number"]:focus, .hubspot-form input[type="password"]:focus, .hubspot-form input[type="search"]:focus, .hubspot-form input[type="tel"]:focus, .hubspot-form input[type="text"]:focus, .hubspot-form input[type="time"]:focus, .hubspot-form input[type="url"]:focus, .hubspot-form input[type="week"]:focus, .hubspot-form input:not([type]):focus, .hubspot-form textarea:focus,
+    .hubspot-form select:focus {
+      position: relative;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      outline: none;
+      z-index: 1;
+      box-shadow: 0 0 5px black; }
+      [dir=rtl] .hubspot-form input[type="color"]:focus, [dir=rtl] .hubspot-form input[type="date"]:focus, [dir=rtl] .hubspot-form input[type="datetime"]:focus, [dir=rtl] .hubspot-form input[type="datetime-local"]:focus, [dir=rtl] .hubspot-form input[type="email"]:focus, [dir=rtl] .hubspot-form input[type="month"]:focus, [dir=rtl] .hubspot-form input[type="number"]:focus, [dir=rtl] .hubspot-form input[type="password"]:focus, [dir=rtl] .hubspot-form input[type="search"]:focus, [dir=rtl] .hubspot-form input[type="tel"]:focus, [dir=rtl] .hubspot-form input[type="text"]:focus, [dir=rtl] .hubspot-form input[type="time"]:focus, [dir=rtl] .hubspot-form input[type="url"]:focus, [dir=rtl] .hubspot-form input[type="week"]:focus, [dir=rtl] .hubspot-form input:not([type]):focus, [dir=rtl] .hubspot-form textarea:focus, [dir=rtl]
+      .hubspot-form select:focus {
+        right: auto;
+        left: auto; }
+  .hubspot-form textarea {
+    padding-top: 0.833em;
+    padding-right: 0.98em;
+    padding-bottom: 0.833em;
+    padding-left: 0.98em;
+    line-height: 1.5; }
+    [dir=rtl] .hubspot-form textarea {
+      padding-right: 0.98em;
+      padding-left: 0.98em; }
+  .hubspot-form label {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0.25em;
+    padding-left: 0;
+    line-height: 1; }
+    [dir=rtl] .hubspot-form label {
+      padding-right: 0;
+      padding-left: 0; }
+    .hubspot-form label span {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 700;
+      font-style: normal;
+      color: black;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      white-space: nowrap;
+      font-size: .7em; }
+  .hubspot-form button,
+  .hubspot-form input[type="button"],
+  .hubspot-form input[type="reset"],
+  .hubspot-form input[type="submit"] {
+    padding-top: 0;
+    padding-right: 3.92em;
+    padding-bottom: 0;
+    padding-left: 3.92em;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    -webkit-transition: background-color 0.25s ease-in-out;
+    -moz-transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
+    color: white;
+    line-height: 4.44444;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: .9em;
+    border: none;
+    border-radius: 2px;
+    background-color: black; }
+    [dir=rtl] .hubspot-form button, [dir=rtl]
+    .hubspot-form input[type="button"], [dir=rtl]
+    .hubspot-form input[type="reset"], [dir=rtl]
+    .hubspot-form input[type="submit"] {
+      padding-right: 3.92em;
+      padding-left: 3.92em; }
+    html:not(.touch) .hubspot-form button:hover, html:not(.touch)
+    .hubspot-form input[type="button"]:hover, html:not(.touch)
+    .hubspot-form input[type="reset"]:hover, html:not(.touch)
+    .hubspot-form input[type="submit"]:hover {
+      background-color: #292929; }
+  .hubspot-form .hs-error-msgs {
+    list-style: none; }
+    .hubspot-form .hs-error-msgs li {
+      margin-top: 0.98em;
+      margin-right: auto;
+      margin-bottom: 0.98em;
+      margin-left: auto;
+      padding-top: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
+      display: block;
+      background-color: yellow; }
+      [dir=rtl] .hubspot-form .hs-error-msgs li {
+        margin-right: auto;
+        margin-left: auto; }
+      [dir=rtl] .hubspot-form .hs-error-msgs li {
+        padding-right: 0;
+        padding-left: 0; }
+      .hubspot-form .hs-error-msgs li:before {
+        position: absolute;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: 0.98em;
+        width: 0;
+        height: 0;
+        content: "";
+        border-top: none;
+        border-right: 0.5em solid transparent;
+        border-bottom: 0.5em solid yellow;
+        border-left: 0.5em solid transparent;
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+        content: ""; }
+        [dir=rtl] .hubspot-form .hs-error-msgs li:before {
+          right: 0.98em;
+          left: auto; }
+      .hubspot-form .hs-error-msgs li label {
+        padding-top: 0.98em;
+        padding-right: 0.98em;
+        padding-bottom: 0.784em;
+        padding-left: 0.98em;
+        display: block;
+        line-height: inherit;
+        font-size: .9em; }
+        [dir=rtl] .hubspot-form .hs-error-msgs li label {
+          padding-right: 0.98em;
+          padding-left: 0.98em; }
+
+form.form {
   margin-top: 0.98em;
   margin-right: auto;
   margin-bottom: 0.98em;
   margin-left: auto;
   display: block; }
-  [dir=rtl] form {
+  [dir=rtl] form.form {
     margin-right: auto;
     margin-left: auto; }
-  form ::-webkit-input-placeholder {
+  form.form ::-webkit-input-placeholder {
     color: black; }
-  form :-moz-placeholder {
+  form.form :-moz-placeholder {
     /* Firefox 18- */
     color: black; }
-  form ::-moz-placeholder {
+  form.form ::-moz-placeholder {
     /* Firefox 19+ */
     color: black; }
-  form :-ms-input-placeholder {
+  form.form :-ms-input-placeholder {
     color: black; }
-  form fieldset,
-  form legend,
-  form label,
-  form select,
-  form input[type="color"], form input[type="date"], form input[type="datetime"], form input[type="datetime-local"], form input[type="email"], form input[type="month"], form input[type="number"], form input[type="password"], form input[type="search"], form input[type="tel"], form input[type="text"], form input[type="time"], form input[type="url"], form input[type="week"], form input:not([type]), form textarea,
-  form textarea {
+  form.form fieldset,
+  form.form legend,
+  form.form label,
+  form.form select,
+  form.form input[type="color"], form.form input[type="date"], form.form input[type="datetime"], form.form input[type="datetime-local"], form.form input[type="email"], form.form input[type="month"], form.form input[type="number"], form.form input[type="password"], form.form input[type="search"], form.form input[type="tel"], form.form input[type="text"], form.form input[type="time"], form.form input[type="url"], form.form input[type="week"], form.form input:not([type]), form.form textarea,
+  form.form textarea {
     display: block; }
-  form fieldset,
-  form label,
-  form select,
-  form input,
-  form textarea {
+  form.form fieldset,
+  form.form label,
+  form.form select,
+  form.form input,
+  form.form textarea {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-style: normal; }
-  form label {
+  form.form label {
     cursor: pointer; }
-    form label + label {
+    form.form label + label {
       margin-top: -1px; }
-    form label > p {
+    form.form label > p {
       position: absolute;
       width: 1px;
       height: 1px;
@@ -1515,51 +1712,51 @@ form {
       padding: 0;
       border: 0;
       clip: rect(0 0 0 0); }
-      form label > p.focusable:active, form label > p.focusable:focus {
+      form.form label > p.focusable:active, form.form label > p.focusable:focus {
         clip: auto;
         height: auto;
         margin: 0;
         overflow: visible;
         position: static;
         width: auto; }
-    form label > div {
+    form.form label > div {
       position: relative;
       top: auto;
       right: auto;
       bottom: auto;
       left: auto; }
-      [dir=rtl] form label > div {
+      [dir=rtl] form.form label > div {
         right: auto;
         left: auto; }
-    form label > input[type="color"], form label input[type="date"], form label input[type="datetime"], form label input[type="datetime-local"], form label input[type="email"], form label input[type="month"], form label input[type="number"], form label input[type="password"], form label input[type="search"], form label input[type="tel"], form label input[type="text"], form label input[type="time"], form label input[type="url"], form label input[type="week"], form label input:not([type]), form label textarea,
-    form label > div {
+    form.form label > input[type="color"], form.form label input[type="date"], form.form label input[type="datetime"], form.form label input[type="datetime-local"], form.form label input[type="email"], form.form label input[type="month"], form.form label input[type="number"], form.form label input[type="password"], form.form label input[type="search"], form.form label input[type="tel"], form.form label input[type="text"], form.form label input[type="time"], form.form label input[type="url"], form.form label input[type="week"], form.form label input:not([type]), form.form label textarea,
+    form.form label > div {
       width: 100%;
       color: black;
       border: 1px solid black;
       background-color: white; }
-    form label > input[type="color"], form label input[type="date"], form label input[type="datetime"], form label input[type="datetime-local"], form label input[type="email"], form label input[type="month"], form label input[type="number"], form label input[type="password"], form label input[type="search"], form label input[type="tel"], form label input[type="text"], form label input[type="time"], form label input[type="url"], form label input[type="week"], form label input:not([type]), form label textarea,
-    form label select {
+    form.form label > input[type="color"], form.form label input[type="date"], form.form label input[type="datetime"], form.form label input[type="datetime-local"], form.form label input[type="email"], form.form label input[type="month"], form.form label input[type="number"], form.form label input[type="password"], form.form label input[type="search"], form.form label input[type="tel"], form.form label input[type="text"], form.form label input[type="time"], form.form label input[type="url"], form.form label input[type="week"], form.form label input:not([type]), form.form label textarea,
+    form.form label select {
       padding-top: 0;
       padding-right: 0.98em;
       padding-bottom: 0;
       padding-left: 0.98em;
       line-height: 3; }
-      [dir=rtl] form label > input[type="color"], [dir=rtl] form label input[type="date"], [dir=rtl] form label input[type="datetime"], [dir=rtl] form label input[type="datetime-local"], [dir=rtl] form label input[type="email"], [dir=rtl] form label input[type="month"], [dir=rtl] form label input[type="number"], [dir=rtl] form label input[type="password"], [dir=rtl] form label input[type="search"], [dir=rtl] form label input[type="tel"], [dir=rtl] form label input[type="text"], [dir=rtl] form label input[type="time"], [dir=rtl] form label input[type="url"], [dir=rtl] form label input[type="week"], [dir=rtl] form label input:not([type]), [dir=rtl] form label textarea, [dir=rtl]
-      form label select {
+      [dir=rtl] form.form label > input[type="color"], [dir=rtl] form.form label input[type="date"], [dir=rtl] form.form label input[type="datetime"], [dir=rtl] form.form label input[type="datetime-local"], [dir=rtl] form.form label input[type="email"], [dir=rtl] form.form label input[type="month"], [dir=rtl] form.form label input[type="number"], [dir=rtl] form.form label input[type="password"], [dir=rtl] form.form label input[type="search"], [dir=rtl] form.form label input[type="tel"], [dir=rtl] form.form label input[type="text"], [dir=rtl] form.form label input[type="time"], [dir=rtl] form.form label input[type="url"], [dir=rtl] form.form label input[type="week"], [dir=rtl] form.form label input:not([type]), [dir=rtl] form.form label textarea, [dir=rtl]
+      form.form label select {
         padding-right: 0.98em;
         padding-left: 0.98em; }
-    form label > textarea,
-    form label > div {
+    form.form label > textarea,
+    form.form label > div {
       padding-top: 0.833em;
       padding-right: 0.98em;
       padding-bottom: 0.833em;
       padding-left: 0.98em;
       line-height: 1.5; }
-      [dir=rtl] form label > textarea, [dir=rtl]
-      form label > div {
+      [dir=rtl] form.form label > textarea, [dir=rtl]
+      form.form label > div {
         padding-right: 0.98em;
         padding-left: 0.98em; }
-    form label[for^="radio-"] > div, form label[for^="checkbox-"] > div {
+    form.form label[for^="radio-"] > div, form.form label[for^="checkbox-"] > div {
       padding-top: 0.833em;
       padding-right: 0.98em;
       padding-bottom: 0.833em;
@@ -1567,10 +1764,10 @@ form {
       -webkit-transition: box-shadow 0.25s ease-in-out;
       -moz-transition: box-shadow 0.25s ease-in-out;
       transition: box-shadow 0.25s ease-in-out; }
-      [dir=rtl] form label[for^="radio-"] > div, [dir=rtl] form label[for^="checkbox-"] > div {
+      [dir=rtl] form.form label[for^="radio-"] > div, [dir=rtl] form.form label[for^="checkbox-"] > div {
         padding-right: 2.352em;
         padding-left: 0.98em; }
-      form label[for^="radio-"] > div:before, form label[for^="radio-"] > div:after, form label[for^="checkbox-"] > div:before, form label[for^="checkbox-"] > div:after {
+      form.form label[for^="radio-"] > div:before, form.form label[for^="radio-"] > div:after, form.form label[for^="checkbox-"] > div:before, form.form label[for^="checkbox-"] > div:after {
         position: absolute;
         top: 1.029em;
         right: auto;
@@ -1578,20 +1775,20 @@ form {
         left: 0.98em;
         display: block;
         content: ""; }
-        [dir=rtl] form label[for^="radio-"] > div:before, [dir=rtl] form label[for^="radio-"] > div:after, [dir=rtl] form label[for^="checkbox-"] > div:before, [dir=rtl] form label[for^="checkbox-"] > div:after {
+        [dir=rtl] form.form label[for^="radio-"] > div:before, [dir=rtl] form.form label[for^="radio-"] > div:after, [dir=rtl] form.form label[for^="checkbox-"] > div:before, [dir=rtl] form.form label[for^="checkbox-"] > div:after {
           right: 0.98em;
           left: auto; }
-      form label[for^="radio-"] > div:before, form label[for^="checkbox-"] > div:before {
+      form.form label[for^="radio-"] > div:before, form.form label[for^="checkbox-"] > div:before {
         width: 1em;
         height: 1em;
         border: 1px solid black; }
-      form label[for^="radio-"] > div:after, form label[for^="checkbox-"] > div:after {
+      form.form label[for^="radio-"] > div:after, form.form label[for^="checkbox-"] > div:after {
         -webkit-transition: border 0.25s ease-in-out;
         -moz-transition: border 0.25s ease-in-out;
         transition: border 0.25s ease-in-out;
         width: 0;
         height: 0; }
-    form label[for^="radio-"] input, form label[for^="checkbox-"] input {
+    form.form label[for^="radio-"] input, form.form label[for^="checkbox-"] input {
       position: absolute;
       width: 1px;
       height: 1px;
@@ -1600,14 +1797,14 @@ form {
       padding: 0;
       border: 0;
       clip: rect(0 0 0 0); }
-      form label[for^="radio-"] input.focusable:active, form label[for^="radio-"] input.focusable:focus, form label[for^="checkbox-"] input.focusable:active, form label[for^="checkbox-"] input.focusable:focus {
+      form.form label[for^="radio-"] input.focusable:active, form.form label[for^="radio-"] input.focusable:focus, form.form label[for^="checkbox-"] input.focusable:active, form.form label[for^="checkbox-"] input.focusable:focus {
         clip: auto;
         height: auto;
         margin: 0;
         overflow: visible;
         position: static;
         width: auto; }
-      form label[for^="radio-"] input:focus + div, form label[for^="checkbox-"] input:focus + div {
+      form.form label[for^="radio-"] input:focus + div, form.form label[for^="checkbox-"] input:focus + div {
         position: relative;
         top: auto;
         right: auto;
@@ -1615,24 +1812,24 @@ form {
         left: auto;
         z-index: 1;
         box-shadow: 0 0 5px black; }
-        [dir=rtl] form label[for^="radio-"] input:focus + div, [dir=rtl] form label[for^="checkbox-"] input:focus + div {
+        [dir=rtl] form.form label[for^="radio-"] input:focus + div, [dir=rtl] form.form label[for^="checkbox-"] input:focus + div {
           right: auto;
           left: auto; }
-      form label[for^="radio-"] input:checked + div, form label[for^="checkbox-"] input:checked + div {
+      form.form label[for^="radio-"] input:checked + div, form.form label[for^="checkbox-"] input:checked + div {
         font-family: "Source Sans Pro", sans-serif;
         font-weight: 700;
         font-style: normal; }
-        form label[for^="radio-"] input:checked + div:after, form label[for^="checkbox-"] input:checked + div:after {
+        form.form label[for^="radio-"] input:checked + div:after, form.form label[for^="checkbox-"] input:checked + div:after {
           width: 1em;
           height: 1em;
           border: 0.25em solid white;
           background-color: black;
           box-shadow: 0 0 1px black; }
-    form label[for^="radio-"] > div:before, form label[for^="radio-"] > div:after {
+    form.form label[for^="radio-"] > div:before, form.form label[for^="radio-"] > div:after {
       border-radius: 100%; }
-    form label[for^="select-"] > div {
+    form.form label[for^="select-"] > div {
       height: 3em; }
-      form label[for^="select-"] > div select {
+      form.form label[for^="select-"] > div select {
         position: absolute;
         top: -1px;
         right: -1px;
@@ -1650,12 +1847,12 @@ form {
         border: none;
         border-radius: 0;
         background-color: transparent; }
-        [dir=rtl] form label[for^="select-"] > div select {
+        [dir=rtl] form.form label[for^="select-"] > div select {
           right: -1px;
           left: -1px; }
-        form label[for^="select-"] > div select::-ms-expand {
+        form.form label[for^="select-"] > div select::-ms-expand {
           display: none; }
-      form label[for^="select-"] > div:after {
+      form.form label[for^="select-"] > div:after {
         position: absolute;
         top: auto;
         right: 0.98em;
@@ -1676,10 +1873,10 @@ form {
         -o-transform: translateY(-50%);
         transform: translateY(-50%);
         pointer-events: none; }
-        [dir=rtl] form label[for^="select-"] > div:after {
+        [dir=rtl] form.form label[for^="select-"] > div:after {
           right: auto;
           left: 0.98em; }
-  form button {
+  form.form button {
     padding-top: 0;
     padding-right: 1.96em;
     padding-bottom: 0;
@@ -1689,18 +1886,18 @@ form {
     white-space: nowrap;
     border: none;
     background-color: black; }
-    [dir=rtl] form button {
+    [dir=rtl] form.form button {
       padding-right: 1.96em;
       padding-left: 1.96em; }
-  form input[type="color"], form input[type="date"], form input[type="datetime"], form input[type="datetime-local"], form input[type="email"], form input[type="month"], form input[type="number"], form input[type="password"], form input[type="search"], form input[type="tel"], form input[type="text"], form input[type="time"], form input[type="url"], form input[type="week"], form input:not([type]), form textarea,
-  form select,
-  form button {
+  form.form input[type="color"], form.form input[type="date"], form.form input[type="datetime"], form.form input[type="datetime-local"], form.form input[type="email"], form.form input[type="month"], form.form input[type="number"], form.form input[type="password"], form.form input[type="search"], form.form input[type="tel"], form.form input[type="text"], form.form input[type="time"], form.form input[type="url"], form.form input[type="week"], form.form input:not([type]), form.form textarea,
+  form.form select,
+  form.form button {
     -webkit-transition: box-shadow 0.25s ease-in-out;
     -moz-transition: box-shadow 0.25s ease-in-out;
     transition: box-shadow 0.25s ease-in-out; }
-    form input[type="color"]:focus, form input[type="date"]:focus, form input[type="datetime"]:focus, form input[type="datetime-local"]:focus, form input[type="email"]:focus, form input[type="month"]:focus, form input[type="number"]:focus, form input[type="password"]:focus, form input[type="search"]:focus, form input[type="tel"]:focus, form input[type="text"]:focus, form input[type="time"]:focus, form input[type="url"]:focus, form input[type="week"]:focus, form input:not([type]):focus, form textarea:focus,
-    form select:focus,
-    form button:focus {
+    form.form input[type="color"]:focus, form.form input[type="date"]:focus, form.form input[type="datetime"]:focus, form.form input[type="datetime-local"]:focus, form.form input[type="email"]:focus, form.form input[type="month"]:focus, form.form input[type="number"]:focus, form.form input[type="password"]:focus, form.form input[type="search"]:focus, form.form input[type="tel"]:focus, form.form input[type="text"]:focus, form.form input[type="time"]:focus, form.form input[type="url"]:focus, form.form input[type="week"]:focus, form.form input:not([type]):focus, form.form textarea:focus,
+    form.form select:focus,
+    form.form button:focus {
       position: relative;
       top: auto;
       right: auto;
@@ -1709,25 +1906,25 @@ form {
       outline: none;
       z-index: 1;
       box-shadow: 0 0 5px black; }
-      [dir=rtl] form input[type="color"]:focus, [dir=rtl] form input[type="date"]:focus, [dir=rtl] form input[type="datetime"]:focus, [dir=rtl] form input[type="datetime-local"]:focus, [dir=rtl] form input[type="email"]:focus, [dir=rtl] form input[type="month"]:focus, [dir=rtl] form input[type="number"]:focus, [dir=rtl] form input[type="password"]:focus, [dir=rtl] form input[type="search"]:focus, [dir=rtl] form input[type="tel"]:focus, [dir=rtl] form input[type="text"]:focus, [dir=rtl] form input[type="time"]:focus, [dir=rtl] form input[type="url"]:focus, [dir=rtl] form input[type="week"]:focus, [dir=rtl] form input:not([type]):focus, [dir=rtl] form textarea:focus, [dir=rtl]
-      form select:focus, [dir=rtl]
-      form button:focus {
+      [dir=rtl] form.form input[type="color"]:focus, [dir=rtl] form.form input[type="date"]:focus, [dir=rtl] form.form input[type="datetime"]:focus, [dir=rtl] form.form input[type="datetime-local"]:focus, [dir=rtl] form.form input[type="email"]:focus, [dir=rtl] form.form input[type="month"]:focus, [dir=rtl] form.form input[type="number"]:focus, [dir=rtl] form.form input[type="password"]:focus, [dir=rtl] form.form input[type="search"]:focus, [dir=rtl] form.form input[type="tel"]:focus, [dir=rtl] form.form input[type="text"]:focus, [dir=rtl] form.form input[type="time"]:focus, [dir=rtl] form.form input[type="url"]:focus, [dir=rtl] form.form input[type="week"]:focus, [dir=rtl] form.form input:not([type]):focus, [dir=rtl] form.form textarea:focus, [dir=rtl]
+      form.form select:focus, [dir=rtl]
+      form.form button:focus {
         right: auto;
         left: auto; }
-  form legend {
+  form.form legend {
     width: 100%; }
-    form legend + label {
+    form.form legend + label {
       margin-top: 0; }
-  form fieldset > *:last-child {
+  form.form fieldset > *:last-child {
     margin-bottom: 0.98em; }
-  form > div:last-of-type {
+  form.form > div:last-of-type {
     margin-bottom: 0.98em; }
-  form > footer {
+  form.form > footer {
     margin-top: 0.98em;
     margin-right: auto;
     margin-bottom: 0.98em;
     margin-left: auto; }
-    [dir=rtl] form > footer {
+    [dir=rtl] form.form > footer {
       margin-right: auto;
       margin-left: auto; }
 
@@ -1825,9 +2022,9 @@ abbr:before {
 
 .button {
   padding-top: 0;
-  padding-right: 1.96em;
+  padding-right: 3.92em;
   padding-bottom: 0;
-  padding-left: 1.96em;
+  padding-left: 3.92em;
   -webkit-transition: background-color 0.25s ease-in-out;
   -moz-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
@@ -1836,8 +2033,8 @@ abbr:before {
   white-space: nowrap;
   border-radius: 2px; }
   [dir=rtl] .button {
-    padding-right: 1.96em;
-    padding-left: 1.96em; }
+    padding-right: 3.92em;
+    padding-left: 3.92em; }
   .button span {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 700;
@@ -1967,8 +2164,16 @@ abbr:before {
       margin-right: 0;
       margin-left: 0; }
   .home-hero h2 {
-    line-height: 1;
-    font-size: 4.5vw; }
+    line-height: 1; }
+    @media only screen and (max-width: 768px) {
+      .home-hero h2 {
+        font-size: 4.5vw; } }
+    @media only screen and (min-width: 769px) and (max-width: 1440px) {
+      .home-hero h2 {
+        font-size: 4.5vw; } }
+    @media only screen and (min-width: 1441px) {
+      .home-hero h2 {
+        font-size: 3.6em; } }
   .home-hero h3 {
     margin-top: 0.98em;
     margin-right: 0;
@@ -1977,11 +2182,19 @@ abbr:before {
     font-family: "Source Sans Pro", sans-serif;
     font-weight: 300;
     font-style: normal;
-    letter-spacing: 0;
-    font-size: 2vw; }
+    letter-spacing: 0; }
     [dir=rtl] .home-hero h3 {
       margin-right: 0;
       margin-left: 0; }
+    @media only screen and (max-width: 768px) {
+      .home-hero h3 {
+        font-size: 2vw; } }
+    @media only screen and (min-width: 769px) and (max-width: 1440px) {
+      .home-hero h3 {
+        font-size: 2vw; } }
+    @media only screen and (min-width: 1441px) {
+      .home-hero h3 {
+        font-size: 1.6em; } }
 
 .home-hero-headlines {
   -webkit-box-flex: 0;
@@ -2019,7 +2232,7 @@ abbr:before {
   .home-spotlight h3 {
     color: #af272f;
     text-transform: uppercase;
-    letter-spacing: .1em;
+    letter-spacing: .2em;
     font-size: 1em; }
   .home-spotlight figure {
     margin-top: 0.98em;
@@ -2042,9 +2255,18 @@ abbr:before {
   background-color: black; }
   .home-big-intro h2,
   .home-big-intro p {
-    max-width: 86ch; }
+    max-width: 88ch; }
   .home-big-intro h2 {
     color: white; }
+    @media only screen and (max-width: 768px) {
+      .home-big-intro h2 {
+        font-size: 4.5vw; } }
+    @media only screen and (min-width: 769px) and (max-width: 1440px) {
+      .home-big-intro h2 {
+        font-size: 4.5vw; } }
+    @media only screen and (min-width: 1441px) {
+      .home-big-intro h2 {
+        font-size: 3.6em; } }
 
 #page-category-is-article > main a:visited {
   color: black; }
@@ -2091,12 +2313,12 @@ abbr:before {
 #page-category-is-article > main h3 + p,
 #page-category-is-article > main h3 + *:not(p) + p,
 #page-category-is-article > main h4 + p,
-#page-category-is-article > main form legend + p,
-form #page-category-is-article > main legend + p,
+#page-category-is-article > main form.form legend + p,
+form.form #page-category-is-article > main legend + p,
 #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + * + p,
 #page-category-is-article > main h4 + *:not(p) + p,
-#page-category-is-article > main form legend + *:not(p) + p,
-form #page-category-is-article > main legend + *:not(p) + p,
+#page-category-is-article > main form.form legend + *:not(p) + p,
+form.form #page-category-is-article > main legend + *:not(p) + p,
 #page-category-is-article > main article > header:first-of-type > hgroup *:first-child + * + *:not(p) + p,
 #page-category-is-article > main h5 + p,
 #page-category-is-article > main h5 + *:not(p) + p,

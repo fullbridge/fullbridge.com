@@ -34,7 +34,21 @@
   h2
   {
     line-height: 1;
-    font-size: 4.5vw;
+
+    @include bp(small)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 3.6em;
+    }
   }
 
   h3
@@ -43,7 +57,21 @@
     @include font(body,regular);
 
     letter-spacing: 0;
-    font-size: 2vw;
+
+    @include bp(small)
+    {
+      font-size: 2vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 2vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 1.6em;
+    }
   }
 }
 
@@ -78,7 +106,7 @@
     {
       color: $primary-color;
       text-transform: uppercase;
-      letter-spacing: .1em;
+      letter-spacing: .2em;
       font-size: 1em;
     }
 
@@ -111,11 +139,30 @@
   h2,
   p
   {
-    max-width: 86ch;
+    max-width: 88ch;
   }
 
   h2
   {
+    @include bp(small)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 3.6em;
+    }
+
     color: $background-color;
+  }
+
+  p
+  {
   }
 }
