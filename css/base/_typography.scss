@@ -257,7 +257,7 @@ dl
   }
 }
 
-hr
+hr.divider
 {
   @include position(relative,auto,auto,auto,auto);
   @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
