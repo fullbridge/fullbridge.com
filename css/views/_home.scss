@@ -1,0 +1,168 @@
+.home-hero,
+.home-spotlights,
+.home-big-intro
+{
+  @include margin(0,auto,0,auto);
+
+  max-width: $medium-screen;
+
+  @include bp(small)
+  {
+    @include padding(($paragraph-spacing*4 + em),($gutter/2),($paragraph-spacing*4 + em),($gutter/2));
+  }
+
+  @include bp(desktop)
+  {
+    @include padding(($paragraph-spacing*4 + em),($gutter*2),($paragraph-spacing*4 + em),($gutter*2));
+  }
+}
+
+.home-hero
+{
+  @include display(flex);
+  @include align-items(center);
+  @include justify-content(space-between);
+
+  max-height: calc(100vh - #{5em*.7 + 3em});
+
+  h2,
+  h3
+  {
+    @include margin(0,0,0,0);
+  }
+
+  h2
+  {
+    line-height: 1;
+
+    @include bp(small)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 3.6em;
+    }
+  }
+
+  h3
+  {
+    @include margin(($paragraph-spacing + em),0,($paragraph-spacing + em),0);
+    @include font(body,regular);
+
+    letter-spacing: 0;
+
+    @include bp(small)
+    {
+      font-size: 2vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 2vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 1.6em;
+    }
+  }
+}
+
+  .home-hero-headlines
+  {
+    @include flex(0 0 40%);
+  }
+
+  .home-hero-image
+  {
+    @include flex(0 0 55%);
+
+    img
+    {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+.home-spotlights
+{
+  @include text-align(center);
+
+  padding-top: 0;
+}
+
+  .home-spotlight
+  {
+    @include padding(0,($gutter/2),0,($gutter/2));
+
+    h3
+    {
+      color: $primary-color;
+      text-transform: uppercase;
+      letter-spacing: .2em;
+      font-size: 1em;
+    }
+
+    figure
+    {
+      @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+
+      max-width: 12ch;
+    }
+
+    img
+    {
+      width: 100%;
+      height: auto;
+    }
+
+    p
+    {
+      max-width: 40ch;
+    }
+  }
+
+.home-big-intro
+{
+  @include text-align(center);
+
+  color: $background-color;
+  background-color: $heading-color;
+
+  h2,
+  p
+  {
+    max-width: 88ch;
+  }
+
+  h2
+  {
+    @include bp(small)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 3.6em;
+    }
+
+    color: $background-color;
+  }
+
+  p
+  {
+  }
+}

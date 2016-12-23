@@ -1,0 +1,51 @@
+$black: black;
+$white: white;
+$yellow: yellow;
+$blue: mediumblue;
+$purple: indigo;
+
+$branding-red: #af272f;
+$branding-blue: #13a8e1;
+
+$primary-color: $branding-red;
+$secondary-color: $branding-blue;
+
+$gray-lightest: #f4f4f4;
+$gray-lighter: darken($gray-lightest,5%);
+$gray-light: darken($gray-lightest,10%);
+$gray-regular: darken($gray-lightest,35%);
+$gray-dark: darken($gray-lightest,60%);
+$gray-darker: darken($gray-lightest,70%);
+$gray-darkest: darken($gray-lightest,80%);
+
+$body-text-color: $black;
+$heading-color: $body-text-color;
+$link-color: $branding-blue;
+$link-visited-color: $branding-blue;
+$placeholder-text-color: $body-text-color;
+$background-color: $white;
+$highlight-background-color: $yellow;
+$border: 1px solid $body-text-color;
+$border-radius: 2px;
+
+$body-font: 'Source Sans Pro', sans-serif;
+$heading-font: 'Roboto Condensed', 'Lucida Sans', sans-serif;
+$monospace-font: 'Lucida Sans Typewriter', 'Courier New', monospace;
+$base-font-size: 15;
+$body-font-size: 1;
+$small-font-size: .9;
+$tooltip-font-size: .6;
+$large-font-size: 1.16;
+$leading: 1.5;
+$paragraph-spacing: .98;
+$golden-characters: 70;
+
+$gutter: 1.96em; // .98 x 2
+$golden-side-width: 21.6447;
+$golden-main-width: (100 - ($golden-side-width*2));
+$small-screen: 768px;
+$medium-screen: 1440px;
+
+$timing: .25s;
+$modal-z: 99999;
+$menubar-z: ($modal-z - 1);

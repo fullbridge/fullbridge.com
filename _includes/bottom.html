@@ -1,0 +1,25 @@
+        <!-- Extra shit I might need
+          <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+          <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+          <script src="js/plugins.js"></script>
+          <script src="js/main.js"></script>
+        -->
+    </body>
+    <!-- Lazy loading web fonts -->
+    <script>
+      document.body.onload = function() {
+        var xhr = new XMLHttpRequest();
+        var url = '{{ site.sans-stack }}';
+
+        xhr.open('GET', url, true);
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState == 4 && xhr.status == 200) {
+            var style = document.createElement('style');
+            style.innerHTML = xhr.responseText;
+            document.head.appendChild(style);
+          }
+        };
+        xhr.send();
+      }
+    </script>
+</html>

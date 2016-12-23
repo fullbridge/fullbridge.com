@@ -1,0 +1,70 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+*,
+*:before,
+*:after
+{
+  @include border-box;
+}
+
+body
+{
+  background-color: $background-color;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection
+{
+  text-shadow: none;
+  background: $highlight-background-color;
+}
+
+::selection
+{
+  text-shadow: none;
+  background: $highlight-background-color;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+{
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset
+{
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea
+{
+  resize: vertical;
+}

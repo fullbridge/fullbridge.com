@@ -1,0 +1,128 @@
+thead,
+tfoot
+{
+  color: $background-color;
+  background-color: $heading-color;
+  white-space: nowrap;
+}
+
+thead,
+tfoot,
+td:before
+{
+  @include font(heading,bold);
+
+  letter-spacing: .1em;
+}
+
+@include bp(small)
+{
+  table
+  {
+    width: 100%;
+  }
+
+  thead,
+  tfoot
+  {
+    @include visuallyhidden;
+  }
+
+  tr
+  {
+    display: block;
+    border-bottom: 2px solid $body-text-color;
+
+    & + tr
+    {
+      @include margin(($paragraph-spacing + em),auto,auto,auto);
+    }
+  }
+
+  td
+  {
+    @include padding(0,0,0,($gutter/4));
+    @include text-align(right);
+
+    display: block;
+    border-bottom: 1px dotted $body-text-color;
+
+    &:before
+    {
+      @include float(left);
+      @include margin(0,0,0,(-$gutter/4));
+      @include text-align(left);
+
+      content: attr(data-thead);
+    }
+
+    &:last-child
+    {
+      border-bottom: 0;
+    }
+  }
+}
+
+@include bp(desktop)
+{
+  table
+  {
+    // scrolling shadows
+    @include background(
+      radial-gradient(left, ellipse, rgba($body-text-color, .2) 0%, rgba($body-text-color, 0) 75%) 0 center,
+      radial-gradient(right, ellipse, rgba($body-text-color, .2) 0%, rgba($body-text-color, 0) 75%) 100% center);
+
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-size: .5em 100%, .5em 100%;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  td
+  {
+    // change these gradients from white to your background colour if it differs
+    // gradient on the first cells to hide the left shadow
+    &:first-child
+    {
+      @include background-image(linear-gradient(to right, rgba($background-color, 1) 50%, rgba($background-color, 0) 100%));
+
+      background-repeat: no-repeat;
+      background-size: 1em 100%;
+    }
+
+    // gradient on the last cells to hide the right shadow
+    &:last-child
+    {
+      @include background-image(linear-gradient(to left, rgba($background-color, 1) 50%, rgba($background-color, 0) 100%));
+
+      background-repeat: no-repeat;
+      background-position: 100% 0;
+      background-size: 1em 100%;
+    }
+  }
+
+  th,
+  td
+  {
+    @include text-align(left);
+
+    border: $border;
+  }
+
+  td
+  {
+    @include padding(($paragraph-spacing/4 + em),($gutter/4),($paragraph-spacing/4 + em),($gutter/4));
+  }
+
+  th,
+  tfoot td
+  {
+    @include padding(($paragraph-spacing/4 + em),($gutter/4/$small-font-size),($paragraph-spacing/4 + em),($gutter/4/$small-font-size));
+  }
+}
