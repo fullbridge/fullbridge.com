@@ -6,30 +6,37 @@
 
   max-width: $medium-screen;
 
-  @include bp(small)
+  @include bp($max: 416px)
   {
-    @include padding(($paragraph-spacing*4 + em),($gutter/2),($paragraph-spacing*4 + em),($gutter/2));
+    @include padding(($paragraph-spacing*2 + em),$gutter,($paragraph-spacing*2 + em),$gutter);
   }
 
-  @include bp(desktop)
+  @include bp($min: 416px, $max: 850px)
   {
     @include padding(($paragraph-spacing*4 + em),($gutter*2),($paragraph-spacing*4 + em),($gutter*2));
+  }
+
+  @include bp($min: 850px)
+  {
+    @include padding(($paragraph-spacing*4 + em),($gutter*4),($paragraph-spacing*4 + em),($gutter*4));
   }
 }
 
 .home-hero
 {
-  @include display(flex);
-  @include align-items(center);
-  @include justify-content(space-between);
-
-  min-height: 30em;
-  max-height: calc(100vh - #{5em*.7 + 3em});
-
-  h2,
-  h3
+  @include bp(small)
   {
-    @include margin(0,0,0,0);
+    @include position(relative,auto,auto,auto,auto);
+  }
+
+  @include bp(desktop)
+  {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(space-between);
+
+    min-height: 30em;
+    max-height: calc(100vh - #{5em*.7 + 3em});
   }
 
   h2
@@ -38,7 +45,7 @@
 
     @include bp(small)
     {
-      font-size: 4.5vw;
+      font-size: 10vw;
     }
 
     @include bp(medium)
@@ -61,7 +68,7 @@
 
     @include bp(small)
     {
-      font-size: 2vw;
+      font-size: 4vw;
     }
 
     @include bp(medium)
@@ -78,12 +85,32 @@
 
   .home-hero-headlines
   {
-    @include flex(0 0 43%);
+    @include bp(small)
+    {
+      @include text-align(center);
+    }
+
+    @include bp(desktop)
+    {
+      @include flex(0 0 43%);
+    }
   }
 
   .home-hero-image
   {
-    @include flex(0 0 52%);
+    @include bp(small)
+    {
+      @include position(absolute,-20%,auto,auto,0);
+      @include opacity(.1);
+
+      width: 100%;
+      z-index: -1;
+    }
+
+    @include bp(desktop)
+    {
+      @include flex(0 0 52%);
+    }
 
     img
     {
@@ -102,6 +129,13 @@
   .home-spotlight
   {
     @include padding(0,($gutter/2),0,($gutter/2));
+
+    display: block;
+
+    @include bp(small)
+    {
+      @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
+    }
 
     h3
     {
@@ -124,7 +158,8 @@
       height: auto;
     }
 
-    p
+    p,
+    hr
     {
       max-width: 40ch;
       color: $body-text-color;
@@ -169,9 +204,11 @@
 
   h2
   {
+    color: $background-color;
+
     @include bp(small)
     {
-      font-size: 4.5vw;
+      font-size: 10vw;
     }
 
     @include bp(medium)
@@ -183,11 +220,5 @@
     {
       font-size: 3.6em;
     }
-
-    color: $background-color;
-  }
-
-  p
-  {
   }
 }

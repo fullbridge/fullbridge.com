@@ -8,7 +8,7 @@
   max-width: $medium-screen;
   list-style: none;
 
-  @include bp($max: 728px)
+  @include bp($max: 726px)
   {
     @include padding(0,0,0,0);
   }
@@ -21,6 +21,11 @@
   line-height: 5;
   font-size: .7em;
 
+  @include bp($max: 726px)
+  {
+    line-height: 4;
+  }
+
   a,
   img
   {
@@ -31,6 +36,11 @@
   {
     width: auto;
     height: 5em;
+
+    @include bp($max: 726px)
+    {
+      height: 4em;
+    }
   }
 
   span
@@ -65,11 +75,11 @@
     cursor: pointer;
     font-size: .7em;
 
-    @include bp($max: 728px)
+    @include bp($max: 726px)
     {
       @include padding(0,($gutter/2),0,($gutter/2));
 
-      line-height: 5*.7;
+      line-height: 4*.7;
       font-size: 1em;
     }
 
@@ -78,6 +88,7 @@
       @include transition(opacity $timing ease-in-out);
 
       position: absolute;
+      z-index: $modal-z - 1;
 
       &:not([class])
       {
@@ -115,7 +126,7 @@
   &.is-dropdown,
   &.is-cta
   {
-    @include bp($max: 728px)
+    @include bp($max: 726px)
     {
       @include visuallyhidden;
     }
@@ -153,7 +164,7 @@
       {
         content: "More";
 
-        @include bp($max: 728px)
+        @include bp($max: 726px)
         {
           content: "Menu";
         }
@@ -276,7 +287,7 @@
   max-width: $medium-screen;
   list-style: none;
 
-  @include bp($max: 728px)
+  @include bp($max: 726px)
   {
     @include justify-content(space-around);
   }
@@ -322,14 +333,14 @@
         @include text-align(center);
       }
 
-      @include bp($min: 336px, $max: 728px)
+      @include bp($min: 336px, $max: 726px)
       {
         @include flex-wrap(wrap);
         @include justify-content(space-around);
         @include margin(0,(-$gutter/8),0,(-$gutter/8));
       }
 
-      @include bp($min: 728px)
+      @include bp($min: 726px)
       {
         @include position(relative,auto,auto,auto,auto);
         @include justify-content(flex-end);
@@ -386,12 +397,12 @@
       @include flex(0 0 100%);
     }
 
-    @include bp($min: 466px, $max: 728px)
+    @include bp($min: 466px, $max: 726px)
     {
       @include flex(0 0 33%);
     }
 
-    @include bp($max: 728px)
+    @include bp($max: 726px)
     {
       @include text-align(center);
     }
@@ -404,5 +415,13 @@
         @include padding(0,0,0,0);
       }
     }
+  }
+}
+
+.main-footer
+{
+  @include bp($max: 726px)
+  {
+    display: none;
   }
 }
