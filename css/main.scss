@@ -8,7 +8,7 @@
 // Utilities
 @import "utilities/variables";
 @import "utilities/mixins";
-// @import "utilities/animate";
+@import "utilities/animate";
 
 // Base
 @import "base/normalize";
@@ -21,6 +21,7 @@
 @import "components/form";
 @import "components/tooltip";
 @import "components/button";
+@import "components/modal";
 
 // Layouts
 @import "layouts/columns";

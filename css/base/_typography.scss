@@ -257,3 +257,30 @@ dl
   }
 }
 
+hr.divider
+{
+  @include position(relative,auto,auto,auto,auto);
+  @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+  @include padding(0,0,0,0);
+
+  display: block;
+  height: 1px;
+  border: 0;
+  background-color: rgba($heading-color,.1);
+
+  &:after
+  {
+    @include position(absolute,auto,auto,auto,auto);
+    @include center(xy);
+
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    color: $background-color;
+    border: 3px solid;
+    border-radius: 10px;
+    background-color: $heading-color;
+    line-height: 1;
+  }
+}

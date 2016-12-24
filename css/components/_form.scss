@@ -29,9 +29,9 @@
       @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
     }
 
-    .hs_submit
+    > .hs_submit
     {
-      @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
+      margin-top: $paragraph-spacing*2 + em;
     }
   }
 
@@ -126,7 +126,19 @@
 
   .hs-error-msgs
   {
+    @include position(relative,auto,auto,auto,auto);
+
     list-style: none;
+    background-color: $yellow;
+
+    &:before
+    {
+      @include position(absolute,auto,auto,auto,($gutter/2));
+      @include triangle-up(.5em,.5em,$yellow);
+      @include transform(translateY(-100%));
+
+      content: "";
+    }
 
     li
     {
@@ -134,20 +146,10 @@
       @include padding(0,0,0,0);
 
       display: block;
-      background-color: $yellow;
-
-      &:before
-      {
-        @include position(absolute,auto,auto,auto,($gutter/2));
-        @include triangle-up(.5em,.5em,$yellow);
-        @include transform(translateY(-100%));
-
-        content: "";
-      }
 
       label
       {
-        @include padding(($paragraph-spacing + em),($gutter/2),($paragraph-spacing*.8 + em),($gutter/2));
+        @include padding(($paragraph-spacing/2 + em),($gutter/2),($paragraph-spacing/2*.8 + em),($gutter/2));
 
         display: block;
         line-height: inherit;

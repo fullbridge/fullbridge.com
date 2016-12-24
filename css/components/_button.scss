@@ -1,12 +1,26 @@
 .button
 {
   @include padding(0,($gutter*2),0,($gutter*2));
+  @include truncate;
   @include transition(background-color $timing ease-in-out);
 
   display: inline-block;
+  max-width: 100%;
   line-height: 4;
   white-space: nowrap;
   border-radius: $border-radius;
+
+  @include bp(small)
+  {
+    @include padding(0,$gutter,0,$gutter);
+
+    line-height: 2.5;
+
+    span
+    {
+      font-size: .7em;
+    }
+  }
 
   span
   {

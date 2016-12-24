@@ -1,9 +1,15 @@
 .even-columns
 {
-  @include display(flex);
+  @include bp(desktop)
+  {
+    @include display(flex);
+  }
 }
 
 .even-column
 {
-  @include flex(1);
+  @include bp(desktop)
+  {
+    @include flex(1);
+  }
 }
