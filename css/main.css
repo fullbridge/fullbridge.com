@@ -2608,7 +2608,9 @@ abbr:before {
 
 .home-hero,
 .home-spotlights,
-.home-big-intro {
+.home-big-intro,
+.home-testimonials,
+.home-partners {
   margin-top: 0;
   margin-right: auto;
   margin-bottom: 0;
@@ -2616,46 +2618,60 @@ abbr:before {
   max-width: 1440px; }
   [dir=rtl] .home-hero, [dir=rtl]
   .home-spotlights, [dir=rtl]
-  .home-big-intro {
+  .home-big-intro, [dir=rtl]
+  .home-testimonials, [dir=rtl]
+  .home-partners {
     margin-right: auto;
     margin-left: auto; }
   @media (max-width: 416px) {
     .home-hero,
     .home-spotlights,
-    .home-big-intro {
+    .home-big-intro,
+    .home-testimonials,
+    .home-partners {
       padding-top: 1.96em;
       padding-right: 1.96em;
       padding-bottom: 1.96em;
       padding-left: 1.96em; }
       [dir=rtl] .home-hero, [dir=rtl]
       .home-spotlights, [dir=rtl]
-      .home-big-intro {
+      .home-big-intro, [dir=rtl]
+      .home-testimonials, [dir=rtl]
+      .home-partners {
         padding-right: 1.96em;
         padding-left: 1.96em; } }
   @media (min-width: 416px) and (max-width: 850px) {
     .home-hero,
     .home-spotlights,
-    .home-big-intro {
+    .home-big-intro,
+    .home-testimonials,
+    .home-partners {
       padding-top: 3.92em;
       padding-right: 3.92em;
       padding-bottom: 3.92em;
       padding-left: 3.92em; }
       [dir=rtl] .home-hero, [dir=rtl]
       .home-spotlights, [dir=rtl]
-      .home-big-intro {
+      .home-big-intro, [dir=rtl]
+      .home-testimonials, [dir=rtl]
+      .home-partners {
         padding-right: 3.92em;
         padding-left: 3.92em; } }
   @media (min-width: 850px) {
     .home-hero,
     .home-spotlights,
-    .home-big-intro {
+    .home-big-intro,
+    .home-testimonials,
+    .home-partners {
       padding-top: 3.92em;
       padding-right: 7.84em;
       padding-bottom: 3.92em;
       padding-left: 7.84em; }
       [dir=rtl] .home-hero, [dir=rtl]
       .home-spotlights, [dir=rtl]
-      .home-big-intro {
+      .home-big-intro, [dir=rtl]
+      .home-testimonials, [dir=rtl]
+      .home-partners {
         padding-right: 7.84em;
         padding-left: 7.84em; } }
 
