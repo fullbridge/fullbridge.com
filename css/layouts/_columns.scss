@@ -3,6 +3,28 @@
   @include bp(desktop)
   {
     @include display(flex);
+    @include justify-content(space-around);
+  }
+
+  &.has-columns-always
+  {
+    @include display(flex);
+    @include justify-content(space-around);
+  }
+
+  &.has-gutters
+  {
+    @include margin(auto,(-$gutter/2),auto,(-$gutter/2));
+
+    .even-column
+    {
+      @include margin(($paragraph-spacing + em),($gutter/2),($paragraph-spacing + em),($gutter/2));
+    }
+  }
+
+  &.is-wrapped
+  {
+    @include flex-wrap(wrap);
   }
 }
 
