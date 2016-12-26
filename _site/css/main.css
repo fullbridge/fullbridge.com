@@ -2594,7 +2594,57 @@ abbr:before {
     display: -webkit-flex;
     display: -moz-flex;
     display: -ms-flexbox;
-    display: flex; } }
+    display: flex;
+    -webkit-box-pack: distribute;
+    -moz-box-pack: distribute;
+    box-pack: distribute;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    -o-justify-content: space-around;
+    justify-content: space-around;
+    -ms-flex-pack: distribute; } }
+.even-columns.has-columns-always {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute; }
+.even-columns.has-gutters {
+  margin-top: auto;
+  margin-right: -0.98em;
+  margin-bottom: auto;
+  margin-left: -0.98em; }
+  [dir=rtl] .even-columns.has-gutters {
+    margin-right: -0.98em;
+    margin-left: -0.98em; }
+  .even-columns.has-gutters .even-column {
+    margin-top: 0.98em;
+    margin-right: 0.98em;
+    margin-bottom: 0.98em;
+    margin-left: 0.98em; }
+    [dir=rtl] .even-columns.has-gutters .even-column {
+      margin-right: 0.98em;
+      margin-left: 0.98em; }
+.even-columns.is-wrapped {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
 
 @media only screen and (min-width: 769px) {
   .even-column {
@@ -2674,6 +2724,15 @@ abbr:before {
       .home-partners {
         padding-right: 7.84em;
         padding-left: 7.84em; } }
+
+.home-spotlights h3,
+.home-testimonials h3,
+.home-partners h3 {
+  text-align: center;
+  color: #af272f;
+  text-transform: uppercase;
+  letter-spacing: .2em;
+  font-size: 1em; }
 
 @media only screen and (max-width: 768px) {
   .home-hero {
@@ -2809,11 +2868,6 @@ abbr:before {
       [dir=rtl] .home-spotlight {
         margin-right: auto;
         margin-left: auto; } }
-  .home-spotlight h3 {
-    color: #af272f;
-    text-transform: uppercase;
-    letter-spacing: .2em;
-    font-size: 1em; }
   .home-spotlight figure {
     margin-top: 0.98em;
     margin-right: auto;
@@ -2861,6 +2915,125 @@ abbr:before {
     @media only screen and (min-width: 1441px) {
       .home-big-intro h2 {
         font-size: 3.6em; } }
+
+.home-partner {
+  -webkit-box-flex: 0;
+  -moz-box-flex: 0;
+  box-flex: 0;
+  -webkit-flex: 0 0 120px;
+  -moz-flex: 0 0 120px;
+  -ms-flex: 0 0 120px;
+  flex: 0 0 120px; }
+  .home-partner img {
+    display: block;
+    width: 100%;
+    height: auto; }
+
+.home-testimonial {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  margin-top: 0.98em;
+  margin-right: -0.98em;
+  margin-bottom: 0.98em;
+  margin-left: -0.98em; }
+  [dir=rtl] .home-testimonial {
+    margin-right: -0.98em;
+    margin-left: -0.98em; }
+  @media only screen and (max-width: 768px) {
+    .home-testimonial {
+      -webkit-box-lines: multiple;
+      -moz-box-lines: multiple;
+      box-lines: multiple;
+      -webkit-flex-wrap: wrap;
+      -moz-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap; } }
+  .home-testimonial figure,
+  .home-testimonial blockquote {
+    margin-top: 0;
+    margin-right: 0.98em;
+    margin-bottom: 0;
+    margin-left: 0.98em; }
+    [dir=rtl] .home-testimonial figure, [dir=rtl]
+    .home-testimonial blockquote {
+      margin-right: 0.98em;
+      margin-left: 0.98em; }
+  .home-testimonial figure {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 120px;
+    -moz-flex: 0 0 120px;
+    -ms-flex: 0 0 120px;
+    flex: 0 0 120px; }
+    .home-testimonial figure img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  .home-testimonial blockquote {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0.98em;
+    font-size: 1.2em; }
+    [dir=rtl] .home-testimonial blockquote {
+      padding-right: 0.98em;
+      padding-left: 0; }
+    @media only screen and (max-width: 768px) {
+      .home-testimonial blockquote {
+        -webkit-box-flex: 0;
+        -moz-box-flex: 0;
+        box-flex: 0;
+        -webkit-flex: 0 0 100%;
+        -moz-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin-top: 0.98em;
+        margin-right: auto;
+        margin-bottom: 0.98em;
+        margin-left: auto; }
+        [dir=rtl] .home-testimonial blockquote {
+          margin-right: auto;
+          margin-left: auto; } }
+    .home-testimonial blockquote:before, .home-testimonial blockquote:after {
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: auto;
+      left: auto;
+      line-height: 1;
+      font-size: 2.2em; }
+      [dir=rtl] .home-testimonial blockquote:before, [dir=rtl] .home-testimonial blockquote:after {
+        right: auto;
+        left: auto; }
+    .home-testimonial blockquote:before {
+      -webkit-transform: translateX(-150%);
+      -moz-transform: translateX(-150%);
+      -ms-transform: translateX(-150%);
+      -o-transform: translateX(-150%);
+      transform: translateX(-150%);
+      content: "\201C"; }
+    .home-testimonial blockquote:after {
+      -webkit-transform: translateX(50%);
+      -moz-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+      -o-transform: translateX(50%);
+      transform: translateX(50%);
+      content: "\201D"; }
 
 #page-category-is-article > main a:visited {
   color: black; }

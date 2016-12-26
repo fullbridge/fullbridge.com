@@ -24,6 +24,21 @@
   }
 }
 
+.home-spotlights,
+.home-testimonials,
+.home-partners
+{
+  h3
+  {
+    @include text-align(center);
+
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 1em;
+  }
+}
+
 .home-hero
 {
   @include bp(small)
@@ -139,14 +154,6 @@
       @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
     }
 
-    h3
-    {
-      color: $primary-color;
-      text-transform: uppercase;
-      letter-spacing: .2em;
-      font-size: 1em;
-    }
-
     figure
     {
       @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
@@ -221,6 +228,84 @@
     @include bp(large)
     {
       font-size: 3.6em;
+    }
+  }
+}
+
+.home-partner
+{
+  @include flex(0 0 120px);
+
+  img
+  {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.home-testimonial
+{
+  @include display(flex);
+  @include justify-content(space-around);
+  @include margin(($paragraph-spacing + em),(-$gutter/2),($paragraph-spacing + em),(-$gutter/2));
+
+  @include bp(small)
+  {
+    @include flex-wrap(wrap);
+  }
+
+  figure,
+  blockquote
+  {
+    @include margin(0,($gutter/2),0,($gutter/2));
+  }
+
+  figure
+  {
+    @include flex(0 0 120px);
+
+    img
+    {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  blockquote
+  {
+    @include padding(0,0,0,($gutter/2));
+
+    font-size: 1.2em;
+
+    @include bp(small)
+    {
+      @include flex(0 0 100%);
+      @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+    }
+
+    &:before,
+    &:after
+    {
+      @include position(absolute,auto,auto,auto,auto);
+
+      line-height: 1;
+      font-size: 2.2em;
+    }
+
+    &:before
+    {
+      @include transform(translateX(-150%));
+
+      content: "\201C";
+    }
+
+    &:after
+    {
+      @include transform(translateX(50%));
+
+      content: "\201D";
     }
   }
 }
