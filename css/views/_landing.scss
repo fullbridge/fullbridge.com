@@ -1,0 +1,71 @@
+.landing-hero
+{
+  @include text-align(center);
+
+  background-color: $gray-lightest;
+
+  h1
+  {
+    line-height: 1;
+
+    @include bp(small)
+    {
+      font-size: 10vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 3.6em;
+    }
+  }
+
+  h2
+  {
+    @include margin(($paragraph-spacing + em),0,($paragraph-spacing + em),0);
+    @include font(body,regular);
+
+    letter-spacing: 0;
+
+    @include bp(small)
+    {
+      font-size: 4vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 2vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 1.6em;
+    }
+  }
+}
+
+.landing-wrapper
+{
+  @include margin(0,auto,0,auto);
+
+  max-width: $medium-screen;
+
+  @include bp($max: 416px)
+  {
+    @include padding(($paragraph-spacing*2 + em),$gutter,($paragraph-spacing*2 + em),$gutter);
+  }
+
+  @include bp($min: 416px, $max: 850px)
+  {
+    @include padding(($paragraph-spacing*4 + em),($gutter*2),($paragraph-spacing*4 + em),($gutter*2));
+  }
+
+  @include bp($min: 850px)
+  {
+    @include padding(($paragraph-spacing*4 + em),($gutter*4),($paragraph-spacing*4 + em),($gutter*4));
+  }
+}

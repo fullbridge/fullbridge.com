@@ -10,7 +10,17 @@
 
 body
 {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(space-between);
+
+  min-height: 100vh;
   background-color: $background-color;
+
+  > *
+  {
+    width: 100vw;
+  }
 }
 
 /*

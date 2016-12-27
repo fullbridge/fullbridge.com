@@ -625,4 +625,32 @@ $font-stack:
       }
     }
   }
+
+  hr
+  {
+    @include position(relative,auto,auto,auto,auto);
+    @include margin(($paragraph-spacing*3 + em),auto,($paragraph-spacing*3 + em),auto);
+    @include padding(0,0,0,0);
+
+    display: block;
+    height: 1px;
+    border: 0;
+    background-color: $body-text-color;
+
+    &:before,
+    &:after
+    {
+      @include small-diamond;
+    }
+
+    &:before
+    {
+      @include position(absolute,-2px,auto,auto,-2px);
+    }
+
+    &:after
+    {
+      @include position(absolute,-2px,-2px,auto,auto);
+    }
+  }
 }
