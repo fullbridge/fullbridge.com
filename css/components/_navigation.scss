@@ -195,8 +195,16 @@
 
       & + *
       {
+        @include vertical-scroll;
+
         left: 0;
         width: 100%;
+        max-height: calc(100vh - #{5*.7em});
+
+        @include bp($max: 726px)
+        {
+          max-height: calc(100vh - #{4*.7em});
+        }
       }
 
       span
