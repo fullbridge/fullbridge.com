@@ -80,8 +80,25 @@
           @include opacity(1);
         }
       }
-
     }
+
+    html.touch &
+    {
+      span
+      {
+        &:nth-of-type(1)
+        {
+          @include position(relative,auto,auto,auto,auto);
+          @include opacity(1);
+        }
+
+        &:nth-of-type(2)
+        {
+          display: none;
+        }
+      }
+    }
+
   }
 
   &.is-primary

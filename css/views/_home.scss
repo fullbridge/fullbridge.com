@@ -37,17 +37,20 @@
 
 .home-hero
 {
+  @include display(flex);
+  @include align-items(center);
+
   max-width: $medium-screen;
 
   @include bp(small)
   {
     @include position(relative,auto,auto,auto,auto);
+
+    min-height: calc(90vh - #{5em*.7 + 3em});
   }
 
   @include bp(desktop)
   {
-    @include display(flex);
-    @include align-items(center);
     @include justify-content(space-between);
 
     min-height: 30em;
