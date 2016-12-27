@@ -1,17 +1,35 @@
 .main-menu
 {
-  @include display(flex);
-  @include justify-content(space-between);
-  @include margin(0,auto,0,auto);
+  @include position(fixed,0,0,auto,0);
   @include padding(0,$gutter,0,$gutter);
 
-  max-width: $medium-screen;
   list-style: none;
+  background-color: $background-color;
+  z-index: $menubar-z;
 
   @include bp($max: 726px)
   {
     @include padding(0,0,0,0);
   }
+
+  & + *
+  {
+    @include margin(5*.7em,auto,auto,auto);
+
+    @include bp($max: 726px)
+    {
+      @include margin(4*.7em,auto,auto,auto);
+    }
+  }
+}
+
+.main-menu-wrapper
+{
+  @include display(flex);
+  @include justify-content(space-between);
+  @include margin(0,auto,0,auto);
+
+  max-width: $medium-screen;
 }
 
 .main-menu-logo

@@ -255,6 +255,11 @@
   @include margin(0,auto,0,auto);
 
   max-width: 90ch;
+
+  @include bp(small)
+  {
+    @include padding(0,$gutter,0,$gutter);
+  }
 }
 
   .home-testimonial
@@ -270,9 +275,12 @@
 
     &:nth-of-type(even)
     {
-      figure
+      @include bp(desktop)
       {
-        @include order(2);
+        figure
+        {
+          @include order(2);
+        }
       }
     }
 
