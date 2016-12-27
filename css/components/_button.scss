@@ -1,34 +1,87 @@
 .button
 {
-  @include padding(0,($gutter*2),0,($gutter*2));
+  @include padding(($paragraph-spacing*1.5 + em),($gutter*2),($paragraph-spacing*1.5 + em),($gutter*2));
   @include truncate;
   @include transition(background-color $timing ease-in-out);
 
   display: inline-block;
   max-width: 100%;
-  line-height: 4;
   white-space: nowrap;
   border-radius: $border-radius;
 
   @include bp(small)
   {
-    @include padding(0,$gutter,0,$gutter);
+    @include padding(($paragraph-spacing + em),$gutter,($paragraph-spacing + em),$gutter);
 
-    line-height: 2.5;
-
-    span
-    {
-      font-size: .7em;
-    }
   }
 
   span
   {
     @include font(body,bold);
 
+    display: block;
+    line-height: 1;
     text-transform: uppercase;
     letter-spacing: .1em;
     font-size: .9em;
+
+    @include bp(small)
+    {
+      font-size: .7em;
+    }
+  }
+
+  &.has-rotating-text
+  {
+    @include position(relative,auto,auto,auto,auto);
+
+    overflow: hidden;
+
+    span
+    {
+      @include transition(transform $timing ease-in-out);
+    }
+
+    html:not(.touch) &:not(:hover)
+    {
+      span
+      {
+        &:nth-of-type(1)
+        {
+          @include position(relative,auto,auto,auto,auto);
+          @include opacity(1);
+        }
+
+        &:nth-of-type(2)
+        {
+          @include position(absolute,auto,0,auto,0);
+          @include transform(translateY(500%));
+          @include text-align(center);
+          @include opacity(0);
+        }
+      }
+    }
+
+    html:not(.touch) &:hover
+    {
+      span
+      {
+        &:nth-of-type(1)
+        {
+          @include position(absolute,auto,0,auto,0);
+          @include transform(translateY(-500%));
+          @include text-align(center);
+          @include opacity(0);
+        }
+
+        &:nth-of-type(2)
+        {
+          @include position(relative,auto,auto,auto,auto);
+          @include opacity(1);
+        }
+      }
+
+    }
   }
 
   &.is-primary
