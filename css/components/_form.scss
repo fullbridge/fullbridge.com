@@ -110,7 +110,7 @@
     @include transition(background-color $timing ease-in-out);
 
     color: $background-color;
-    line-height: (4/.9);
+    line-height: (3/.9);
     text-transform: uppercase;
     letter-spacing: .1em;
     font-size: .9em;

@@ -14,24 +14,40 @@
 
   &.has-gutters
   {
-    @include margin(auto,(-$gutter/2),auto,(-$gutter/2));
-
-    .even-column
+    @include bp(desktop)
     {
-      @include margin(($paragraph-spacing + em),($gutter/2),($paragraph-spacing + em),($gutter/2));
+      @include margin(auto,(-$gutter/2),auto,(-$gutter/2));
+
+      .even-column
+      {
+        @include margin(($paragraph-spacing + em),($gutter/2),($paragraph-spacing + em),($gutter/2));
+      }
     }
   }
 
   &.is-wrapped
   {
-    @include flex-wrap(wrap);
+    @include bp(desktop)
+    {
+      @include flex-wrap(wrap);
+    }
   }
 }
 
 .even-column
 {
+  @include bp(small)
+  {
+    @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
+  }
+
   @include bp(desktop)
   {
     @include flex(1);
+  }
+
+  img
+  {
+    max-width: 100%;
   }
 }
