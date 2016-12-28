@@ -8,7 +8,7 @@
 
   @include bp(desktop)
   {
-    @include padding(($paragraph-spacing*3 + em),$gutter,($paragraph-spacing*3 + em),$gutter);
+    @include padding(($paragraph-spacing*4 + em),$gutter,($paragraph-spacing*4 + em),$gutter);
     @include vertical-scroll;
 
     background-color: rgba(black,.9);
@@ -21,14 +21,9 @@
 
   &:target
   {
-    .modal-shadow
-    {
-      @include animated--fadeIn;
-    }
-
     .modal-content
     {
-      @include animated--fadeInDown;
+      @include animated--fadeInUp;
     }
   }
 }
