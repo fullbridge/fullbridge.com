@@ -4007,10 +4007,15 @@ form.form #page-category-is-article > main legend + *:not(p) + p,
       right: auto;
       bottom: auto;
       left: 0;
+      padding-top: 0.2em;
+      padding-right: 0;
+      padding-bottom: 0;
+      padding-left: 0;
       text-align: center;
       width: 1.5em;
+      height: 1.5em;
       color: #af272f;
-      line-height: 1.5;
+      line-height: 1;
       content: counter(li);
       counter-increment: li;
       border: 1px solid #9b9b9b;
@@ -4018,6 +4023,9 @@ form.form #page-category-is-article > main legend + *:not(p) + p,
       [dir=rtl] .landing-numbered-list li:before {
         right: 0;
         left: auto; }
+      [dir=rtl] .landing-numbered-list li:before {
+        padding-right: 0;
+        padding-left: 0; }
 
 .landing-blockquote {
   display: -webkit-box;
