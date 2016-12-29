@@ -248,6 +248,19 @@
   }
 }
 
+.home-partners
+{
+  @include display(flex);
+  @include justify-content(space-around);
+  @include flex-wrap(wrap);
+  @include margin(auto,(-$gutter/2),auto,(-$gutter/2));
+
+  .home-partner
+  {
+    @include margin(($paragraph-spacing + em),($gutter/2),($paragraph-spacing + em),($gutter/2));
+  }
+}
+
   .home-partner
   {
     @include text-align(center);
@@ -255,6 +268,7 @@
     img
     {
       @include opacity(.4);
+
       width: auto;
       height: 40px;
     }
@@ -283,7 +297,7 @@
       @include flex-wrap(wrap);
     }
 
-    &:nth-of-type(even)
+    &:nth-of-type(odd)
     {
       @include bp(desktop)
       {
