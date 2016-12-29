@@ -2754,23 +2754,6 @@ abbr:before {
     -o-justify-content: space-around;
     justify-content: space-around;
     -ms-flex-pack: distribute; } }
-.even-columns.has-columns-always {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: distribute;
-  -moz-box-pack: distribute;
-  box-pack: distribute;
-  -webkit-justify-content: space-around;
-  -moz-justify-content: space-around;
-  -ms-justify-content: space-around;
-  -o-justify-content: space-around;
-  justify-content: space-around;
-  -ms-flex-pack: distribute; }
 @media only screen and (min-width: 769px) {
   .even-columns.has-gutters {
     margin-top: auto;
@@ -3082,6 +3065,46 @@ abbr:before {
     margin-right: auto;
     margin-left: auto; }
 
+.home-partners {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-top: auto;
+  margin-right: -0.98em;
+  margin-bottom: auto;
+  margin-left: -0.98em; }
+  [dir=rtl] .home-partners {
+    margin-right: -0.98em;
+    margin-left: -0.98em; }
+  .home-partners .home-partner {
+    margin-top: 0.98em;
+    margin-right: 0.98em;
+    margin-bottom: 0.98em;
+    margin-left: 0.98em; }
+    [dir=rtl] .home-partners .home-partner {
+      margin-right: 0.98em;
+      margin-left: 0.98em; }
+
 .home-partner {
   text-align: center; }
   .home-partner img {
@@ -3143,7 +3166,7 @@ abbr:before {
       -ms-flex-wrap: wrap;
       flex-wrap: wrap; } }
   @media only screen and (min-width: 769px) {
-    .home-testimonial:nth-of-type(even) figure {
+    .home-testimonial:nth-of-type(odd) figure {
       -webkit-box-ordinal-group: 2;
       -moz-box-ordinal-group: 2;
       box-ordinal-group: 2;

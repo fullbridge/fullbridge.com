@@ -6,12 +6,6 @@
     @include justify-content(space-around);
   }
 
-  &.has-columns-always
-  {
-    @include display(flex);
-    @include justify-content(space-around);
-  }
-
   &.has-gutters
   {
     @include bp(desktop)
