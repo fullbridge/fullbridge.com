@@ -2802,9 +2802,54 @@ abbr:before {
 .even-column img {
   max-width: 100%; }
 
+@media (max-width: 416px) {
+  .home-hero,
+  .home-spotlights,
+  .home-double-intros,
+  .home-section {
+    padding-top: 1.96em;
+    padding-right: 1.96em;
+    padding-bottom: 1.96em;
+    padding-left: 1.96em; }
+    [dir=rtl] .home-hero, [dir=rtl]
+    .home-spotlights, [dir=rtl]
+    .home-double-intros, [dir=rtl]
+    .home-section {
+      padding-right: 1.96em;
+      padding-left: 1.96em; } }
+@media (min-width: 416px) and (max-width: 850px) {
+  .home-hero,
+  .home-spotlights,
+  .home-double-intros,
+  .home-section {
+    padding-top: 3.92em;
+    padding-right: 3.92em;
+    padding-bottom: 3.92em;
+    padding-left: 3.92em; }
+    [dir=rtl] .home-hero, [dir=rtl]
+    .home-spotlights, [dir=rtl]
+    .home-double-intros, [dir=rtl]
+    .home-section {
+      padding-right: 3.92em;
+      padding-left: 3.92em; } }
+@media (min-width: 850px) {
+  .home-hero,
+  .home-spotlights,
+  .home-double-intros,
+  .home-section {
+    padding-top: 3.92em;
+    padding-right: 7.84em;
+    padding-bottom: 3.92em;
+    padding-left: 7.84em; }
+    [dir=rtl] .home-hero, [dir=rtl]
+    .home-spotlights, [dir=rtl]
+    .home-double-intros, [dir=rtl]
+    .home-section {
+      padding-right: 7.84em;
+      padding-left: 7.84em; } }
+
 .home-hero,
 .home-spotlights,
-.home-big-intro,
 .home-section {
   margin-top: 0;
   margin-right: auto;
@@ -2812,55 +2857,9 @@ abbr:before {
   margin-left: auto; }
   [dir=rtl] .home-hero, [dir=rtl]
   .home-spotlights, [dir=rtl]
-  .home-big-intro, [dir=rtl]
   .home-section {
     margin-right: auto;
     margin-left: auto; }
-  @media (max-width: 416px) {
-    .home-hero,
-    .home-spotlights,
-    .home-big-intro,
-    .home-section {
-      padding-top: 1.96em;
-      padding-right: 1.96em;
-      padding-bottom: 1.96em;
-      padding-left: 1.96em; }
-      [dir=rtl] .home-hero, [dir=rtl]
-      .home-spotlights, [dir=rtl]
-      .home-big-intro, [dir=rtl]
-      .home-section {
-        padding-right: 1.96em;
-        padding-left: 1.96em; } }
-  @media (min-width: 416px) and (max-width: 850px) {
-    .home-hero,
-    .home-spotlights,
-    .home-big-intro,
-    .home-section {
-      padding-top: 3.92em;
-      padding-right: 3.92em;
-      padding-bottom: 3.92em;
-      padding-left: 3.92em; }
-      [dir=rtl] .home-hero, [dir=rtl]
-      .home-spotlights, [dir=rtl]
-      .home-big-intro, [dir=rtl]
-      .home-section {
-        padding-right: 3.92em;
-        padding-left: 3.92em; } }
-  @media (min-width: 850px) {
-    .home-hero,
-    .home-spotlights,
-    .home-big-intro,
-    .home-section {
-      padding-top: 3.92em;
-      padding-right: 7.84em;
-      padding-bottom: 3.92em;
-      padding-left: 7.84em; }
-      [dir=rtl] .home-hero, [dir=rtl]
-      .home-spotlights, [dir=rtl]
-      .home-big-intro, [dir=rtl]
-      .home-section {
-        padding-right: 7.84em;
-        padding-left: 7.84em; } }
 
 .home-spotlights h3,
 .home-section h3 {
@@ -3000,13 +2999,15 @@ abbr:before {
     padding-left: 0.98em; }
   @media only screen and (max-width: 768px) {
     .home-spotlight {
-      margin-top: 1.96em;
+      margin-top: 4.9em;
       margin-right: auto;
-      margin-bottom: 1.96em;
+      margin-bottom: 4.9em;
       margin-left: auto; }
       [dir=rtl] .home-spotlight {
         margin-right: auto;
-        margin-left: auto; } }
+        margin-left: auto; }
+      .home-spotlight:nth-child(1) {
+        margin-top: 0; } }
   .home-spotlight figure {
     margin-top: 0.98em;
     margin-right: auto;
@@ -3036,25 +3037,88 @@ abbr:before {
     html:not(.touch) .home-spotlight:hover hr:after {
       background-color: #af272f; }
 
-.home-big-intro {
-  text-align: center;
-  color: black;
-  background-color: #f4f4f4; }
-  .home-big-intro h2,
-  .home-big-intro p {
-    max-width: 88ch; }
-  @media only screen and (max-width: 768px) {
-    .home-big-intro h2 {
-      font-size: 10vw; } }
-  @media only screen and (min-width: 769px) and (max-width: 1440px) {
-    .home-big-intro h2 {
-      font-size: 4.5vw; } }
-  @media only screen and (min-width: 1441px) {
-    .home-big-intro h2 {
-      font-size: 3.6em; } }
-  .home-big-intro figure img {
-    width: 100%;
-    height: auto; }
+@media (min-width: 1026px) {
+  .home-double-intros {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    margin-top: 0;
+    margin-right: -2.94em;
+    margin-bottom: 0;
+    margin-left: -2.94em; }
+    [dir=rtl] .home-double-intros {
+      margin-right: -2.94em;
+      margin-left: -2.94em; } }
+
+@media (max-width: 1026px) {
+  .home-double-intro {
+    text-align: center; } }
+@media (min-width: 1026px) {
+  .home-double-intro {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-top: 0;
+    margin-right: 2.94em;
+    margin-bottom: 0;
+    margin-left: 2.94em;
+    max-width: 60ch; }
+    [dir=rtl] .home-double-intro {
+      margin-right: 2.94em;
+      margin-left: 2.94em; }
+    .home-double-intro:nth-child(1) {
+      text-align: right; }
+      [dir=rtl] .home-double-intro:nth-child(1) {
+        text-align: left; } }
+
+.home-big-divider {
+  height: 5em;
+  border: none;
+  background: url("../img/img-divider-change.svg") center center repeat-x; }
+  @media (max-width: 416px) {
+    .home-big-divider {
+      margin-top: 1.96em;
+      margin-right: 0;
+      margin-bottom: 1.96em;
+      margin-left: 0; }
+      [dir=rtl] .home-big-divider {
+        margin-right: 0;
+        margin-left: 0; } }
+  @media (min-width: 416px) and (max-width: 850px) {
+    .home-big-divider {
+      margin-top: 3.92em;
+      margin-right: 0;
+      margin-bottom: 3.92em;
+      margin-left: 0; }
+      [dir=rtl] .home-big-divider {
+        margin-right: 0;
+        margin-left: 0; } }
+  @media (min-width: 850px) {
+    .home-big-divider {
+      margin-top: 3.92em;
+      margin-right: 0;
+      margin-bottom: 3.92em;
+      margin-left: 0; }
+      [dir=rtl] .home-big-divider {
+        margin-right: 0;
+        margin-left: 0; } }
 
 .home-section h3 {
   margin-top: 0;

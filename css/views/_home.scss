@@ -1,10 +1,8 @@
 .home-hero,
 .home-spotlights,
-.home-big-intro,
+.home-double-intros,
 .home-section
 {
-  @include margin(0,auto,0,auto);
-
   @include bp($max: 416px)
   {
     @include padding(($paragraph-spacing*2 + em),$gutter,($paragraph-spacing*2 + em),$gutter);
@@ -19,6 +17,13 @@
   {
     @include padding(($paragraph-spacing*4 + em),($gutter*4),($paragraph-spacing*4 + em),($gutter*4));
   }
+}
+
+.home-hero,
+.home-spotlights,
+.home-section
+{
+  @include margin(0,auto,0,auto);
 }
 
 .home-spotlights,
@@ -152,7 +157,12 @@
 
     @include bp(small)
     {
-      @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
+      @include margin(($paragraph-spacing*5 + em),auto,($paragraph-spacing*5 + em),auto);
+
+      &:nth-child(1)
+      {
+        margin-top: 0;
+      }
     }
 
     figure
@@ -199,45 +209,57 @@
     }
   }
 
-.home-big-intro
+.home-double-intros
 {
-  @include text-align(center);
-
-  color: $heading-color;
-  background-color: $gray-lightest;
-
-  h2,
-  p
+  @include bp($min: 1026px)
   {
-    max-width: 88ch;
+    @include display(flex);
+    @include justify-content(center);
+    @include margin(0,-$gutter*1.5,0,-$gutter*1.5);
+  }
+}
+
+  .home-double-intro
+  {
+    @include bp($max: 1026px)
+    {
+      @include text-align(center);
+    }
+
+    @include bp($min: 1026px)
+    {
+      @include flex(1);
+      @include margin(0,$gutter*1.5,0,$gutter*1.5);
+
+      max-width: 60ch;
+
+      &:nth-child(1)
+      {
+        @include text-align(right);
+      }
+    }
   }
 
-  h2
+.home-big-divider
+{
+  @include bp($max: 416px)
   {
-    @include bp(small)
-    {
-      font-size: 10vw;
-    }
-
-    @include bp(medium)
-    {
-      font-size: 4.5vw;
-    }
-
-    @include bp(large)
-    {
-      font-size: 3.6em;
-    }
+    @include margin(($paragraph-spacing*2 + em),0,($paragraph-spacing*2 + em),0);
   }
 
-  figure
+  @include bp($min: 416px, $max: 850px)
   {
-    img
-    {
-      width: 100%;
-      height: auto;
-    }
+    @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
   }
+
+  @include bp($min: 850px)
+  {
+    @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
+  }
+
+  height: 5em;
+  border: none;
+  background: url("../img/img-divider-change.svg") center center repeat-x;
 }
 
 .home-section
