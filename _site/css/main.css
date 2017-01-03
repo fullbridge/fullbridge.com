@@ -3977,15 +3977,6 @@ form.form #page-category-is-article > main legend + *:not(p) + p,
   [dir=rtl] .landing-stella-hero-graphic {
     margin-right: 0;
     margin-left: 0; }
-  @media only screen and (min-width: 769px) {
-    .landing-stella-hero-graphic {
-      -webkit-box-flex: 0;
-      -moz-box-flex: 0;
-      box-flex: 0;
-      -webkit-flex: 0 0 50%;
-      -moz-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-      flex: 0 0 50%; } }
   .landing-stella-hero-graphic img {
     width: 100%;
     height: auto; }
@@ -4001,6 +3992,13 @@ form.form #page-category-is-article > main legend + *:not(p) + p,
       margin-left: 0; } }
 @media only screen and (min-width: 769px) {
   .landing-stella-hero-headlines {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 56.7106%;
+    -moz-flex: 0 0 56.7106%;
+    -ms-flex: 0 0 56.7106%;
+    flex: 0 0 56.7106%;
     margin-top: 0;
     margin-right: 0;
     margin-bottom: 0;
