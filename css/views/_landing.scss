@@ -82,6 +82,131 @@
     }
   }
 
+.landing-stella-hero
+{
+  @include position(relative,auto,auto,auto,auto);
+  @include padding(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
+
+  &:before
+  {
+    @include position(absolute,0,0,0,0);
+    @include opacity(.15);
+
+    content: "";
+    background: url("../img/img-divider-change.svg") repeat-x;
+
+    @include bp(small)
+    {
+      background-position: center 100%;
+    }
+
+    @include bp(desktop)
+    {
+      background-position: center center;
+    }
+  }
+
+  > .landing-wrapper
+  {
+    @include position(relative,auto,auto,auto,auto);
+
+    z-index: 1;
+
+    @include bp(small)
+    {
+    }
+
+    @include bp(desktop)
+    {
+      @include display(flex);
+      @include align-items(center);
+    }
+  }
+}
+
+  .landing-stella-hero-graphic
+  {
+    @include margin(0,0,0,0);
+
+    @include bp(small)
+    {
+    }
+
+    @include bp(desktop)
+    {
+      @include flex(0 0 50%);
+    }
+
+    img
+    {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .landing-stella-hero-headlines
+  {
+    @include bp(small)
+    {
+      @include margin($gutter,0,0,0);
+    }
+
+    @include bp(desktop)
+    {
+      @include margin(0,0,0,$gutter*2);
+    }
+
+    h1,
+    h2
+    {
+      @include margin(0,0,0,0);
+      @include text-align(left);
+    }
+
+    h1
+    {
+      line-height: 1;
+
+      @include bp(small)
+      {
+        font-size: 8vw;
+      }
+
+      @include bp(medium)
+      {
+        font-size: 4.5vw;
+      }
+
+      @include bp(large)
+      {
+        font-size: 3.6em;
+      }
+    }
+
+    h2
+    {
+      @include margin(($paragraph-spacing/2 + em),0,($paragraph-spacing + em),0);
+      @include font(body,regular);
+
+      letter-spacing: 0;
+
+      @include bp(small)
+      {
+        font-size: 5vw;
+      }
+
+      @include bp(medium)
+      {
+        font-size: 2vw;
+      }
+
+      @include bp(large)
+      {
+        font-size: 1.6em;
+      }
+    }
+  }
+
 .landing-cta
 {
   @include bp(small)
