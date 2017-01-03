@@ -24,9 +24,22 @@
 
   form
   {
+    @include display(flex);
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
+
     > div
     {
-      @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+      @include flex(0 0 100%);
+      @include margin(($paragraph-spacing/2 + em),0,($paragraph-spacing/2 + em),0);
+
+      &:nth-child(1),
+      &:nth-child(2)
+      {
+        @include flex(1);
+
+        max-width: calc(50% - #{$gutter/4});
+      }
     }
 
     > .hs_submit
@@ -35,7 +48,6 @@
     }
   }
 
-  form,
   label,
   select,
   #{$all-text-inputs},

@@ -273,7 +273,7 @@
 
 .full-menu
 {
-  @include padding(($paragraph-spacing + em),$gutter,($paragraph-spacing + em),$gutter);
+  @include padding(($paragraph-spacing + em),$gutter,($paragraph-spacing*4 + em),$gutter);
 
   width: 100%;
   color: $background-color;
