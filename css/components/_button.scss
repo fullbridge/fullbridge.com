@@ -1,0 +1,160 @@
+.button
+{
+  @include padding(($paragraph-spacing*1.5 + em),($gutter*2),($paragraph-spacing*1.5 + em),($gutter*2));
+  @include truncate;
+  @include transition(background-color $timing ease-in-out);
+
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  border-radius: $border-radius;
+
+  @include bp(small)
+  {
+    @include padding(($paragraph-spacing + em),$gutter,($paragraph-spacing + em),$gutter);
+
+  }
+
+  span
+  {
+    @include font(body,bold);
+
+    display: block;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    font-size: .9em;
+
+    @include bp(small)
+    {
+      font-size: .7em;
+    }
+  }
+
+  &.has-rotating-text
+  {
+    @include position(relative,auto,auto,auto,auto);
+
+    overflow: hidden;
+
+    span
+    {
+      @include transition(transform $timing ease-in-out);
+    }
+
+    html:not(.touch) &:not(:hover)
+    {
+      span
+      {
+        &:nth-of-type(1)
+        {
+          @include position(relative,auto,auto,auto,auto);
+          @include opacity(1);
+        }
+
+        &:nth-of-type(2)
+        {
+          @include position(absolute,auto,0,auto,0);
+          @include transform(translateY(500%));
+          @include text-align(center);
+          @include opacity(0);
+        }
+      }
+    }
+
+    html:not(.touch) &:hover
+    {
+      span
+      {
+        &:nth-of-type(1)
+        {
+          @include position(absolute,auto,0,auto,0);
+          @include transform(translateY(-500%));
+          @include text-align(center);
+          @include opacity(0);
+        }
+
+        &:nth-of-type(2)
+        {
+          @include position(relative,auto,auto,auto,auto);
+          @include opacity(1);
+        }
+      }
+    }
+
+    html.touch &
+    {
+      span
+      {
+        &:nth-of-type(1)
+        {
+          @include position(relative,auto,auto,auto,auto);
+          @include opacity(1);
+        }
+
+        &:nth-of-type(2)
+        {
+          display: none;
+        }
+      }
+    }
+
+  }
+
+  &.is-primary
+  {
+    color: $background-color;
+    background-color: $primary-color;
+
+    html:not(.touch) &:hover
+    {
+      background-color: lighten($primary-color,6%);
+    }
+  }
+
+  &.is-secondary
+  {
+    color: $background-color;
+    background-color: $heading-color;
+
+    html:not(.touch) &:hover
+    {
+      background-color: lighten($heading-color,16%);
+    }
+  }
+
+  &.is-small
+  {
+    line-height: 2.5;
+
+    span
+    {
+      font-size: .7em;
+    }
+  }
+}
+
+.link
+{
+  border-bottom: 1px solid;
+
+  &:visited
+  {
+    color: $body-text-color;
+  }
+
+  &:hover
+  {
+    color: $link-color;
+  }
+
+  &:visited:hover
+  {
+    color: $link-visited-color;
+  }
+
+  &:active
+  {
+    color: $link-visited-color;
+  }
+}

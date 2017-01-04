@@ -1,0 +1,43 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- Mobile view styles -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- SEO stuff -->
+    <meta name="author" content="{{ site.author }}">
+    <meta name="description" content="{{ page.description }}">
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="touch-icon-ipad-retina.png" />
+    <meta property="og:url" content="{{ site.url }}{{ page.permalink }}" />
+    {% if page.current == "home" %}
+    <meta property="og:site_name" content="{{ site.author }}: {{ page.title }}" />
+    <meta property="og:title" content="{{ site.author }}: {{ page.title }}" />
+    <title>{{ site.author }}: {{ page.title }}</title>
+    {% else %}
+    <meta property="og:site_name" content="{{ page.title }} | {{ site.author }}" />
+    <meta property="og:title" content="{{ page.title }} | {{ site.author }}" />
+    <title>{{ page.title }} | {{ site.author }}</title>
+    {% endif %}
+    <link rel="canonical" href="{{ site.url }}{{ page.permalink }}">
+
+    <!-- Thumbnails -->
+    <link rel="image_src" href="/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{ site.sans-stack }}">
+
+    <!-- JS -->
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body {% if page.category %}id="page-category-is-{{ page.category }}"{% endif %} data-current-page="{{ page.current }}">

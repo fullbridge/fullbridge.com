@@ -1,0 +1,90 @@
+abbr,
+[data-tip]
+{
+  position: relative;
+  cursor: help;
+
+  &:before,
+  &:after
+  {
+    @include center(x);
+    @include transition(top ease-out $timing);
+
+    position: absolute;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  &:before
+  {
+    @include margin(0,0,0,0);
+    @include padding(.7em,($gutter/2),.7em,($gutter/2));
+    @include font(body,bold);
+    @include text-align(center);
+
+    top: calc(100% - #{($gutter/2)});
+    color: $background-color;
+    text-indent: 0;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-shadow: none;
+    line-height: 1.2;
+    letter-spacing: .1em;
+    white-space: nowrap;
+    font-size: .6em;
+    background-color: $heading-color;
+    box-shadow: 0 0 .8em $background-color;
+  }
+
+  &:after
+  {
+    @include triangle-up(8px, 8px, $heading-color);
+
+    top: calc(100% - #{($gutter/2)});
+  }
+
+  html:not(.touch) &:hover:before,
+  html:not(.touch) &:hover:after,
+  {
+    width: auto;
+    height: auto;
+    overflow: visible;
+    visibility: visible;
+  }
+
+  html:not(.touch) &:hover:before,
+  {
+    top: calc(100% + 7px);
+  }
+
+  html:not(.touch) &:hover:after,
+  {
+    top: 100%;
+  }
+}
+
+a[data-tip],
+button[data-tip],
+input[data-tip]
+{
+  cursor: pointer;
+}
+
+[data-tip]
+{
+  &:before
+  {
+    content: attr(data-tip);
+  }
+}
+
+abbr
+{
+  &:before
+  {
+    content: attr(title);
+  }
+}

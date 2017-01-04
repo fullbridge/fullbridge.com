@@ -1,0 +1,410 @@
+.home-hero,
+.home-spotlights,
+.home-double-intros,
+.home-section
+{
+  @include bp($max: 416px)
+  {
+    @include padding(($paragraph-spacing*2 + em),$gutter,($paragraph-spacing*2 + em),$gutter);
+  }
+
+  @include bp($min: 416px, $max: 850px)
+  {
+    @include padding(($paragraph-spacing*4 + em),($gutter*2),($paragraph-spacing*4 + em),($gutter*2));
+  }
+
+  @include bp($min: 850px)
+  {
+    @include padding(($paragraph-spacing*4 + em),($gutter*4),($paragraph-spacing*4 + em),($gutter*4));
+  }
+}
+
+.home-hero,
+.home-spotlights,
+.home-section
+{
+  @include margin(0,auto,0,auto);
+}
+
+.home-spotlights,
+.home-section
+{
+  h3
+  {
+    @include text-align(center);
+
+    color: $primary-color;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 1em;
+  }
+}
+
+.home-hero
+{
+  @include display(flex);
+  @include align-items(center);
+
+  max-width: $medium-screen;
+
+  @include bp(small)
+  {
+    @include position(relative,auto,auto,auto,auto);
+
+    min-height: calc(90vh - #{5em*.7 + 3em});
+  }
+
+  @include bp(desktop)
+  {
+    @include justify-content(space-between);
+
+    min-height: 30em;
+    max-height: calc(100vh - #{5em*.7 + 3em});
+  }
+
+  h2
+  {
+    line-height: 1;
+
+    @include bp(small)
+    {
+      font-size: 10vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 4.5vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 3.6em;
+    }
+  }
+
+  h3
+  {
+    @include margin(($paragraph-spacing + em),0,($paragraph-spacing + em),0);
+    @include font(body,regular);
+
+    letter-spacing: 0;
+
+    @include bp(small)
+    {
+      font-size: 4vw;
+    }
+
+    @include bp(medium)
+    {
+      font-size: 2vw;
+    }
+
+    @include bp(large)
+    {
+      font-size: 1.6em;
+    }
+  }
+}
+
+  .home-hero-headlines
+  {
+    @include bp(small)
+    {
+      @include text-align(center);
+    }
+
+    @include bp(desktop)
+    {
+      @include flex(0 0 43%);
+    }
+  }
+
+  .home-hero-image
+  {
+    @include bp(small)
+    {
+      @include position(absolute,-20%,auto,auto,0);
+      @include opacity(.1);
+
+      width: 100%;
+      z-index: -1;
+    }
+
+    @include bp(desktop)
+    {
+      @include flex(0 0 52%);
+    }
+
+    img
+    {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+.home-spotlights
+{
+  @include text-align(center);
+
+  padding-top: 0;
+}
+
+  .home-spotlight
+  {
+    @include padding(0,($gutter/2),0,($gutter/2));
+
+    display: block;
+
+    @include bp(small)
+    {
+      @include margin(($paragraph-spacing*5 + em),auto,($paragraph-spacing*5 + em),auto);
+
+      &:nth-child(1)
+      {
+        margin-top: 0;
+      }
+    }
+
+    figure
+    {
+      @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+
+      max-width: 12ch;
+    }
+
+    img
+    {
+      width: 100%;
+      height: auto;
+    }
+
+    p,
+    hr
+    {
+      max-width: 40ch;
+      color: $body-text-color;
+    }
+
+    hr
+    {
+      @include transition(background-color $timing ease-in-out);
+
+      &:after
+      {
+        @include transition(background-color $timing ease-in-out);
+      }
+    }
+
+    html:not(.touch) &:hover
+    {
+      hr
+      {
+        background-color: $primary-color;
+
+        &:after
+        {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+
+.home-double-intros
+{
+  @include bp($min: 1026px)
+  {
+    @include display(flex);
+    @include justify-content(center);
+  }
+}
+
+  .home-double-intro
+  {
+    @include bp($max: 1026px)
+    {
+      @include text-align(center);
+
+      & + .home-double-intro
+      {
+        @include margin(($paragraph-spacing*4 + em),0,0,0);
+      }
+    }
+
+    @include bp($min: 1026px)
+    {
+      @include flex(1);
+      @include margin(0,$gutter*1.5,0,$gutter*1.5);
+
+      min-width: 40ch;
+      max-width: 60ch;
+
+      &:nth-child(1)
+      {
+        @include text-align(right);
+      }
+    }
+  }
+
+.home-big-divider
+{
+  @include bp($max: 416px)
+  {
+    @include margin(($paragraph-spacing*2 + em),0,($paragraph-spacing*2 + em),0);
+  }
+
+  @include bp($min: 416px, $max: 850px)
+  {
+    @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
+  }
+
+  @include bp($min: 850px)
+  {
+    @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
+  }
+
+  height: 5em;
+  border: none;
+  background: url("../img/img-divider-change.svg") center center repeat-x;
+}
+
+.home-section
+{
+  h3
+  {
+    @include margin(0,auto,($paragraph-spacing*2 + em),auto);
+  }
+}
+
+.home-partners
+{
+  @include display(flex);
+  @include justify-content(space-around);
+  @include flex-wrap(wrap);
+  @include margin(auto,(-$gutter/2),auto,(-$gutter/2));
+
+  .home-partner
+  {
+    @include margin(($paragraph-spacing + em),($gutter/2),($paragraph-spacing + em),($gutter/2));
+  }
+}
+
+  .home-partner
+  {
+    @include text-align(center);
+
+    img
+    {
+      @include opacity(.4);
+
+      width: auto;
+      height: 40px;
+    }
+  }
+
+.home-testimonials
+{
+  @include margin(0,auto,0,auto);
+
+  max-width: 90ch;
+
+  @include bp(small)
+  {
+    @include padding(0,$gutter,0,$gutter);
+  }
+}
+
+  .home-testimonial
+  {
+    @include display(flex);
+    @include justify-content(space-around);
+    @include margin(($paragraph-spacing*5 + em),(-$gutter/2),($paragraph-spacing*5 + em),(-$gutter/2));
+
+    @include bp(small)
+    {
+      @include flex-wrap(wrap);
+    }
+
+    &:nth-of-type(odd)
+    {
+      @include bp(desktop)
+      {
+        figure
+        {
+          @include order(2);
+        }
+      }
+    }
+
+    > *:nth-child(1)
+    {
+      @include flex(0 0 120px);
+    }
+
+    > *:nth-child(2)
+    {
+      @include bp(small)
+      {
+        @include flex(0 0 100%);
+        @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+      }
+    }
+
+    > *
+    {
+      @include margin(0,($gutter/2),0,($gutter/2));
+    }
+
+    figure
+    {
+      img
+      {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 100em;
+        border: 1px solid $muted-color;
+        overflow: hidden;
+      }
+    }
+  }
+
+  .home-testimonial-quote
+  {
+    blockquote
+    {
+      @include margin(0,0,0,0);
+
+      font-size: 1.2em;
+
+      &:before,
+      &:after
+      {
+        @include position(absolute,auto,auto,auto,auto);
+
+        color: $muted-color;
+        line-height: 1;
+        font-size: 2.2em;
+      }
+
+      &:before
+      {
+        @include transform(translateX(-150%));
+
+        content: "\201C";
+      }
+
+      &:after
+      {
+        @include transform(translateX(50%));
+
+        content: "\201D";
+      }
+    }
+
+    em
+    {
+      @include margin(($paragraph-spacing + em),0,0,0);
+
+      display: block;
+    }
+  }

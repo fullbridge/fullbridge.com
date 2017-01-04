@@ -1,0 +1,81 @@
+    <nav role="navigation" class="main-menu">
+      <div class="main-menu-wrapper">
+        {% if page.current == "home" %}
+        <h1 class="main-menu-logo">
+        {% else %}
+        <h2 class="main-menu-logo">
+        {% endif %}
+          <a href="/" title="{{ site.author }}">
+            <img src="/img/logo-fullbridge.png" alt="{{ site.author }}">
+            <span>{{ site.author }}</span>
+          </a>
+        {% if page.current == "home" %}
+        </h1>
+        {% else %}
+        </h2>
+        {% endif %}
+        <ul class="main-menu-items">
+          <li class="main-menu-item is-dropdown">
+            <strong class="trigger">
+              Products
+            </strong>
+            <ul>
+              <li>
+                <a href="javascript:">
+                  Learning Labs
+                </a>
+              </li>
+              <li>
+                <a href="javascript:">
+                  Working Labs
+                </a>
+              </li>
+              <li>
+                <a href="javascript:">
+                  Learning Modules
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-menu-item is-dropdown">
+            <strong class="trigger">
+              Who we help
+            </strong>
+            <ul>
+              <li>
+                <a href="/corporate">
+                  Corporate
+                </a>
+              </li>
+              <li>
+                <a href="/law">
+                  Law
+                </a>
+              </li>
+              <li>
+                <a href="/higher-ed">
+                  Higher-Ed
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="main-menu-item is-full-menu">
+            <a href="javascript:" class="trigger">
+              <span>View full menu</span>
+            </a>
+            {% include full-menu.html %}
+          </li>
+          <li class="main-menu-item is-cta">
+            <a href="#contact-us">
+              <span>Request a</span> demo
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="modal" id="contact-us">
+        <a href="#" class="modal-shadow"></a>
+        <div class="modal-content">
+          {% include contact-form.html %}
+        </div>
+      </div>
+    </nav>
