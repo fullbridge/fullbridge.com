@@ -253,7 +253,7 @@
 
       &:after
       {
-        @include position(absolute,auto,auto,0,calc(50% - .4em));
+        @include position(absolute,auto,auto,0,calc(50% - .8em));
         @include transform(translateY(100%));
         @include triangle-down(.8em,.8em,$gray-lighter);
       }
