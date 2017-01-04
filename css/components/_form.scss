@@ -24,21 +24,28 @@
 
   form
   {
-    @include display(flex);
-    @include justify-content(space-between);
-    @include flex-wrap(wrap);
+    @include bp(desktop)
+    {
+      @include display(flex);
+      @include justify-content(space-between);
+      @include flex-wrap(wrap);
+    }
 
     > div
     {
-      @include flex(0 0 100%);
-      @include margin(($paragraph-spacing/2 + em),0,($paragraph-spacing/2 + em),0);
+      @include margin(($paragraph-spacing + em),0,($paragraph-spacing + em),0);
 
-      &:nth-child(1),
-      &:nth-child(2)
+      @include bp(desktop)
       {
-        @include flex(1);
+        @include flex(0 0 100%);
+        @include margin(($paragraph-spacing/2 + em),0,($paragraph-spacing/2 + em),0);
 
-        max-width: calc(50% - #{$gutter/4});
+        &:nth-child(-n+4)
+        {
+          @include flex(0 0 50%);
+
+          max-width: calc(50% - #{$gutter/4});
+        }
       }
     }
 
