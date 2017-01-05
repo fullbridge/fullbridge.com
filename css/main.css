@@ -3174,7 +3174,7 @@ abbr:before {
     @media only screen and (min-width: 1441px) {
       .landing-hero-headlines h2 {
         font-size: 1.6em; } }
-  .landing-hero-headlines.is-corporate:before, .landing-hero-headlines.is-higher-ed:before, .landing-hero-headlines.is-law:before, .landing-hero-headlines.is-knocked-out:before {
+  .landing-hero-headlines.is-corporate:before, .landing-hero-headlines.is-higher-ed:before, .landing-hero-headlines.is-law:before, .landing-hero-headlines.is-callout:before {
     position: absolute;
     top: 0;
     right: 0;
@@ -3182,15 +3182,15 @@ abbr:before {
     left: 0;
     content: "";
     background: url("../img/img-divider-change-inverted.svg") repeat-x; }
-    [dir=rtl] .landing-hero-headlines.is-corporate:before, [dir=rtl] .landing-hero-headlines.is-higher-ed:before, [dir=rtl] .landing-hero-headlines.is-law:before, [dir=rtl] .landing-hero-headlines.is-knocked-out:before {
+    [dir=rtl] .landing-hero-headlines.is-corporate:before, [dir=rtl] .landing-hero-headlines.is-higher-ed:before, [dir=rtl] .landing-hero-headlines.is-law:before, [dir=rtl] .landing-hero-headlines.is-callout:before {
       right: 0;
       left: 0; }
     @media only screen and (max-width: 768px) {
-      .landing-hero-headlines.is-corporate:before, .landing-hero-headlines.is-higher-ed:before, .landing-hero-headlines.is-law:before, .landing-hero-headlines.is-knocked-out:before {
+      .landing-hero-headlines.is-corporate:before, .landing-hero-headlines.is-higher-ed:before, .landing-hero-headlines.is-law:before, .landing-hero-headlines.is-callout:before {
         background-position: 30% 5%;
         background-size: auto 3em; } }
     @media only screen and (min-width: 769px) {
-      .landing-hero-headlines.is-corporate:before, .landing-hero-headlines.is-higher-ed:before, .landing-hero-headlines.is-law:before, .landing-hero-headlines.is-knocked-out:before {
+      .landing-hero-headlines.is-corporate:before, .landing-hero-headlines.is-higher-ed:before, .landing-hero-headlines.is-law:before, .landing-hero-headlines.is-callout:before {
         background-position: 30% 15%;
         background-size: auto 4em; } }
   .landing-hero-headlines.is-corporate {
@@ -3208,10 +3208,10 @@ abbr:before {
         left: auto; }
   .landing-hero-headlines.is-law {
     background-color: #a5c0d5; }
-  .landing-hero-headlines.is-knocked-out {
+  .landing-hero-headlines.is-callout {
     background-color: #f4f4f4; }
-    .landing-hero-headlines.is-knocked-out h1,
-    .landing-hero-headlines.is-knocked-out h2 {
+    .landing-hero-headlines.is-callout h1,
+    .landing-hero-headlines.is-callout h2 {
       color: #af272f; }
 
 .landing-stella-hero {

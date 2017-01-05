@@ -129,7 +129,7 @@
     &.is-corporate,
     &.is-higher-ed,
     &.is-law,
-    &.is-knocked-out
+    &.is-callout
     {
       &:before
       {
@@ -175,7 +175,7 @@
       background-color: #a5c0d5;
     }
 
-    &.is-knocked-out
+    &.is-callout
     {
       background-color: $gray-lightest;
 
