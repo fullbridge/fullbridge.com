@@ -74,59 +74,6 @@
       }
     }
 
-    aside
-    {
-      @include position(relative,auto,auto,auto,auto);
-      @include padding(0,0,0,($gutter/2));
-
-      line-height: ($leading*.845);
-      border-top: $border;
-      z-index: 1;
-
-      &:before
-      {
-        @include position(absolute,-3px,auto,auto,-3px);
-        @include small-diamond;
-      }
-
-      @include bp(small)
-      {
-        @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
-        @include padding(0,($gutter/2),0,($gutter/2));
-      }
-
-      @include bp($min: ($small-screen + 1))
-      {
-        @include float(right);
-
-        &:before
-        {
-          @include position(absolute,-3px,auto,auto,0);
-        }
-      }
-
-      @include bp($min: ($small-screen + 1), $max: 994px)
-      {
-        @include margin(.5em,0,0,($gutter/2));
-
-        width: ($golden-characters/3) + ch;
-      }
-
-      @include bp($min: 995px, $max: 1199px)
-      {
-        @include margin(.5em,calc(#{((-$golden-characters + 9)/3) + ch} - #{$gutter/5}),0,0);
-
-        width: (($golden-characters - 9)/3) + ch;
-      }
-
-      @include bp($min: 1200px)
-      {
-        @include margin(.5em,calc(#{(-$golden-characters/3) + ch} - #{$gutter/2}),0,0);
-
-        width: ($golden-characters/3) + ch;
-      }
-    }
-
     article
     {
       @include margin(0,auto,0,auto);

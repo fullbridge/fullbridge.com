@@ -55,21 +55,6 @@
       }
     }
 
-    &.is-corporate
-    {
-      background-color: #46c6e7;
-    }
-
-    &.is-higher-ed
-    {
-      background-color: #fbaf3f;
-    }
-
-    &.is-law
-    {
-      background-color: #a5c0d5;
-    }
-
     > *
     {
       @include position(relative,auto,auto,auto,auto);
@@ -158,6 +143,29 @@
       {
         font-size: 1.6em;
       }
+    }
+
+    &.is-corporate
+    {
+      background-color: #46c6e7;
+    }
+
+    &.is-higher-ed
+    {
+      background-color: #fbaf3f;
+
+      figure
+      {
+        img
+        {
+          @include position(absolute,18%,auto,auto,20%);
+        }
+      }
+    }
+
+    &.is-law
+    {
+      background-color: #a5c0d5;
     }
   }
 
@@ -422,12 +430,17 @@
 .landing-blockquote
 {
   @include display(flex);
+  @include margin(($paragraph-spacing + em),0,($paragraph-spacing + em),0);
 
   figure
   {
+    @include flex(0 0 48px);
     @include margin(0,0,0,0);
 
-    width: 48px;
+    & + blockquote
+    {
+      @include margin(0,0,0,$gutter);
+    }
   }
 
   img
@@ -440,7 +453,7 @@
 
   blockquote
   {
-    @include margin(0,0,0,$gutter);
+    @include margin(0,0,0,0);
 
     quote
     {
@@ -475,6 +488,11 @@
         @include margin(($paragraph-spacing/2 + em),0,0,0);
       }
     }
+  }
+
+  &.is-large
+  {
+    font-size: 1.35em;
   }
 }
 
