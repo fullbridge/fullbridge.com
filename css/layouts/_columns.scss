@@ -99,9 +99,16 @@
     {
       @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
       @include padding(0,($gutter/2),0,($gutter/2));
+
+      border-bottom: 1px solid $gray-lighter;
+
+      &:before
+      {
+        display: none;
+      }
     }
 
-    @include bp($min: ($small-screen + 1))
+    @include bp(desktop)
     {
       @include float(right);
 

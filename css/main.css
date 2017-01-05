@@ -2917,14 +2917,17 @@ abbr:before {
       padding-top: 0;
       padding-right: 0.98em;
       padding-bottom: 0;
-      padding-left: 0.98em; }
+      padding-left: 0.98em;
+      border-bottom: 1px solid #e7e7e7; }
       [dir=rtl] .golden-column-aside {
         margin-right: auto;
         margin-left: auto; }
       [dir=rtl] .golden-column-aside {
         padding-right: 0.98em;
-        padding-left: 0.98em; } }
-  @media (min-width: 769px) {
+        padding-left: 0.98em; }
+      .golden-column-aside:before {
+        display: none; } }
+  @media only screen and (min-width: 769px) {
     .golden-column-aside {
       float: right; }
       [dir=rtl] .golden-column-aside {
@@ -3997,37 +4000,37 @@ abbr:before {
       [dir=rtl] .home-double-intro:nth-child(1) {
         text-align: left; } }
 
-.home-big-divider {
+.big-graphical-divider {
   opacity: 0.8;
   filter: alpha(opacity=80);
   height: 5em;
   border: none;
   background: url("../img/img-divider-change.svg") center center repeat-x; }
   @media (max-width: 416px) {
-    .home-big-divider {
+    .big-graphical-divider {
       margin-top: 1.96em;
       margin-right: 0;
       margin-bottom: 1.96em;
       margin-left: 0; }
-      [dir=rtl] .home-big-divider {
+      [dir=rtl] .big-graphical-divider {
         margin-right: 0;
         margin-left: 0; } }
   @media (min-width: 416px) and (max-width: 850px) {
-    .home-big-divider {
+    .big-graphical-divider {
       margin-top: 3.92em;
       margin-right: 0;
       margin-bottom: 3.92em;
       margin-left: 0; }
-      [dir=rtl] .home-big-divider {
+      [dir=rtl] .big-graphical-divider {
         margin-right: 0;
         margin-left: 0; } }
   @media (min-width: 850px) {
-    .home-big-divider {
+    .big-graphical-divider {
       margin-top: 3.92em;
       margin-right: 0;
       margin-bottom: 3.92em;
       margin-left: 0; }
-      [dir=rtl] .home-big-divider {
+      [dir=rtl] .big-graphical-divider {
         margin-right: 0;
         margin-left: 0; } }
 
