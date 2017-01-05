@@ -412,6 +412,8 @@ $font-stack:
 {
   a
   {
+    border-bottom: 1px solid;
+
     &:visited
     {
       color: $body-text-color;
@@ -432,20 +434,15 @@ $font-stack:
       color: $link-visited-color;
     }
 
-    &:link:after
+    &[target="_blank"]:after
     {
       @include position(relative,-.6em,auto,auto,auto);
       @include padding(0,0,0,2px);
 
-      content: "\2299";
+      content: "\290F";
       font-size: .6em;
       font-style: normal;
       text-shadow: none;
-    }
-
-    &[target="_blank"]:after
-    {
-      content: "\290F";
     }
   }
 
