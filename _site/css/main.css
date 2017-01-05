@@ -2901,41 +2901,126 @@ abbr:before {
     padding-right: 0;
     padding-left: 0; }
 
-.landing-hero-headlines h1,
-.landing-hero-headlines h2 {
+.landing-hero-headlines {
+  position: relative;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  left: auto;
   text-align: center; }
-.landing-hero-headlines h1 {
-  line-height: 1; }
-  @media only screen and (max-width: 768px) {
-    .landing-hero-headlines h1 {
-      font-size: 10vw; } }
-  @media only screen and (min-width: 769px) and (max-width: 1440px) {
-    .landing-hero-headlines h1 {
-      font-size: 4.5vw; } }
-  @media only screen and (min-width: 1441px) {
-    .landing-hero-headlines h1 {
-      font-size: 3.6em; } }
-.landing-hero-headlines h2 {
-  margin-top: 0.98em;
-  margin-right: 0;
-  margin-bottom: 0.98em;
-  margin-left: 0;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-  letter-spacing: 0; }
-  [dir=rtl] .landing-hero-headlines h2 {
+  [dir=rtl] .landing-hero-headlines {
+    right: auto;
+    left: auto; }
+  .landing-hero-headlines:before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    background: url("../img/img-divider-change-inverted.svg") repeat-x; }
+    [dir=rtl] .landing-hero-headlines:before {
+      right: 0;
+      left: 0; }
+    @media only screen and (max-width: 768px) {
+      .landing-hero-headlines:before {
+        background-position: 30% 5%;
+        background-size: auto 3em; } }
+    @media only screen and (min-width: 769px) {
+      .landing-hero-headlines:before {
+        background-position: 30% 15%;
+        background-size: auto 4em; } }
+  .landing-hero-headlines.is-corporate {
+    background-color: #46c6e7; }
+  .landing-hero-headlines.is-higher-ed {
+    background-color: #fbaf3f; }
+  .landing-hero-headlines.is-law {
+    background-color: #a5c0d5; }
+  .landing-hero-headlines > * {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    z-index: 1; }
+    [dir=rtl] .landing-hero-headlines > * {
+      right: auto;
+      left: auto; }
+  .landing-hero-headlines figure {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    background-color: white;
+    border-radius: 100em; }
+    [dir=rtl] .landing-hero-headlines figure {
+      right: auto;
+      left: auto; }
+    [dir=rtl] .landing-hero-headlines figure {
+      margin-right: auto;
+      margin-left: auto; }
+    @media only screen and (max-width: 768px) {
+      .landing-hero-headlines figure {
+        width: 12vw;
+        height: 12vw; } }
+    @media only screen and (min-width: 769px) and (max-width: 1440px) {
+      .landing-hero-headlines figure {
+        width: 8vw;
+        height: 8vw; } }
+    @media only screen and (min-width: 1441px) {
+      .landing-hero-headlines figure {
+        width: 5em;
+        height: 5em; } }
+    .landing-hero-headlines figure img {
+      position: absolute;
+      top: 18%;
+      right: auto;
+      bottom: auto;
+      left: 22%;
+      display: block;
+      width: 60%; }
+      [dir=rtl] .landing-hero-headlines figure img {
+        right: 22%;
+        left: auto; }
+    .landing-hero-headlines figure + h1 {
+      margin-top: .25em; }
+  .landing-hero-headlines h1 {
+    line-height: 1; }
+    @media only screen and (max-width: 768px) {
+      .landing-hero-headlines h1 {
+        font-size: 10vw; } }
+    @media only screen and (min-width: 769px) and (max-width: 1440px) {
+      .landing-hero-headlines h1 {
+        font-size: 4.5vw; } }
+    @media only screen and (min-width: 1441px) {
+      .landing-hero-headlines h1 {
+        font-size: 3.6em; } }
+  .landing-hero-headlines h2 {
+    margin-top: 0.98em;
     margin-right: 0;
-    margin-left: 0; }
-  @media only screen and (max-width: 768px) {
-    .landing-hero-headlines h2 {
-      font-size: 4vw; } }
-  @media only screen and (min-width: 769px) and (max-width: 1440px) {
-    .landing-hero-headlines h2 {
-      font-size: 2vw; } }
-  @media only screen and (min-width: 1441px) {
-    .landing-hero-headlines h2 {
-      font-size: 1.6em; } }
+    margin-bottom: 0.98em;
+    margin-left: 0;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 0; }
+    [dir=rtl] .landing-hero-headlines h2 {
+      margin-right: 0;
+      margin-left: 0; }
+    @media only screen and (max-width: 768px) {
+      .landing-hero-headlines h2 {
+        font-size: 4vw; } }
+    @media only screen and (min-width: 769px) and (max-width: 1440px) {
+      .landing-hero-headlines h2 {
+        font-size: 2vw; } }
+    @media only screen and (min-width: 1441px) {
+      .landing-hero-headlines h2 {
+        font-size: 1.6em; } }
 
 .landing-stella-hero {
   position: relative;
@@ -3156,9 +3241,9 @@ abbr:before {
   right: auto;
   bottom: auto;
   left: auto;
-  margin-top: 0;
+  margin-top: 1.96em;
   margin-right: 0;
-  margin-bottom: 0;
+  margin-bottom: 0.98em;
   margin-left: 0;
   padding-top: 0.98em;
   padding-right: 0.98em;
@@ -3698,6 +3783,8 @@ abbr:before {
         text-align: left; } }
 
 .home-big-divider {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
   height: 5em;
   border: none;
   background: url("../img/img-divider-change.svg") center center repeat-x; }
