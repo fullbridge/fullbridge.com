@@ -73,31 +73,10 @@
         }
       }
     }
-
-    article
-    {
-      @include margin(0,auto,0,auto);
-      @include padding(auto,auto,($paragraph-spacing*4 + em),auto);
-
-      @include bp(small)
-      {
-        width: calc(100vw - #{$gutter*2});
-      }
-
-      @include bp($min: ($small-screen + 1), $max: 994px)
-      {
-        width: $golden-characters + ch;
-      }
-
-      @include bp($min: 995px, $max: 1199px)
-      {
-        width: ($golden-characters - 9) + ch;
-      }
-
-      @include bp($min: 1200px)
-      {
-        width: $golden-characters + ch;
-      }
-    }
   }
+}
+
+.article-body
+{
+  @include additional-typography;
 }

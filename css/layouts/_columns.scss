@@ -28,23 +28,23 @@
   }
 }
 
-.even-column
-{
-  @include bp(small)
+  .even-column
   {
-    @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
-  }
+    @include bp(small)
+    {
+      @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
+    }
 
-  @include bp(desktop)
-  {
-    @include flex(1);
-  }
+    @include bp(desktop)
+    {
+      @include flex(1);
+    }
 
-  img
-  {
-    max-width: 100%;
+    img
+    {
+      max-width: 100%;
+    }
   }
-}
 
 .golden-column
 {
@@ -52,37 +52,47 @@
 
   @include bp(small)
   {
-    width: calc(100vw - #{$gutter*2});
+    max-width: calc(100vw - #{$gutter*2});
   }
 
   @include bp($min: ($small-screen + 1), $max: 994px)
   {
-    width: $golden-characters + ch;
+    max-width: $golden-characters + ch;
   }
 
   @include bp($min: 995px, $max: 1199px)
   {
-    width: ($golden-characters - 9) + ch;
+    max-width: ($golden-characters - 9) + ch;
   }
 
   @include bp($min: 1200px)
   {
-    width: $golden-characters + ch;
+    max-width: $golden-characters + ch;
   }
+}
 
-  aside
+  .golden-column-aside
   {
     @include position(relative,auto,auto,auto,auto);
     @include padding(0,0,0,($gutter/2));
 
     line-height: ($leading*.845);
-    border-top: $border;
+    border-top: 1px solid $gray-lighter;
     z-index: 1;
 
     &:before
     {
-      @include position(absolute,-3px,auto,auto,-3px);
-      @include small-diamond;
+      @include position(absolute,-5px,auto,auto,-5px);
+
+      display: block;
+      width: 10px;
+      height: 10px;
+      content: "";
+      color: $background-color;
+      border: 3px solid;
+      border-radius: 10px;
+      background-color: $heading-color;
+      line-height: 1;
     }
 
     @include bp(small)
@@ -97,7 +107,7 @@
 
       &:before
       {
-        @include position(absolute,-3px,auto,auto,0);
+        @include position(absolute,-5px,auto,auto,0);
       }
     }
 
@@ -108,18 +118,59 @@
       width: ($golden-characters/3) + ch;
     }
 
-    @include bp($min: 1090px, $max: 1199px)
+    @include bp($min: 1090px, $max: 1286px)
     {
       @include margin(.5em,calc(#{((-$golden-characters + 9)/3) + ch} - #{$gutter/5}),0,0);
 
       width: (($golden-characters - 9)/3) + ch;
     }
 
-    @include bp($min: 1200px)
+    @include bp($min: 1286px)
     {
       @include margin(.5em,calc(#{(-$golden-characters/3) + ch} - #{$gutter/2}),0,0);
 
       width: ($golden-characters/3) + ch;
     }
   }
-}
+
+.side-by-side
+{}
+
+  .side-by-side-row
+  {
+    @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
+
+    @include bp(desktop)
+    {
+      @include display(flex);
+      @include justify-content(space-around);
+      @include align-items(center);
+    }
+  }
+
+  .side-by-side-column
+  {
+    @include bp(desktop)
+    {
+      width: 50%;
+
+      &:nth-child(1)
+      {
+        @include padding(0,($gutter/2),0,0);
+      }
+
+      &:nth-child(2)
+      {
+        @include padding(0,0,0,($gutter/2));
+      }
+    }
+
+    figure
+    {
+      img
+      {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }

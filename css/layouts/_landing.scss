@@ -35,26 +35,6 @@
     @include position(relative,auto,auto,auto,auto);
     @include text-align(center);
 
-    &:before
-    {
-      @include position(absolute,0,0,0,0);
-
-      content: "";
-      background: url("../img/img-divider-change-inverted.svg") repeat-x;
-
-      @include bp(small)
-      {
-        background-position: 30% 5%;
-        background-size: auto 3em;
-      }
-
-      @include bp(desktop)
-      {
-        background-position: 30% 15%;
-        background-size: auto 4em;
-      }
-    }
-
     > *
     {
       @include position(relative,auto,auto,auto,auto);
@@ -104,7 +84,7 @@
 
     h1
     {
-      line-height: 1;
+      line-height: 1.1;
 
       @include bp(small)
       {
@@ -127,6 +107,7 @@
       @include margin(($paragraph-spacing + em),0,($paragraph-spacing + em),0);
       @include font(body,regular);
 
+      line-height: 1.4;
       letter-spacing: 0;
 
       @include bp(small)
@@ -142,6 +123,32 @@
       @include bp(large)
       {
         font-size: 1.6em;
+      }
+    }
+
+    &.is-corporate,
+    &.is-higher-ed,
+    &.is-law,
+    &.is-knocked-out
+    {
+      &:before
+      {
+        @include position(absolute,0,0,0,0);
+
+        content: "";
+        background: url("../img/img-divider-change-inverted.svg") repeat-x;
+
+        @include bp(small)
+        {
+          background-position: 30% 5%;
+          background-size: auto 3em;
+        }
+
+        @include bp(desktop)
+        {
+          background-position: 30% 15%;
+          background-size: auto 4em;
+        }
       }
     }
 
@@ -166,6 +173,17 @@
     &.is-law
     {
       background-color: #a5c0d5;
+    }
+
+    &.is-knocked-out
+    {
+      background-color: $gray-lightest;
+
+      h1,
+      h2
+      {
+        color: $primary-color;
+      }
     }
   }
 

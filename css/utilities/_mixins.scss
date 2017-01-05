@@ -449,52 +449,6 @@ $font-stack:
     }
   }
 
-  * + p
-  {
-    @include bp(small)
-    {
-      text-indent: $gutter/2;
-    }
-
-    @include bp(desktop)
-    {
-      text-indent: $gutter/1.5;
-    }
-  }
-
-  header + p,
-  header + *:not(p) + p,
-  h1 + p,
-  h1 + *:not(p) + p,
-  h2 + p,
-  h2 + *:not(p) + p,
-  h3 + p,
-  h3 + *:not(p) + p,
-  h4 + p,
-  h4 + *:not(p) + p,
-  h5 + p,
-  h5 + *:not(p) + p,
-  h6 + p,
-  h6 + *:not(p) + p
-  {
-    text-indent: 0;
-  }
-
-  p
-  {
-    @include margin(0,auto,0,auto);
-
-    &:first-of-type
-    {
-      text-indent: 0;
-    }
-
-    &:first-child
-    {
-      @include margin(($paragraph-spacing + em),auto,0,auto);
-    }
-  }
-
   abbr,
   span[data-tip]
   {
