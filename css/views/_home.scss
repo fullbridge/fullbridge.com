@@ -247,6 +247,12 @@
 
 .home-big-divider
 {
+  @include opacity(.8);
+
+  height: 5em;
+  border: none;
+  background: url("../img/img-divider-change.svg") center center repeat-x;
+
   @include bp($max: 416px)
   {
     @include margin(($paragraph-spacing*2 + em),0,($paragraph-spacing*2 + em),0);
@@ -261,10 +267,6 @@
   {
     @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
   }
-
-  height: 5em;
-  border: none;
-  background: url("../img/img-divider-change.svg") center center repeat-x;
 }
 
 .home-section
