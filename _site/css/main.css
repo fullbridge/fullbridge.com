@@ -4237,36 +4237,36 @@ abbr:before {
     margin-right: 0;
     margin-left: 0; }
 
-#page-category-is-article > main a:visited {
-  color: black; }
-#page-category-is-article > main a:hover {
-  color: #13a8e1; }
-#page-category-is-article > main a:visited:hover {
-  color: #13a8e1; }
-#page-category-is-article > main a:active {
-  color: #13a8e1; }
-#page-category-is-article > main a:link:after {
-  position: relative;
-  top: -0.6em;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 2px;
-  content: "\2299";
-  font-size: .6em;
-  font-style: normal;
-  text-shadow: none; }
-  [dir=rtl] #page-category-is-article > main a:link:after {
+#page-category-is-article > main a {
+  border-bottom: 1px solid; }
+  #page-category-is-article > main a:visited {
+    color: black; }
+  #page-category-is-article > main a:hover {
+    color: #13a8e1; }
+  #page-category-is-article > main a:visited:hover {
+    color: #13a8e1; }
+  #page-category-is-article > main a:active {
+    color: #13a8e1; }
+  #page-category-is-article > main a[target="_blank"]:after {
+    position: relative;
+    top: -0.6em;
     right: auto;
-    left: auto; }
-  [dir=rtl] #page-category-is-article > main a:link:after {
-    padding-right: 2px;
-    padding-left: 0; }
-#page-category-is-article > main a[target="_blank"]:after {
-  content: "\290F"; }
+    bottom: auto;
+    left: auto;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 2px;
+    content: "\290F";
+    font-size: .6em;
+    font-style: normal;
+    text-shadow: none; }
+    [dir=rtl] #page-category-is-article > main a[target="_blank"]:after {
+      right: auto;
+      left: auto; }
+    [dir=rtl] #page-category-is-article > main a[target="_blank"]:after {
+      padding-right: 2px;
+      padding-left: 0; }
 #page-category-is-article > main abbr a:after,
 #page-category-is-article > main span[data-tip] a:after {
   content: "\2139" !important; }
@@ -4531,36 +4531,36 @@ abbr:before {
     /* Set your wanted text-shadow here */
     text-shadow: 2px 2px 0px white, 2px -2px 0px white, -2px 2px 0px white, -2px -2px 0px white, 0px 2px 0px white, 0px -2px 0px white; }
 
-.article-body a:visited {
-  color: black; }
-.article-body a:hover {
-  color: #13a8e1; }
-.article-body a:visited:hover {
-  color: #13a8e1; }
-.article-body a:active {
-  color: #13a8e1; }
-.article-body a:link:after {
-  position: relative;
-  top: -0.6em;
-  right: auto;
-  bottom: auto;
-  left: auto;
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 2px;
-  content: "\2299";
-  font-size: .6em;
-  font-style: normal;
-  text-shadow: none; }
-  [dir=rtl] .article-body a:link:after {
+.article-body a {
+  border-bottom: 1px solid; }
+  .article-body a:visited {
+    color: black; }
+  .article-body a:hover {
+    color: #13a8e1; }
+  .article-body a:visited:hover {
+    color: #13a8e1; }
+  .article-body a:active {
+    color: #13a8e1; }
+  .article-body a[target="_blank"]:after {
+    position: relative;
+    top: -0.6em;
     right: auto;
-    left: auto; }
-  [dir=rtl] .article-body a:link:after {
-    padding-right: 2px;
-    padding-left: 0; }
-.article-body a[target="_blank"]:after {
-  content: "\290F"; }
+    bottom: auto;
+    left: auto;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 2px;
+    content: "\290F";
+    font-size: .6em;
+    font-style: normal;
+    text-shadow: none; }
+    [dir=rtl] .article-body a[target="_blank"]:after {
+      right: auto;
+      left: auto; }
+    [dir=rtl] .article-body a[target="_blank"]:after {
+      padding-right: 2px;
+      padding-left: 0; }
 .article-body abbr a:after,
 .article-body span[data-tip] a:after {
   content: "\2139" !important; }
