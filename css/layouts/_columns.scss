@@ -142,11 +142,16 @@
 
 .side-by-side
 {
+  @include display(flex);
   @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
+
+  @include bp($max: 1126px)
+  {
+    @include flex-direction(column);
+  }
 
   @include bp($min: 1126px)
   {
-    @include display(flex);
     @include justify-content(space-around);
     @include align-items(center);
   }
@@ -156,9 +161,19 @@
   {
     @include bp($max: 1126px)
     {
-      @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+      @include margin(0,auto,0,auto);
 
-      max-width: $golden-characters + ch;
+      &.is-main
+      {
+        @include order(1);
+
+        max-width: $golden-characters + ch;
+      }
+
+      &.is-aside
+      {
+        min-width: 100%;
+      }
     }
 
     @include bp($min: 1126px)
