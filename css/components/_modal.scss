@@ -21,6 +21,11 @@
 
   &:target
   {
+    .modal-shadow
+    {
+      @include animated--fadeIn;
+    }
+
     .modal-content
     {
       @include animated--fadeInUp;
@@ -32,7 +37,7 @@
 {
   &:before
   {
-    @include font(body,bold);
+    @include font(code,regular);
 
     content: "\2A09";
   }

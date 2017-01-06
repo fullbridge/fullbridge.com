@@ -141,34 +141,46 @@
   }
 
 .side-by-side
-{}
+{
+  @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
 
-  .side-by-side-row
+  @include bp($min: 1126px)
   {
-    @include margin(($paragraph-spacing*2 + em),auto,($paragraph-spacing*2 + em),auto);
-
-    @include bp(desktop)
-    {
-      @include display(flex);
-      @include justify-content(space-around);
-      @include align-items(center);
-    }
+    @include display(flex);
+    @include justify-content(space-around);
+    @include align-items(center);
   }
+}
 
   .side-by-side-column
   {
-    @include bp(desktop)
+    @include bp($max: 1126px)
     {
-      width: 50%;
+      @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
 
+      max-width: $golden-characters + ch;
+    }
+
+    @include bp($min: 1126px)
+    {
       &:nth-child(1)
       {
-        @include padding(0,($gutter/2),0,0);
+        @include padding(0,$gutter,0,0);
       }
 
       &:nth-child(2)
       {
-        @include padding(0,0,0,($gutter/2));
+        @include padding(0,0,0,$gutter);
+      }
+
+      &.is-main
+      {
+        width: $golden-main-width*1%;
+      }
+
+      &.is-aside
+      {
+        width: $golden-side-width*2%;
       }
     }
 
