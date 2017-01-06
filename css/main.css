@@ -3382,25 +3382,6 @@ abbr:before {
   [dir=rtl] .landing-stella-hero {
     padding-right: 0;
     padding-left: 0; }
-  .landing-stella-hero:before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.15;
-    filter: alpha(opacity=15);
-    content: "";
-    background: url("../img/img-divider-change.svg") repeat-x; }
-    [dir=rtl] .landing-stella-hero:before {
-      right: 0;
-      left: 0; }
-    @media only screen and (max-width: 768px) {
-      .landing-stella-hero:before {
-        background-position: center 100%; } }
-    @media only screen and (min-width: 769px) {
-      .landing-stella-hero:before {
-        background-position: center center; } }
   .landing-stella-hero > .landing-wrapper {
     position: relative;
     top: auto;
@@ -3428,7 +3409,16 @@ abbr:before {
         -ms-align-items: center;
         -o-align-items: center;
         align-items: center;
-        -ms-flex-align: center; } }
+        -ms-flex-align: center;
+        -webkit-box-pack: justify;
+        -moz-box-pack: justify;
+        box-pack: justify;
+        -webkit-justify-content: space-between;
+        -moz-justify-content: space-between;
+        -ms-justify-content: space-between;
+        -o-justify-content: space-between;
+        justify-content: space-between;
+        -ms-flex-pack: justify; } }
 
 .landing-stella-hero-graphic {
   margin-top: 0;
@@ -3438,6 +3428,16 @@ abbr:before {
   [dir=rtl] .landing-stella-hero-graphic {
     margin-right: 0;
     margin-left: 0; }
+  @media only screen and (min-width: 769px) {
+    .landing-stella-hero-graphic {
+      margin-top: 0;
+      margin-right: 0;
+      margin-bottom: 0;
+      margin-left: 3.92em;
+      width: 43.2894%; }
+      [dir=rtl] .landing-stella-hero-graphic {
+        margin-right: 3.92em;
+        margin-left: 0; } }
   .landing-stella-hero-graphic img {
     width: 100%;
     height: auto; }
@@ -3453,20 +3453,7 @@ abbr:before {
       margin-left: 0; } }
 @media only screen and (min-width: 769px) {
   .landing-stella-hero-headlines {
-    -webkit-box-flex: 0;
-    -moz-box-flex: 0;
-    box-flex: 0;
-    -webkit-flex: 0 0 56.7106%;
-    -moz-flex: 0 0 56.7106%;
-    -ms-flex: 0 0 56.7106%;
-    flex: 0 0 56.7106%;
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 3.92em; }
-    [dir=rtl] .landing-stella-hero-headlines {
-      margin-right: 3.92em;
-      margin-left: 0; } }
+    width: 56.7106%; } }
 .landing-stella-hero-headlines h1,
 .landing-stella-hero-headlines h2 {
   margin-top: 0;

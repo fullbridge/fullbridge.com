@@ -232,25 +232,6 @@
   @include position(relative,auto,auto,auto,auto);
   @include padding(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
 
-  &:before
-  {
-    @include position(absolute,0,0,0,0);
-    @include opacity(.15);
-
-    content: "";
-    background: url("../img/img-divider-change.svg") repeat-x;
-
-    @include bp(small)
-    {
-      background-position: center 100%;
-    }
-
-    @include bp(desktop)
-    {
-      background-position: center center;
-    }
-  }
-
   > .landing-wrapper
   {
     @include position(relative,auto,auto,auto,auto);
@@ -261,6 +242,7 @@
     {
       @include display(flex);
       @include align-items(center);
+      @include justify-content(space-between);
     }
   }
 }
@@ -268,6 +250,13 @@
   .landing-stella-hero-graphic
   {
     @include margin(0,0,0,0);
+
+    @include bp(desktop)
+    {
+      @include margin(0,0,0,$gutter*2);
+
+      width: $golden-side-width*2%;
+    }
 
     img
     {
@@ -285,8 +274,7 @@
 
     @include bp(desktop)
     {
-      @include flex(0 0 $golden-main-width*1%);
-      @include margin(0,0,0,$gutter*2);
+      width: $golden-main-width*1%;
     }
 
     h1,
