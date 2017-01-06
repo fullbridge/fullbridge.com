@@ -2708,94 +2708,90 @@ abbr:before {
       overflow: visible;
       position: static;
       width: auto; }
-  .modal:target .modal-shadow {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn; }
-  .modal:target .modal-content {
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-    -webkit-animation-name: fadeInUp;
-    animation-name: fadeInUp; }
+  @media only screen and (max-width: 768px) {
+    .modal:target .modal-shadow {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeInRight;
+      animation-name: fadeInRight; }
+    .modal:target .modal-content {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeInRight;
+      animation-name: fadeInRight; } }
+  @media only screen and (min-width: 769px) {
+    .modal:target .modal-shadow {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeInUp;
+      animation-name: fadeInUp; }
+    .modal:target .modal-content {
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-name: fadeInUp;
+      animation-name: fadeInUp; } }
 
-.modal-shadow:before {
-  font-family: "Lucida Sans Typewriter", "Courier New", monospace;
-  font-weight: 400;
-  font-style: normal;
-  content: "\2A09"; }
-@media only screen and (max-width: 768px) {
-  .modal-shadow {
-    position: fixed;
-    top: 0;
-    right: 0;
+.modal-shadow {
+  display: block; }
+  .modal-shadow:before {
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
     bottom: auto;
     left: auto;
-    text-align: center;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    font-style: normal;
     display: block;
-    width: 2em;
-    height: 2em;
-    color: white;
-    line-height: 2;
-    z-index: 1; }
-    [dir=rtl] .modal-shadow {
+    content: "+";
+    line-height: 1;
+    font-size: 1.5em; }
+    [dir=rtl] .modal-shadow:before {
       right: auto;
-      left: 0; }
-    .modal-shadow:before {
-      position: absolute;
-      top: auto;
-      right: auto;
-      bottom: auto;
-      left: auto;
-      left: 50%;
-      top: 50%;
-      bottom: auto;
-      right: auto;
-      -webkit-transform: translateX(-50%) translateY(-50%);
-      -moz-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-      -o-transform: translateX(-50%) translateY(-50%);
-      transform: translateX(-50%) translateY(-50%);
-      display: block;
-      color: black;
-      line-height: 1;
-      font-size: 1.25em; }
-      [dir=rtl] .modal-shadow:before {
-        right: auto;
-        left: auto; } }
-@media only screen and (min-width: 769px) {
-  .modal-shadow {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: block;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1; }
-    [dir=rtl] .modal-shadow {
-      right: 0;
-      left: 0; }
-    .modal-shadow:before {
-      position: absolute;
+      left: 0.5em; }
+  @media only screen and (max-width: 768px) {
+    .modal-shadow {
+      position: fixed;
       top: 0;
       right: 0;
       bottom: auto;
       left: auto;
-      text-align: center;
-      display: block;
-      width: 2em;
-      height: 2em;
-      color: white;
-      line-height: 2; }
-      [dir=rtl] .modal-shadow:before {
+      width: 1.5em;
+      height: 1.5em;
+      z-index: 1; }
+      [dir=rtl] .modal-shadow {
         right: auto;
-        left: 0; } }
+        left: 0; }
+      .modal-shadow:before {
+        color: black; } }
+  @media only screen and (min-width: 769px) {
+    .modal-shadow {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1; }
+      [dir=rtl] .modal-shadow {
+        right: 0;
+        left: 0; }
+      .modal-shadow:before {
+        color: white; } }
 
 .modal-content {
   padding-top: 0.98em;
