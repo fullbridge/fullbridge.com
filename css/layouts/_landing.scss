@@ -52,8 +52,8 @@
 
       @include bp(small)
       {
-        width: 12vw;
-        height: 12vw;
+        width: 15vw;
+        height: 15vw;
       }
 
       @include bp(medium)
@@ -140,7 +140,7 @@
 
         @include bp(small)
         {
-          background-position: 30% 5%;
+          background-position: 60% 5%;
           background-size: auto 3em;
         }
 
@@ -183,6 +183,46 @@
       h2
       {
         color: $primary-color;
+      }
+    }
+
+    &.is-future
+    {
+      background-color: #193952;
+
+      @include bp(small)
+      {
+        @include padding(6em,0,($paragraph-spacing*2 + em),0);
+      }
+
+      @include bp(desktop)
+      {
+        @include padding(8em,0,($paragraph-spacing*2 + em),0);
+      }
+
+      &:before
+      {
+        @include position(absolute,0,0,0,0);
+
+        content: "";
+        background: url("../img/img-hero-future.svg") repeat-x;
+        background-position: center 1em;
+
+        @include bp(small)
+        {
+          background-size: auto 6em;
+        }
+
+        @include bp(desktop)
+        {
+          background-size: auto 8em;
+        }
+      }
+
+      h1,
+      h2
+      {
+        color: $background-color;
       }
     }
   }
@@ -319,11 +359,6 @@
 
   .landing-cta-main
   {
-    figure
-    {
-      @include margin(0,0,0,0);
-    }
-
     img
     {
       width: 100%;
@@ -336,7 +371,7 @@
     @include bp(desktop)
     {
       @include flex(0 0 320px);
-      @include margin(0,0,0,$gutter);
+      @include margin(0,0,0,$gutter*2);
     }
   }
 

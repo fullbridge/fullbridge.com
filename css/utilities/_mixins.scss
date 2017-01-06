@@ -482,23 +482,6 @@ $font-stack:
       max-width: 100%;
     }
 
-    > div
-    {
-      @include position(relative,auto,auto,auto,auto);
-      @include padding(30px,auto,56.25%,auto);
-
-      height: 0;
-      overflow: hidden;
-
-      iframe,object,embed
-      {
-        @include position(absolute,0,auto,auto,0);
-
-        width: 100%;
-        height: 100%;
-      }
-    }
-
     figcaption
     {
       @include font(heading,regular);

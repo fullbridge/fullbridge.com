@@ -38,7 +38,7 @@
     {
       .modal-shadow
       {
-        @include animated--fadeInUp;
+        @include animated--fadeIn;
       }
 
       .modal-content
