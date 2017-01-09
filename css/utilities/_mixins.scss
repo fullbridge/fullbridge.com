@@ -410,88 +410,17 @@ $font-stack:
 
 @mixin additional-typography
 {
-  a
+  a.link
   {
-    &:visited
-    {
-      color: $body-text-color;
-    }
-
-    &:hover
-    {
-      color: $link-color;
-    }
-
-    &:visited:hover
-    {
-      color: $link-visited-color;
-    }
-
-    &:active
-    {
-      color: $link-visited-color;
-    }
-
-    &:link:after
+    &[target="_blank"]:after
     {
       @include position(relative,-.6em,auto,auto,auto);
       @include padding(0,0,0,2px);
 
-      content: "\2299";
+      content: "\290F";
       font-size: .6em;
       font-style: normal;
       text-shadow: none;
-    }
-
-    &[target="_blank"]:after
-    {
-      content: "\290F";
-    }
-  }
-
-  * + p
-  {
-    @include bp(small)
-    {
-      text-indent: $gutter/2;
-    }
-
-    @include bp(desktop)
-    {
-      text-indent: $gutter/1.5;
-    }
-  }
-
-  header + p,
-  header + *:not(p) + p,
-  h1 + p,
-  h1 + *:not(p) + p,
-  h2 + p,
-  h2 + *:not(p) + p,
-  h3 + p,
-  h3 + *:not(p) + p,
-  h4 + p,
-  h4 + *:not(p) + p,
-  h5 + p,
-  h5 + *:not(p) + p,
-  h6 + p,
-  h6 + *:not(p) + p
-  {
-    text-indent: 0;
-  }
-
-  p
-  {
-    @include margin(0,auto,0,auto);
-
-    &:first-of-type
-    {
-      text-indent: 0;
-    }
-
-    &:first-child
-    {
-      @include margin(($paragraph-spacing + em),auto,0,auto);
     }
   }
 
@@ -529,23 +458,6 @@ $font-stack:
     img
     {
       max-width: 100%;
-    }
-
-    > div
-    {
-      @include position(relative,auto,auto,auto,auto);
-      @include padding(30px,auto,56.25%,auto);
-
-      height: 0;
-      overflow: hidden;
-
-      iframe,object,embed
-      {
-        @include position(absolute,0,auto,auto,0);
-
-        width: 100%;
-        height: 100%;
-      }
     }
 
     figcaption

@@ -39,7 +39,7 @@ $tooltip-font-size: .6;
 $large-font-size: 1.16;
 $leading: 1.5;
 $paragraph-spacing: .98;
-$golden-characters: 70;
+$golden-characters: 85;
 
 $gutter: 1.96em; // .98 x 2
 $golden-side-width: 21.6447;
@@ -47,6 +47,6 @@ $golden-main-width: (100 - ($golden-side-width*2));
 $small-screen: 768px;
 $medium-screen: 1440px;
 
-$timing: .25s;
+$timing: .5s;
 $modal-z: 99999;
 $menubar-z: ($modal-z - 1);

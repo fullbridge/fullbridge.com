@@ -58,7 +58,7 @@
   {
     @include justify-content(space-between);
 
-    min-height: 30em;
+    min-height: 35em;
     max-height: calc(100vh - #{5em*.7 + 3em});
   }
 
@@ -124,7 +124,7 @@
     @include bp(small)
     {
       @include position(absolute,-20%,auto,auto,0);
-      @include opacity(.1);
+      @include opacity(.2);
 
       width: 100%;
       z-index: -1;
@@ -235,7 +235,7 @@
       @include flex(1);
       @include margin(0,$gutter*1.5,0,$gutter*1.5);
 
-      min-width: 40ch;
+      min-width: 45ch;
       max-width: 60ch;
 
       &:nth-child(1)
@@ -244,28 +244,6 @@
       }
     }
   }
-
-.home-big-divider
-{
-  @include bp($max: 416px)
-  {
-    @include margin(($paragraph-spacing*2 + em),0,($paragraph-spacing*2 + em),0);
-  }
-
-  @include bp($min: 416px, $max: 850px)
-  {
-    @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
-  }
-
-  @include bp($min: 850px)
-  {
-    @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
-  }
-
-  height: 5em;
-  border: none;
-  background: url("../img/img-divider-change.svg") center center repeat-x;
-}
 
 .home-section
 {

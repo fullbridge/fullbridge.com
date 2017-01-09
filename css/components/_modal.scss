@@ -21,43 +21,61 @@
 
   &:target
   {
-    .modal-content
+    @include bp(small)
     {
-      @include animated--fadeInUp;
+      .modal-shadow
+      {
+        @include animated--fadeInRight;
+      }
+
+      .modal-content
+      {
+        @include animated--fadeInRight;
+      }
+    }
+
+    @include bp(desktop)
+    {
+      .modal-shadow
+      {
+        @include animated--fadeIn;
+      }
+
+      .modal-content
+      {
+        @include animated--fadeInUp;
+      }
     }
   }
 }
 
 .modal-shadow
 {
+  display: block;
+
   &:before
   {
+    @include position(absolute,.5em,.5em,auto,auto);
+    @include transform(rotate(45deg));
     @include font(body,bold);
 
-    content: "\2A09";
+    display: block;
+    content: "+";
+    line-height: 1;
+    font-size: 1.5em;
   }
 
   @include bp(small)
   {
     @include position(fixed,0,0,auto,auto);
-    @include text-align(center);
 
-    display: block;
-    width: 2em;
-    height: 2em;
-    color: $background-color;
-    line-height: 2;
+    width: 1.5em;
+    height: 1.5em;
     z-index: 1;
 
     &:before
     {
-      @include position(absolute,auto,auto,auto,auto);
-      @include center(xy);
-
-      display: block;
       color: $heading-color;
-      line-height: 1;
-      font-size: 1.25em;
     }
   }
 
@@ -65,21 +83,13 @@
   {
     @include position(fixed,0,0,0,0);
 
-    display: block;
     width: 100vw;
     height: 100vh;
     z-index: -1;
 
     &:before
     {
-      @include position(absolute,0,0,auto,auto);
-      @include text-align(center);
-
-      display: block;
-      width: 2em;
-      height: 2em;
       color: $background-color;
-      line-height: 2;
     }
   }
 }
