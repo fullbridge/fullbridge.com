@@ -410,30 +410,8 @@ $font-stack:
 
 @mixin additional-typography
 {
-  a
+  a.link
   {
-    border-bottom: 1px solid;
-
-    &:visited
-    {
-      color: $body-text-color;
-    }
-
-    &:hover
-    {
-      color: $link-color;
-    }
-
-    &:visited:hover
-    {
-      color: $link-visited-color;
-    }
-
-    &:active
-    {
-      color: $link-visited-color;
-    }
-
     &[target="_blank"]:after
     {
       @include position(relative,-.6em,auto,auto,auto);

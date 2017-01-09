@@ -430,6 +430,11 @@
   @include text-align(center);
 }
 
+.landing-centered
+{
+  @include text-align(center);
+}
+
 .landing-big-emphasis
 {
   @include font(body,regular);
