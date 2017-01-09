@@ -104,9 +104,10 @@
 
     h2
     {
-      @include margin(($paragraph-spacing + em),0,($paragraph-spacing + em),0);
+      @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
       @include font(body,regular);
 
+      max-width: 60ch;
       line-height: 1.4;
       letter-spacing: 0;
 
@@ -172,7 +173,7 @@
 
     &.is-law
     {
-      background-color: #a5c0d5;
+      background-color: #db95ca;
     }
 
     &.is-callout
