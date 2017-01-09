@@ -3,11 +3,8 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
-
-# THANKS
-
-    <name>
+    Mike Mai -- Web designer and front-end developer -- @mikemai2awesome
+    Tori VanSant -- Graphic designer
 
 # TECHNOLOGY COLOPHON
 

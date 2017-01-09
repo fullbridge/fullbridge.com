@@ -1,81 +1,3 @@
-#page-category-is-article
-{
-  > main
-  {
-    @include additional-typography;
-
-    article > footer
-    {
-      @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
-    }
-
-    article > header:first-of-type
-    {
-      > hgroup
-      {
-        *:first-child
-        {
-          @include text-align(center);
-
-          & + *
-          {
-            @extend h4;
-            @include margin((-($paragraph-spacing/2) + em),auto,($paragraph-spacing/2 + em),auto);
-            @include text-align(center);
-          }
-        }
-      }
-
-      > figure
-      {
-        @include bp(small)
-        {
-          margin-right: -$gutter;
-          margin-left: -$gutter;
-        }
-
-        @include bp(medium)
-        {
-          margin-right: (-$gutter*1.2);
-          margin-left: (-$gutter*1.2);
-        }
-
-        @include bp(large)
-        {
-          margin-right: (-$gutter*2);
-          margin-left: (-$gutter*2);
-        }
-
-        img
-        {
-          width: 100%;
-        }
-
-        figcaption
-        {
-          @include padding(0,($gutter/$small-font-size),0,($gutter/$small-font-size));
-          @include text-align(center);
-        }
-      }
-
-      > p:first-of-type
-      {
-        color: $heading-color;
-
-        @include bp(desktop)
-        {
-          font-size: 1.22em;
-        }
-
-        a
-        {
-          @include underline(1.12em,0.04em,$body-text-color,$background-color);
-        }
-      }
-    }
-  }
-}
-
 .article-body
 {
   @include additional-typography;
@@ -110,5 +32,6 @@
   img
   {
     display: block;
+    max-width: 100%;
   }
 }

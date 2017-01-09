@@ -11,6 +11,9 @@
     <meta http-equiv="cleartype" content="on">
 
     <!-- SEO stuff -->
+    {% if page.current == "template" %}
+    <meta name="robots" content="noindex, nofollow">
+    {% endif %}
     <meta name="author" content="{{ site.author }}">
     <meta name="description" content="{{ page.description }}">
     <meta property="og:description" content="{{ page.description }}" />
