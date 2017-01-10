@@ -1,6 +1,7 @@
 .button
 {
   @include padding(($paragraph-spacing*1.5 + em),($gutter*2),($paragraph-spacing*1.5 + em),($gutter*2));
+  @include user-select(none);
   @include truncate;
   @include transition(background-color $timing ease-in-out);
 
