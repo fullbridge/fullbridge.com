@@ -33,12 +33,14 @@ body
 
 ::-moz-selection
 {
+  color: black;
   text-shadow: none;
   background: $highlight-background-color;
 }
 
 ::selection
 {
+  color: black;
   text-shadow: none;
   background: $highlight-background-color;
 }
