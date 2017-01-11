@@ -38,9 +38,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="{{ site.sans-stack }}">
+    <link rel="stylesheet" href="{{ site.font-stack }}">
 
     <!-- JS -->
     <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
   </head>
-  <body {% if page.category %}id="page-category-is-{{ page.category }}"{% endif %} data-current-page="{{ page.current }}">
+  <body {% if page.category %}id="page-category-is-{{ page.category }}"{% endif %} {% if page.current %}data-current-page="{{ page.current }}"{% endif %}>

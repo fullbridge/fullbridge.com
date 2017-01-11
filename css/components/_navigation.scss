@@ -35,6 +35,7 @@
   .main-menu-logo
   {
     @include margin(0,0,0,0);
+    @include user-select(none);
 
     line-height: 5;
     font-size: .7em;
@@ -81,6 +82,7 @@
     .trigger
     {
       @include padding(0,$gutter,0,$gutter);
+      @include user-select(none);
       @include font(body,bold);
       @include transition(color $timing ease-in-out, background-color $timing ease-in-out);
 
@@ -152,6 +154,8 @@
 
     &.is-dropdown
     {
+      @include user-select(none);
+
       position: relative;
 
       .trigger
@@ -216,6 +220,8 @@
 
     &.is-cta
     {
+      @include user-select(none);
+
       a
       {
         @include margin(.75em,0,.75em,.75em);
@@ -246,30 +252,27 @@
         }
       }
     }
-
-    &:not(:hover)
-    {
-      .trigger + *
-      {
-        @include opacity(0);
-        @include visuallyhidden;
-      }
-    }
-
-    html:not(.touch) &:hover
-    {
-      .trigger
-      {
-        color: $background-color;
-        background-color: $heading-color;
-
-        & + *
-        {
-          @include opacity(1);
-        }
-      }
-    }
   }
+
+    html:not(.touch) .main-menu-item:not(:hover) > .trigger + *,
+    html.touch .main-menu-item > .trigger:not(.active) + *
+    {
+      @include opacity(0);
+      @include visuallyhidden;
+    }
+
+    html:not(.touch) .main-menu-item:hover > .trigger,
+    html.touch .main-menu-item > .trigger.active
+    {
+      color: $background-color;
+      background-color: $heading-color;
+    }
+
+    html:not(.touch) .main-menu-item:hover > .trigger + *,
+    html.touch .main-menu-item > .trigger.active + *
+    {
+      @include opacity(1);
+    }
 
 .full-menu
 {
@@ -281,6 +284,8 @@
 
   a
   {
+    @include user-select(none);
+
     color: $background-color;
 
     html:not(.touch) &:hover
