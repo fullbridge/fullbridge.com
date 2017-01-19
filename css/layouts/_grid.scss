@@ -210,3 +210,150 @@
       }
     }
   }
+
+.photo-blocks
+{
+  @include display(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include margin(-($paragraph-spacing + em),-($gutter/2),-($paragraph-spacing + em),-($gutter/2));
+}
+
+  .photo-block
+  {
+    @include text-align(center);
+
+    figure
+    {
+      @include margin(0,0,0,0);
+
+      border: 1px solid $gray-light;
+      border-radius: $border-radius*2;
+      overflow: hidden;
+
+      img
+      {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .photo-block-title
+    {
+      @include margin(($paragraph-spacing + em),0,0,0);
+      @include font(heading,bold);
+
+      letter-spacing: 0;
+      font-size: 1em;
+    }
+
+    .photo-block-subtitle
+    {
+      @include margin(($paragraph-spacing/1.5 + em),0,0,0);
+      @include font(body,regular);
+
+      color: $heading-color;
+      line-height: 1.15;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      font-size: .6em;
+    }
+
+    &.is-primary
+    {
+      .photo-block-title
+      {
+        color: $primary-color;
+      }
+    }
+
+    &.is-special
+    {
+      .photo-block-title
+      {
+        color: $secondary-color;
+      }
+    }
+
+    &:not(:target)
+    {
+      @include margin(($paragraph-spacing + em),($gutter/2),($paragraph-spacing + em),($gutter/2));
+
+      width: 210px;
+
+      .photo-block-modal-trigger
+      {
+        @include transition(box-shadow $timing ease-in-out);
+
+        display: block;
+        border-radius: $border-radius*2;
+        overflow: hidden;
+
+        html:not(.touch) &:hover
+        {
+          box-shadow: $box-shadow;
+        }
+      }
+
+      .photo-block-caption
+      {
+        @include visuallyhidden;
+      }
+
+      &.is-special
+      {
+        .photo-block-modal-trigger
+        {
+          html:not(.touch) &:hover
+          {
+            box-shadow: 0 0 5px $secondary-color;
+          }
+        }
+      }
+
+      &.is-primary
+      {
+        .photo-block-modal-trigger
+        {
+          html:not(.touch) &:hover
+          {
+            box-shadow: 0 0 5px $primary-color;
+          }
+        }
+      }
+    }
+
+    &:target
+    {
+      @include display(flex);
+      @include flex-direction(column);
+      @include align-items(center);
+      @include padding(($paragraph-spacing*5 + em),$gutter,($paragraph-spacing*5 + em),$gutter);
+      @include vertical-scroll;
+
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba($background-color,.95);
+      z-index: $modal-z;
+
+      .photo-block-modal-trigger
+      {
+        @include animated--fadeInDown;
+
+        display: block;
+        width: 250px;
+      }
+
+      .photo-block-title,
+      .photo-block-subtitle,
+      .photo-block-caption
+      {
+        @include animated--fadeInUp;
+
+        max-width: $golden-characters/1.2 + ch;
+      }
+    }
+  }

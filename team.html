@@ -1,24 +1,24 @@
 ---
 layout: blank--has_nav
 title: Team
-description: Fullbridge team.
+description: We build and maintain a learning culture
 permalink: /team/
 current: template
 ---
 <main>
   <header role="banner">
     <div class="landing-hero">
-      <div class="landing-hero-headlines is-callout">
+      <div class="landing-hero-headlines">
         <div class="landing-wrapper">
           <h1>
             Fullbridge Team
           </h1>
           <h2>
-            Sed Auctor Neque Eu Tellus Rhoncus Ut Eleifend Nibh
+            We build and maintain a learning culture.
           </h2>
         </div>
       </div>
-      <div class="landing-section">
+      <!-- <div class="landing-section">
         <div class="landing-wrapper">
           <div class="even-columns has-gutters">
             <div class="even-column">
@@ -41,11 +41,11 @@ current: template
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </header>
   <article role="article">
-    <section role="region">
+    <!-- <section role="region">
       <div class="landing-section">
         <div class="landing-wrapper">
           <div class="golden-column">
@@ -98,96 +98,74 @@ current: template
         </div>
       </div>
     </section>
-    <hr class="big-graphical-divider">
+    <hr class="big-graphical-divider"> -->
     <section role="region">
       <div class="landing-section">
         <div class="landing-wrapper">
-          <div class="golden-column">
-            <div class="article-body">
-              <header role="heading">
-                <h2>
-                  Fullbridgians
-                </h2>
-              </header>
-              <p>
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in.
-              </p>
-              <p>
-                <a href="javascript:" class="link">
-                  Learn how to become a Fullbridgian
-                </a>
-              </p>
-            </div>
-          </div>
-          <div class="even-columns has-gutters">
-            <div class="even-column">
-              <div class="article-body">
+          <div class="photo-blocks">
+            {% for fullbridgian in site.team-ceo %}
+            <div class="photo-block is-primary" id="{{ fullbridgian.tag }}">
+              <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
                 <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                  <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
                 </figure>
-                <h3>Name</h3>
+              </a>
+              <h3 class="photo-block-title">
+                {{ fullbridgian.name }}
+              </h3>
+              <div class="photo-block-subtitle">
+                {{ fullbridgian.title }}
+              </div>
+              <div class="photo-block-caption">
+                {{ fullbridgian.content }}
                 <p>
-                  Title
+                  <a class="link" href="#!">Close</a>
                 </p>
               </div>
             </div>
-            <div class="even-column">
-              <div class="article-body">
+            {% endfor %}
+            {% for fullbridgian in site.team-leadership %}
+            <div class="photo-block is-special" id="{{ fullbridgian.tag }}">
+              <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
                 <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                  <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
                 </figure>
-                <h3>Name</h3>
+              </a>
+              <h3 class="photo-block-title">
+                {{ fullbridgian.name }}
+              </h3>
+              <div class="photo-block-subtitle">
+                {{ fullbridgian.title }}
+              </div>
+              <div class="photo-block-caption">
+                {{ fullbridgian.content }}
                 <p>
-                  Title
+                  <a class="link" href="#!">Close</a>
                 </p>
               </div>
             </div>
-            <div class="even-column">
-              <div class="article-body">
+            {% endfor %}
+            {% for fullbridgian in site.team-foundation %}
+            <div class="photo-block" id="{{ fullbridgian.tag }}">
+              <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
                 <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                  <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
                 </figure>
-                <h3>Name</h3>
+              </a>
+              <h3 class="photo-block-title">
+                {{ fullbridgian.name }}
+              </h3>
+              <div class="photo-block-subtitle">
+                {{ fullbridgian.title }}
+              </div>
+              <div class="photo-block-caption">
+                {{ fullbridgian.content }}
                 <p>
-                  Title
+                  <a class="link" href="#!">Close</a>
                 </p>
               </div>
             </div>
-          </div>
-          <div class="even-columns has-gutters">
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
@@ -205,20 +183,23 @@ current: template
               <p>
                 Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in.
               </p>
+              <p>
+                <a class="link" href="javascript:">Learn how to become a Fullbridgian</a>
+              </p>
             </div>
           </div>
           <div class="even-columns has-gutters">
             <div class="even-column">
               <div class="article-body">
                 <figure>
-                  <img src="http://dummyimage.com/900x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                  <img src="http://dummyimage.com/900x600/4d494d/686a82.gif&text=nice-happy-group" alt="placeholder+image">
                 </figure>
               </div>
             </div>
             <div class="even-column">
               <div class="article-body">
                 <figure>
-                  <img src="http://dummyimage.com/900x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
+                  <img src="http://dummyimage.com/900x600/4d494d/686a82.gif&text=nice-happy-group" alt="placeholder+image">
                 </figure>
               </div>
             </div>
@@ -226,6 +207,6 @@ current: template
         </div>
       </div>
     </section>
-    {% include closing-argument-statement.html %}
+    <!-- {% include closing-argument-statement.html %} -->
   </article>
 </main>
