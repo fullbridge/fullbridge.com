@@ -1,0 +1,51 @@
+hr.divider
+{
+  @include position(relative,auto,auto,auto,auto);
+  @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+  @include padding(0,0,0,0);
+
+  display: block;
+  height: 1px;
+  border: 0;
+  background-color: $gray-lighter;
+
+  &:after
+  {
+    @include position(absolute,auto,auto,auto,auto);
+    @include center(xy);
+
+    display: block;
+    width: 10px;
+    height: 10px;
+    content: "";
+    color: $background-color;
+    border: 3px solid;
+    border-radius: 10px;
+    background-color: $heading-color;
+    line-height: 1;
+  }
+}
+
+hr.big-graphical-divider
+{
+  @include opacity(.5);
+
+  height: 5em;
+  border: none;
+  background: url("../img/img-divider-change.svg") center center repeat-x;
+
+  @include bp($max: 416px)
+  {
+    @include margin(($paragraph-spacing*2 + em),0,($paragraph-spacing*2 + em),0);
+  }
+
+  @include bp($min: 416px, $max: 850px)
+  {
+    @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
+  }
+
+  @include bp($min: 850px)
+  {
+    @include margin(($paragraph-spacing*4 + em),0,($paragraph-spacing*4 + em),0);
+  }
+}

@@ -3,7 +3,7 @@
         {% if page.current == "home" %}
         <h1 class="main-menu-logo">
         {% else %}
-        <h2 class="main-menu-logo">
+        <div class="main-menu-logo">
         {% endif %}
           <a href="/" title="{{ site.author }}">
             <img src="/img/logo-fullbridge.png" alt="{{ site.author }}">
@@ -12,7 +12,7 @@
         {% if page.current == "home" %}
         </h1>
         {% else %}
-        </h2>
+        </div>
         {% endif %}
         <ul class="main-menu-items">
           <li class="main-menu-item is-dropdown">
@@ -59,6 +59,11 @@
               </li>
             </ul>
           </li>
+          <li class="main-menu-item">
+            <a href="/lyra-technology" class="trigger">
+              Lyra&trade;
+            </a>
+          </li>
           <li class="main-menu-item is-full-menu">
             <a href="javascript:" class="trigger">
               <span>View full menu</span>
@@ -73,7 +78,7 @@
         </ul>
       </div>
       <div class="modal" id="contact-us">
-        <a href="#" class="modal-shadow"></a>
+        <a href="#!" class="modal-shadow"></a>
         <div class="modal-content">
           {% include contact-form.html %}
         </div>
