@@ -1,6 +1,7 @@
 ---
 name: "Crystal Chandler"
 title: "Production Assistant"
+department: "Product Innovation"
 tag: "crystal-chandler"
 ---
 <p>

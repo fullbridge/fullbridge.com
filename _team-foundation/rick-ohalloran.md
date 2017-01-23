@@ -1,6 +1,7 @@
 ---
 name: "Rick O'Halloran"
 title: "Senior Software Engineer"
+department: "Lyra Technology"
 tag: "rick-ohalloran"
 ---
 <p>

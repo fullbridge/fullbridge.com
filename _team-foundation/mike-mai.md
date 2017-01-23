@@ -1,6 +1,7 @@
 ---
 name: "Mike Mai"
 title: "Full-stack Designer, Head of UIX"
+department: "Lyra Technology"
 tag: "mike-mai"
 ---
 <p>

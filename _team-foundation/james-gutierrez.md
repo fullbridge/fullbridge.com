@@ -1,6 +1,7 @@
 ---
 name: "James Gutierrez"
 title: "Managing Director, Africa"
+department: "Business Development"
 tag: "james-gutierrez"
 ---
 <p>

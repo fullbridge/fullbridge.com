@@ -1,6 +1,7 @@
 ---
 name: "Jenna Tramonti"
 title: "Production Assistant"
+department: "Product Innovation"
 tag: "jenna-tramonti"
 ---
 <p>

@@ -1,6 +1,7 @@
 ---
 name: "Michael Jacques"
 title: "Junior Software Engineer"
+department: "Lyra Technology"
 tag: "michael-jacques"
 ---
 <p>

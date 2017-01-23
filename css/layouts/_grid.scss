@@ -1,3 +1,20 @@
+.wrapper
+{
+  @include margin(0,auto,0,auto);
+
+  max-width: $medium-screen;
+
+  @include bp($max: 416px)
+  {
+    @include padding(0,$gutter,0,$gutter);
+  }
+
+  @include bp($min: 416px)
+  {
+    @include padding(0,($gutter*2),0,($gutter*2));
+  }
+}
+
 .even-columns
 {
   @include bp(desktop)
@@ -279,7 +296,20 @@
     {
       @include margin(($paragraph-spacing + em),($gutter/2),($paragraph-spacing + em),($gutter/2));
 
-      width: 210px;
+      @include bp(small)
+      {
+        width: 210px;
+      }
+
+      @include bp(medium)
+      {
+        width: calc((100%/3) - #{$gutter});
+      }
+
+      @include bp(large)
+      {
+        width: calc((100%/4) - #{$gutter});
+      }
 
       .photo-block-modal-trigger
       {
@@ -295,7 +325,9 @@
         }
       }
 
-      .photo-block-caption
+      .photo-block-subtitle *:not(.target),
+      .photo-block-caption,
+      .photo-block-modal-close
       {
         @include visuallyhidden;
       }
@@ -347,13 +379,84 @@
         width: 250px;
       }
 
+      .photo-block-modal-close
+      {
+        @include position(fixed,auto,0,0,0);
+        @include padding(($paragraph-spacing + em),$gutter,($paragraph-spacing + em),$gutter);
+        @include text-align(center);
+
+        width: 100vw;
+        background-color: $background-color;
+
+        a
+        {
+          @include padding(0,0,0,.1em);
+
+          display: inline-block;
+          color: $heading-color;
+          letter-spacing: .1em;
+          text-transform: uppercase;
+          font-size: .8em;
+          border-bottom: 1px solid;
+
+          html:not(.touch) &:hover
+          {
+            color: $link-color;
+          }
+        }
+      }
+
+      .photo-block-subtitle *.target
+      {
+        @include visuallyhidden;
+      }
+
+      .photo-block-title,
+      .photo-block-subtitle *:not(.target),
+      .photo-block-caption,
+      .photo-block-modal-close
+      {
+        @include animated--fadeInUp;
+      }
+
       .photo-block-title,
       .photo-block-subtitle,
       .photo-block-caption
       {
-        @include animated--fadeInUp;
-
         max-width: $golden-characters/1.2 + ch;
       }
+    }
+  }
+
+.golden-ratio
+{
+  @include bp($min: 1100px)
+  {
+    @include display(flex);
+  }
+}
+
+  .golden-ratio-main
+  {
+    @include bp($max: 1100px)
+    {
+      @include margin(0,0,($paragraph-spacing*3 + em),0);
+    }
+
+    @include bp($min: 1100px)
+    {
+      @include flex(1 0 ($golden-main-width*1%));
+      @include order(1);
+      @include margin(0,0,0,$gutter*2);
+    }
+  }
+
+  .golden-ratio-aside
+  {
+    @include bp($min: 1100px)
+    {
+      @include flex(0 0 ($golden-side-width*1%));
+
+      font-size: $small-font-size + rem;
     }
   }

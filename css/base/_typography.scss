@@ -220,7 +220,8 @@ ul,
 figure,
 details,
 summary,
-dl
+dl,
+.block
 {
   @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
 }

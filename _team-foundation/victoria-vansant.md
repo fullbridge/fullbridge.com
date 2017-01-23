@@ -1,6 +1,7 @@
 ---
 name: "Victoria VanSant"
 title: "Graphic Designer"
+department: "Product Innovation"
 tag: "victoria-vansant"
 ---
 <p>
