@@ -1,6 +1,6 @@
 ---
 name: "David Taylor"
-title: "Vice President, Global Partnerships and Learning Success"
+title: "Executive Vice President, Global Partnerships and Learning Success"
 tag: "david-taylor"
 ---
 <p>

@@ -1,6 +1,7 @@
 ---
 name: "Jason Ronstadt"
 title: "Senior Learning Experience Designer"
+department: "Product Innovation"
 tag: "jason-ronstadt"
 ---
 <p>

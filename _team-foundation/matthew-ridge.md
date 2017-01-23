@@ -1,6 +1,7 @@
 ---
 name: "Matthew Ridge"
 title: "Director of Infrastructure"
+department: "Information Technology"
 tag: "matthew-ridge"
 ---
 <p>

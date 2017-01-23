@@ -1,6 +1,7 @@
 ---
 name: "Kelsey Loanes"
 title: "Content Writer"
+department: "Product Innovation"
 tag: "kelsey-loanes"
 ---
 <p>
