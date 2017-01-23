@@ -457,6 +457,6 @@
     {
       @include flex(0 0 ($golden-side-width*1%));
 
-      font-size: $small-font-size + rem;
+      line-height: ($leading*.845);
     }
   }
