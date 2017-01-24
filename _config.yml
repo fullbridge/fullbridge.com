@@ -4,3 +4,7 @@ url: http://fullbridge.com
 ga-id: UA-21169274-2
 intercom-id:
 font-stack: //fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,700,700italic|Roboto+Condensed:400
+collections:
+- team-foundation
+- team-leadership
+- team-ceo

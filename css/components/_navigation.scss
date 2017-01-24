@@ -143,8 +143,7 @@
       }
     }
 
-    &.is-dropdown,
-    &.is-cta
+    &:not(.is-full-menu)
     {
       @include bp($max: 726px)
       {
@@ -164,7 +163,7 @@
 
         &:after
         {
-          @include triangle-down(.4em,.5em,$heading-color);
+          @include triangle-down(.4em,.5em,lighten($heading-color,70%));
           @include center(y);
 
           position: absolute;
@@ -189,6 +188,11 @@
           @include bp($max: 726px)
           {
             content: "Menu";
+          }
+
+          @include bp($min: 726px, $max: 895px)
+          {
+            @include visuallyhidden;
           }
         }
 
@@ -238,7 +242,7 @@
         border-radius: $border-radius;
         background-color: $heading-color;
 
-        @include bp($max: 850px)
+        @include bp($max: 895px)
         {
           span
           {
@@ -252,6 +256,14 @@
         }
       }
     }
+
+    &:nth-last-child(3)
+    {
+      @include bp($max: 895px)
+      {
+        @include visuallyhidden;
+      }
+    }
   }
 
     html:not(.touch) .main-menu-item:not(:hover) > .trigger + *,
@@ -259,6 +271,12 @@
     {
       @include opacity(0);
       @include visuallyhidden;
+    }
+
+    html:not(.touch) .main-menu-item.is-dropdown:hover > .trigger:after,
+    html.touch .main-menu-item.is-dropdown > .trigger.active:after
+    {
+      @include opacity(0);
     }
 
     html:not(.touch) .main-menu-item:hover > .trigger,

@@ -1,207 +1,134 @@
 ---
 layout: blank--has_nav
 title: Team
-description: Fullbridge team.
+description: We build and maintain a learning culture.
 permalink: /team/
-current: template
 ---
 <main>
   <header role="banner">
     <div class="landing-hero">
-      <div class="landing-hero-headlines is-callout">
+      <div class="landing-hero-headlines">
         <div class="landing-wrapper">
           <h1>
-            Fullbridge Team
+            We build &amp; maintain a learning culture.
           </h1>
           <h2>
-            Sed Auctor Neque Eu Tellus Rhoncus Ut Eleifend Nibh
+            Our success depends upon the ability of each member of our team to lead and innovate by working together, creating idea flow, and focusing on data, analysis, methodology, and technology.
           </h2>
         </div>
       </div>
     </div>
   </header>
+  <hr class="divider" role="separator">
   <article role="article">
     <section role="region">
       <div class="landing-section">
-        <div class="landing-wrapper">
-          <div class="golden-column">
-            <div class="article-body">
-              <header role="heading">
-                <h2>
-                  Leadership Team
-                </h2>
-              </header>
-              <p>
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in.
-              </p>
-            </div>
-          </div>
-          <div class="even-columns has-gutters">
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <hr class="big-graphical-divider">
-    <section role="region">
-      <div class="landing-section">
-        <div class="landing-wrapper">
-          <div class="golden-column">
-            <div class="article-body">
-              <header role="heading">
-                <h2>
-                  Fullbridgians
-                </h2>
-              </header>
-              <p>
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in.
-              </p>
-              <p>
-                <a href="javascript:" class="link">
-                  Learn how to become a Fullbridgian
+        <div class="wrapper">
+          <div class="block">
+            <div class="photo-blocks">
+              {% for fullbridgian in site.team-ceo %}
+              <div class="photo-block is-primary" id="{{ fullbridgian.tag }}">
+                <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+                  <figure>
+                    <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+                  </figure>
                 </a>
-              </p>
+                <h3 class="photo-block-title">
+                  {{ fullbridgian.name }}
+                </h3>
+                <div class="photo-block-subtitle">
+                  {{ fullbridgian.title }}
+                </div>
+                <div class="photo-block-caption">
+                  {{ fullbridgian.content }}
+                </div>
+                <div class="photo-block-modal-close">
+                  <a href="#!">Close</a>
+                </div>
+              </div>
+              {% endfor %}
+              {% for fullbridgian in site.team-leadership %}
+              <div class="photo-block is-special" id="{{ fullbridgian.tag }}">
+                <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+                  <figure>
+                    <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+                  </figure>
+                </a>
+                <h3 class="photo-block-title">
+                  {{ fullbridgian.name }}
+                </h3>
+                <div class="photo-block-subtitle">
+                  {{ fullbridgian.title }}
+                </div>
+                <div class="photo-block-caption">
+                  {{ fullbridgian.content }}
+                </div>
+                <div class="photo-block-modal-close">
+                  <a href="#!">Close</a>
+                </div>
+              </div>
+              {% endfor %}
+              <div class="photo-block is-text-based">
+                <div>
+                  <strong>Vision:</strong> Our vision for Fullbridge is to be the most trusted source of learning that increases the value of people, organizations, and economies.
+                </div>
+                <div>
+                  <strong>Mission:</strong> We help companies become innovative learning organizations where teams collaborate better, solve problems faster, and stay engaged longer.
+                </div>
+              </div>
+              {% for fullbridgian in site.team-foundation %}
+              <div class="photo-block" id="{{ fullbridgian.tag }}">
+                <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+                  <figure>
+                    <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+                  </figure>
+                </a>
+                <h3 class="photo-block-title">
+                  {{ fullbridgian.name }}
+                </h3>
+                <div class="photo-block-subtitle">
+                  <span>{{ fullbridgian.title }}</span>
+                  <span class="target">{{ fullbridgian.department }}</span>
+                </div>
+                <div class="photo-block-caption">
+                  {{ fullbridgian.content }}
+                </div>
+                <div class="photo-block-modal-close">
+                  <a href="#!">Close</a>
+                </div>
+              </div>
+              {% endfor %}
             </div>
           </div>
-          <div class="even-columns has-gutters">
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="even-columns has-gutters">
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/500x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-                <h3>Name</h3>
-                <p>
-                  Title
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </section>
+    <hr class="divider" role="separator">
     <section role="region">
       <div class="landing-section">
         <div class="landing-wrapper">
-          <div class="golden-column">
-            <div class="article-body">
-              <header role="heading">
-                <h2>
-                  The Fullbridge Culture
-                </h2>
-              </header>
-              <p>
-                Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed molestie augue sit amet leo consequat posuere. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin vel ante a orci tempus eleifend ut et magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra. Nulla fringilla, orci ac euismod semper, magna diam porttitor mauris, quis sollicitudin sapien justo in.
-              </p>
-            </div>
-          </div>
-          <div class="even-columns has-gutters">
-            <div class="even-column">
+          <div class="landing-closing">
+            <div class="golden-column">
               <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/900x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
-              </div>
-            </div>
-            <div class="even-column">
-              <div class="article-body">
-                <figure>
-                  <img src="http://dummyimage.com/900x500/4d494d/686a82.gif&text=placeholder+image" alt="placeholder+image">
-                </figure>
+                <header role="heading">
+                  <h2>
+                    The Fullbridge Culture
+                  </h2>
+                </header>
+                <p>
+                  We believe we can change the world through innovation in learning. If you have passion for figuring out what matters, want to work hard and play hard, and become more curious with every new concept you learn, then check us out.
+                </p>
+                <p>
+                  <a class="button is-primary" href="mailto:hr@fullbridge.com">
+                    <span>Join us!</span>
+                  </a>
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-    {% include closing-argument-statement.html %}
   </article>
 </main>
