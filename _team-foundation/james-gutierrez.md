@@ -1,7 +1,7 @@
 ---
 name: "James Gutierrez"
 title: "Managing Director, Africa"
-department: "Global Partnerships and Learning Success"
+department: "Global Partnerships & Learning Success"
 tag: "james-gutierrez"
 ---
 <p>

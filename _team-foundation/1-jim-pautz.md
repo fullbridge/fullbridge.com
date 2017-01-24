@@ -1,7 +1,7 @@
 ---
 name: "Jim Pautz"
 title: "Vice President, Program Delivery"
-department: "Vice President, Program Delivery"
+department: "Vice President,<br>Program Delivery"
 tag: "jim-pautz"
 ---
 <p>
