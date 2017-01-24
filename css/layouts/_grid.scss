@@ -296,12 +296,14 @@
     {
       @include margin(($paragraph-spacing + em),($gutter/2),($paragraph-spacing + em),($gutter/2));
 
+      width: 200px;
+
       @include bp(small)
       {
-        width: 210px;
+        width: 230px;
       }
 
-      @include bp(medium)
+      /*@include bp(medium)
       {
         width: calc((100%/3) - #{$gutter});
       }
@@ -309,7 +311,7 @@
       @include bp(large)
       {
         width: calc((100%/4) - #{$gutter});
-      }
+      }*/
 
       .photo-block-modal-trigger
       {
@@ -352,6 +354,19 @@
             box-shadow: 0 0 5px $primary-color;
           }
         }
+      }
+
+      &.is-text-based
+      {
+        @include display(flex);
+        @include flex-direction(column);
+        @include justify-content(space-around);
+        @include padding(($gutter/2),($gutter/2),($gutter/2),($gutter/2));
+        @include text-align(left);
+
+        width: calc(400px + #{$gutter});
+        border: 1px solid $gray-lighter;
+        border-radius: $border-radius*2;
       }
     }
 
