@@ -1,7 +1,7 @@
 ---
 name: "Christine Glandorf"
 title: "Senior Program Manager"
-department: "Product Innovation & Program Delivery"
+department: "Product Innovation"
 tag: "christine-glandorf"
 ---
 <p>

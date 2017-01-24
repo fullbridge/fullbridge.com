@@ -1,7 +1,7 @@
 ---
 name: "Jim Pautz"
-title: "Vice President, Coaching Operations"
-department: "Product Innovation & Program Delivery"
+title: "Vice President, Program Delivery"
+department: "Vice President, Program Delivery"
 tag: "jim-pautz"
 ---
 <p>

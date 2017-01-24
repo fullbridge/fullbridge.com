@@ -1,7 +1,7 @@
 ---
 name: "Hala Hibri"
 title: "Managing Director of MENA"
-department: "Product Innovation & Program Delivery"
+department: "Program Delivery"
 tag: "hala-hibri"
 ---
 <p>

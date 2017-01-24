@@ -1,7 +1,7 @@
 ---
 name: "Rick Croteau"
 title: "Senior Client Success Manager"
-department: "Business Development & Program Delivery"
+department: "Global Partnerships and Learning Success"
 tag: "rick-croteau"
 ---
 <p>

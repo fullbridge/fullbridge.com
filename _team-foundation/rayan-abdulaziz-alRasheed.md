@@ -1,7 +1,7 @@
 ---
 name: "Rayan Abdulaziz AlRasheed"
 title: "Business Development Associate, MENA"
-department: "Product Innovation & Program Delivery"
+department: "Program Delivery"
 tag: "rayan-abdulaziz-alrasheed"
 ---
 <p>

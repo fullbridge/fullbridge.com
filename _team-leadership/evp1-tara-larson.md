@@ -1,6 +1,6 @@
 ---
 name: "Tara Larson"
-title: "Executive Vice President, Product Innovation and Programs"
+title: "Executive Vice President, Product Innovation & Program Delivery"
 tag: "tara-larson"
 ---
 <p>
