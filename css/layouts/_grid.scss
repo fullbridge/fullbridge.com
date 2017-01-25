@@ -372,7 +372,7 @@
 
     &:target
     {
-      @include padding(($paragraph-spacing*5 + em),$gutter,($paragraph-spacing*5 + em),$gutter);
+      @include padding(($paragraph-spacing*5 + em),$gutter,($paragraph-spacing*8 + em),$gutter);
       @include vertical-scroll;
 
       position: fixed;
