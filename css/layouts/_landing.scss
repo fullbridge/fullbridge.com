@@ -236,12 +236,17 @@
   > .landing-wrapper
   {
     @include position(relative,auto,auto,auto,auto);
+    @include display(flex);
 
     z-index: 1;
 
+    @include bp(small)
+    {
+      @include flex-direction(column);
+    }
+
     @include bp(desktop)
     {
-      @include display(flex);
       @include align-items(center);
       @include justify-content(space-between);
     }
@@ -271,6 +276,7 @@
     @include bp(small)
     {
       @include margin($gutter,0,0,0);
+      @include order(1);
     }
 
     @include bp(desktop)
