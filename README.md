@@ -16,4 +16,4 @@
 
 ## Naming Convention
 * *Index*: index.html
-* *Error Page (including 404s)*: error.html
+* *Error Page  (including 404s)*: error.html
