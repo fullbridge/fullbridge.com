@@ -372,10 +372,7 @@
 
     &:target
     {
-      @include display(flex);
-      @include flex-direction(column);
-      @include align-items(center);
-      @include padding(($paragraph-spacing*5 + em),$gutter,($paragraph-spacing*5 + em),$gutter);
+      @include padding(($paragraph-spacing*5 + em),$gutter,($paragraph-spacing*8 + em),$gutter);
       @include vertical-scroll;
 
       position: fixed;
@@ -385,6 +382,12 @@
       height: 100vh;
       background-color: rgba($background-color,.95);
       z-index: $modal-z;
+
+      > *
+      {
+        margin-right: auto;
+        margin-left: auto;
+      }
 
       .photo-block-modal-trigger
       {
