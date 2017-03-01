@@ -47,9 +47,6 @@
       @include position(relative,auto,auto,auto,auto);
       @include margin(0,auto,0,auto);
 
-      background-color: white;
-      border-radius: 100em;
-
       @include bp(small)
       {
         width: 15vw;
@@ -68,12 +65,19 @@
         height: 5em;
       }
 
-      img
+      &:not(.image-circle)
       {
-        @include position(absolute,18%,auto,auto,22%);
+        background-color: white;
+        border-radius: 100em;
 
-        display: block;
-        width: 60%;
+        img
+        {
+          @include position(absolute,18%,auto,auto,22%);
+
+          display: block;
+          width: 60%;
+        }
+
       }
 
       & + h1
@@ -337,7 +341,7 @@
 
 .landing-cta
 {
-  @include bp(small)
+  @include bp($max: 1000px)
   {
     > *
     {
@@ -345,7 +349,7 @@
     }
   }
 
-  @include bp(desktop)
+  @include bp($min: 1000px)
   {
     @include display(flex);
     @include justify-content(space-between);
@@ -363,7 +367,7 @@
 
   .landing-cta-aside
   {
-    @include bp(desktop)
+    @include bp($min: 1000px)
     {
       @include flex(0 0 320px);
       @include margin(0,0,0,$gutter*2);
@@ -474,6 +478,35 @@
       line-height: 1;
       content: counter(li);
       counter-increment: li;
+      border: 1px solid $muted-color;
+      border-radius: 100em;
+    }
+  }
+}
+
+.landing-checked-list
+{
+  list-style: none;
+
+  li
+  {
+    @include position(relative,auto,auto,auto,auto);
+    @include margin(($paragraph-spacing + em),auto,($paragraph-spacing + em),auto);
+    @include padding(0,0,0,2em);
+
+    color: $heading-color;
+
+    &:before
+    {
+      @include position(absolute,auto,auto,auto,0);
+      @include padding(.2em,0,0,0);
+      @include text-align(center);
+
+      width: 1.5em;
+      height: 1.5em;
+      color: $primary-color;
+      line-height: 1;
+      content: "\2713";
       border: 1px solid $muted-color;
       border-radius: 100em;
     }
