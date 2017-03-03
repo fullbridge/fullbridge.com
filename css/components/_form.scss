@@ -39,13 +39,6 @@
       {
         @include flex(0 0 100%);
         @include margin(($paragraph-spacing/2 + em),0,($paragraph-spacing/2 + em),0);
-
-        &:nth-child(-n+4)
-        {
-          @include flex(0 0 50%);
-
-          max-width: calc(50% - #{$gutter/4});
-        }
       }
     }
 
@@ -55,12 +48,52 @@
     }
   }
 
+  &.is-contact
+  {
+    form
+    {
+      > div
+      {
+        @include bp(desktop)
+        {
+          &:nth-child(-n+4)
+          {
+            @include flex(0 0 50%);
+
+            max-width: calc(50% - #{$gutter/4});
+          }
+        }
+      }
+    }
+  }
+
+  &.is-application
+  {
+    form
+    {
+      > div
+      {
+        @include bp(desktop)
+        {
+          &:nth-child(3),
+          &:nth-child(4)
+          {
+            @include flex(0 0 50%);
+
+            max-width: calc(50% - #{$gutter/4});
+          }
+        }
+      }
+    }
+  }
+
   label,
   select,
   #{$all-text-inputs},
   textarea
   {
-    display: block;
+    display: block !important;
+    width: 100% !important;
   }
 
   select,
@@ -77,7 +110,6 @@
     @include appearance(none);
     @include transition(box-shadow $timing ease-in-out);
 
-    width: 100%;
     color: $body-text-color;
     line-height: 3;
     border: $border;

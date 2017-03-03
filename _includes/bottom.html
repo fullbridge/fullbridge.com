@@ -23,5 +23,10 @@
 
     </script>
     {% endif %}
+
+    {% if site.hubspot-id %}
+    <!-- site.hubspot-id is a variable in the config.yml -->
+    <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/{{ site.hubspot-id }}.js"></script>
+    {% endif %}
   </body>
 </html>
