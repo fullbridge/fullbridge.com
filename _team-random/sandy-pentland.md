@@ -1,6 +1,7 @@
 ---
 name: "Sandy Pentland"
-title: "MIT Sloan School of Management, Center for Collective Intelligence"
+title: "MIT Media Lab"
+department: "MIT Media Lab"
 tag: "sandy-pentland"
 ---
 <p>

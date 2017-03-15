@@ -1,6 +1,7 @@
 ---
 name: "Peter Gloor"
-title: "MIT Media Lab"
+title: "Sloan School of Management"
+department: "MIT Center for Collective Intelligence"
 tag: "peter-gloor"
 ---
 <p>

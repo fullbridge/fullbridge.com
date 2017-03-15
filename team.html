@@ -98,6 +98,11 @@ permalink: /team/
                 </div>
               </div>
               {% endfor %}
+              <!-- <div class="photo-block is-text-based">
+                <div>
+                  <strong>Senior Advisory Board:</strong> Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui.
+                </div>
+              </div>
               {% for fullbridgian in site.team-random %}
               <div class="photo-block is-special" id="{{ fullbridgian.tag }}">
                 <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
@@ -109,7 +114,8 @@ permalink: /team/
                   {{ fullbridgian.name }}
                 </h3>
                 <div class="photo-block-subtitle">
-                  {{ fullbridgian.title }}
+                  <span>{{ fullbridgian.title }}</span>
+                  <span class="target">{{ fullbridgian.department }}</span>
                 </div>
                 <div class="photo-block-caption">
                   {{ fullbridgian.content }}
@@ -118,7 +124,7 @@ permalink: /team/
                   <a href="#!">Close</a>
                 </div>
               </div>
-              {% endfor %}
+              {% endfor %} -->
             </div>
           </div>
           </div>
