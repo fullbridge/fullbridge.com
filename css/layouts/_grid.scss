@@ -303,16 +303,6 @@
         width: 230px;
       }
 
-      /*@include bp(medium)
-      {
-        width: calc((100%/3) - #{$gutter});
-      }
-
-      @include bp(large)
-      {
-        width: calc((100%/4) - #{$gutter});
-      }*/
-
       .photo-block-modal-trigger
       {
         @include transition(box-shadow $timing ease-in-out);

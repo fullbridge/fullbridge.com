@@ -1,0 +1,33 @@
+---
+layout: team
+title: The Fullbridge Advisors
+description: We build and maintain a learning culture.
+permalink: /advisors/
+current: advisors
+---
+<div class="block">
+  <div class="photo-blocks">
+    {% for fullbridgian in site.team-advisors %}
+    <div class="photo-block" id="{{ fullbridgian.tag }}">
+      <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+        <figure>
+          <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+        </figure>
+      </a>
+      <h3 class="photo-block-title">
+        {{ fullbridgian.name }}
+      </h3>
+      <div class="photo-block-subtitle">
+        <span>{{ fullbridgian.title }}</span>
+        <span class="target">{{ fullbridgian.department }}</span>
+      </div>
+      <div class="photo-block-caption">
+        {{ fullbridgian.content }}
+      </div>
+      <div class="photo-block-modal-close">
+        <a href="#!">Close</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

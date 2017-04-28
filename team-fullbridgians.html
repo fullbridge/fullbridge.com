@@ -1,0 +1,83 @@
+---
+layout: team
+title: The Fullbridge Team
+description: The success of Fullbridge depends upon the ability of each member of our team to lead and innovate by working together, creating idea flow, and focusing on data, analysis, methodology, and technology.
+permalink: /team/
+current: team
+---
+<div class="block">
+  <div class="photo-blocks">
+    {% for fullbridgian in site.team-ceo %}
+    <div class="photo-block is-primary" id="{{ fullbridgian.tag }}">
+      <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+        <figure>
+          <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+        </figure>
+      </a>
+      <h3 class="photo-block-title">
+        {{ fullbridgian.name }}
+      </h3>
+      <div class="photo-block-subtitle">
+        {{ fullbridgian.title }}
+      </div>
+      <div class="photo-block-caption">
+        {{ fullbridgian.content }}
+      </div>
+      <div class="photo-block-modal-close">
+        <a href="#!">Close</a>
+      </div>
+    </div>
+    {% endfor %}
+    {% for fullbridgian in site.team-leadership %}
+    <div class="photo-block is-special" id="{{ fullbridgian.tag }}">
+      <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+        <figure>
+          <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+        </figure>
+      </a>
+      <h3 class="photo-block-title">
+        {{ fullbridgian.name }}
+      </h3>
+      <div class="photo-block-subtitle">
+        {{ fullbridgian.title }}
+      </div>
+      <div class="photo-block-caption">
+        {{ fullbridgian.content }}
+      </div>
+      <div class="photo-block-modal-close">
+        <a href="#!">Close</a>
+      </div>
+    </div>
+    {% endfor %}
+    <div class="photo-block is-text-based">
+      <div>
+        <strong>Vision:</strong> Our vision for Fullbridge is to be the most trusted source of learning that increases the value of people, organizations, and economies.
+      </div>
+      <div>
+        <strong>Mission:</strong> We help companies become innovative learning organizations where teams collaborate better, solve problems faster, and stay engaged longer.
+      </div>
+    </div>
+    {% for fullbridgian in site.team-foundation %}
+    <div class="photo-block" id="{{ fullbridgian.tag }}">
+      <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+        <figure>
+          <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+        </figure>
+      </a>
+      <h3 class="photo-block-title">
+        {{ fullbridgian.name }}
+      </h3>
+      <div class="photo-block-subtitle">
+        <span>{{ fullbridgian.title }}</span>
+        <span class="target">{{ fullbridgian.department }}</span>
+      </div>
+      <div class="photo-block-caption">
+        {{ fullbridgian.content }}
+      </div>
+      <div class="photo-block-modal-close">
+        <a href="#!">Close</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
