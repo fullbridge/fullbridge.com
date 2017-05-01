@@ -50,4 +50,7 @@ $medium-screen: 1440px;
 
 $timing: .5s;
 $modal-z: 99999;
-$menubar-z: ($modal-z - 1);
+$main-menu-z: ($modal-z - 1);
+$sub-menu-z: ($modal-z - 2);
+$main-footer-z: ($modal-z - 3);
+$page-fade-z: ($modal-z - 4);
