@@ -1,0 +1,67 @@
+---
+layout: blank--has_nav
+---
+<main>
+  <header role="banner">
+    <div class="landing-hero">
+      <div class="landing-hero-headlines">
+        <div class="landing-wrapper">
+          <h1>
+            We build &amp; maintain a learning culture.
+          </h1>
+          <h2>
+            Our success depends upon the ability of each member of our team to lead and innovate by working together, creating idea flow, and focusing on data, analysis, methodology, and technology.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </header>
+  <nav class="sub-menu">
+    <ul>
+      <li>
+        <a href="/team" {% if page.current == "team" %}class="is-current"{% endif %}>Fullbridgians</a>
+      </li>
+      <li>
+        <a href="/advisors" {% if page.current == "advisors" %}class="is-current"{% endif %}>Advisors</a>
+      </li>
+      <li>
+        <a href="/board-members" {% if page.current == "board-members" %}class="is-current"{% endif %}>Board Members</a>
+      </li>
+    </ul>
+  </nav>
+  <article role="article">
+    <section role="region">
+      <div class="landing-section">
+        <div class="wrapper">
+          {{ content }}
+        </div>
+      </div>
+    </section>
+    <hr class="divider" role="separator">
+    <section role="region">
+      <div class="landing-section">
+        <div class="landing-wrapper">
+          <div class="landing-closing">
+            <div class="golden-column">
+              <div class="article-body">
+                <header role="heading">
+                  <h2>
+                    The Fullbridge Culture
+                  </h2>
+                </header>
+                <p>
+                  We believe we can change the world through innovation in learning. If you have passion for figuring out what matters, want to work hard and play hard, and become more curious with every new concept you learn, then check us out.
+                </p>
+                <p>
+                  <a class="button is-primary" href="mailto:hr@fullbridge.com">
+                    <span>Join us!</span>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>

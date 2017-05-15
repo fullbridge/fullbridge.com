@@ -1,0 +1,54 @@
+---
+layout: team
+title: The Fullbridge Board Members
+description: Fullbridge is guided by industry.
+permalink: /board-members/
+current: board-members
+---
+<div class="block">
+  <div class="photo-blocks">
+    {% for fullbridgian in site.team-board %}
+    <div class="photo-block is-primary" id="{{ fullbridgian.tag }}">
+      <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+        <figure>
+          <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+        </figure>
+      </a>
+      <h3 class="photo-block-title">
+        {{ fullbridgian.name }}
+      </h3>
+      <div class="photo-block-subtitle">
+        <span>{{ fullbridgian.title }}</span>
+        <span class="target">{{ fullbridgian.department }}</span>
+      </div>
+      <div class="photo-block-caption">
+        {{ fullbridgian.content }}
+      </div>
+      <div class="photo-block-modal-close">
+        <a href="#!">Close</a>
+      </div>
+    </div>
+    {% endfor %}
+    {% for fullbridgian in site.team-ceo %}
+    <div class="photo-block is-primary" id="{{ fullbridgian.tag }}">
+      <a href="#{{ fullbridgian.tag }}" class="photo-block-modal-trigger">
+        <figure>
+          <img src="/img/fullbridgians/portrait-{{ fullbridgian.tag }}.jpg" alt="{{ fullbridgian.name }}">
+        </figure>
+      </a>
+      <h3 class="photo-block-title">
+        {{ fullbridgian.name }}
+      </h3>
+      <div class="photo-block-subtitle">
+        {{ fullbridgian.title }}
+      </div>
+      <div class="photo-block-caption">
+        {{ fullbridgian.content }}
+      </div>
+      <div class="photo-block-modal-close">
+        <a href="#!">Close</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
